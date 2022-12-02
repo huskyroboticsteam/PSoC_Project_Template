@@ -1,0 +1,1734 @@
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.getSerialAddress,"ax",%progbits
+  20              		.align	2
+  21              		.global	getSerialAddress
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	getSerialAddress, %function
+  25              	getSerialAddress:
+  26              	.LFB35:
+  27              		.file 1 "main.c"
+   1:main.c        **** 
+   2:main.c        **** /* 
+   3:main.c        **** Davis Sauer
+   4:main.c        **** 
+   5:main.c        **** Husky Robotics
+   6:main.c        **** 
+   7:main.c        **** 2022
+   8:main.c        **** 
+   9:main.c        **** Template project adaptable to any PSoC Project
+  10:main.c        **** 
+  11:main.c        **** CHANGE CLOCKS TO USE EXT_CLK BEFORE USING ON REAL BOARD
+  12:main.c        **** */
+  13:main.c        **** 
+  14:main.c        **** #include "main.h"
+  15:main.c        **** 
+  16:main.c        **** int main(void)
+  17:main.c        **** {
+  18:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */ 
+  19:main.c        ****     DBG_UART_Start();
+  20:main.c        ****     InitCAN( DEVICE_GROUP_MOTOR_CONTROL, getSerialAddress() ); /*UPDATE THIS FOR EACH BOARD*/
+  21:main.c        ****            
+  22:main.c        ****     Print("\r\n");
+  23:main.c        ****     Print("\r\n***************\r\nBOARD INITIALIZED\n\r***************\r\n");
+  24:main.c        ****     
+  25:main.c        ****     
+  26:main.c        ****     int status;
+  27:main.c        ****     
+  28:main.c        ****     for(;;)
+  29:main.c        ****     {
+  30:main.c        ****         switch(state)
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 2
+
+
+  31:main.c        ****         {
+  32:main.c        ****            // DO SOMETHING
+  33:main.c        ****             case(IDLE):        
+  34:main.c        ****                 
+  35:main.c        ****                 state = CHECK_CAN;
+  36:main.c        ****                 break;
+  37:main.c        ****             
+  38:main.c        ****             //Check CAN for new packet
+  39:main.c        ****             case(CHECK_CAN):
+  40:main.c        ****                  
+  41:main.c        ****                 if (PollAndReceiveCANPacket( &receive ) == ERROR_NONE)
+  42:main.c        ****                 {
+  43:main.c        ****                     Print("Packet Found!\r\n");
+  44:main.c        ****                     if(GetPacketID( &receive ) == ID_TELEMETRY_PULL)
+  45:main.c        ****                     {
+  46:main.c        ****                         uint8_t TTC = DecodeTelemetryType( &receive );
+  47:main.c        ****                         Print("Sending CAN Packet...\r\n");      
+  48:main.c        ****                         sendRequestedData(TTC);
+  49:main.c        ****                     }
+  50:main.c        ****                 }
+  51:main.c        ****                 
+  52:main.c        ****                 state = IDLE;
+  53:main.c        ****                 break;
+  54:main.c        **** 
+  55:main.c        ****         }
+  56:main.c        ****     }
+  57:main.c        **** }
+  58:main.c        **** 
+  59:main.c        **** //Reads dip switches to calculate the serial address
+  60:main.c        **** int getSerialAddress()
+  61:main.c        **** {
+  28              		.loc 1 61 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 10B5     		push	{r4, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  36              	.LVL0:
+  62:main.c        ****     int address = 0;
+  63:main.c        ****     if (DIP1_Read()==0)
+  37              		.loc 1 63 0
+  38 0002 FFF7FEFF 		bl	DIP1_Read
+  39              	.LVL1:
+  40 0006 0028     		cmp	r0, #0
+  41 0008 01D0     		beq	.L7
+  62:main.c        ****     int address = 0;
+  42              		.loc 1 62 0
+  43 000a 0024     		movs	r4, #0
+  44 000c 00E0     		b	.L2
+  45              	.L7:
+  64:main.c        ****         address += 1;
+  46              		.loc 1 64 0
+  47 000e 0124     		movs	r4, #1
+  48              	.L2:
+  49              	.LVL2:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 3
+
+
+  65:main.c        ****   
+  66:main.c        ****     if (DIP2_Read()==0)
+  50              		.loc 1 66 0
+  51 0010 FFF7FEFF 		bl	DIP2_Read
+  52              	.LVL3:
+  53 0014 0028     		cmp	r0, #0
+  54 0016 00D1     		bne	.L3
+  67:main.c        ****         address += 2;
+  55              		.loc 1 67 0
+  56 0018 0234     		adds	r4, r4, #2
+  57              	.LVL4:
+  58              	.L3:
+  68:main.c        **** 
+  69:main.c        ****     if (DIP3_Read()==0)
+  59              		.loc 1 69 0
+  60 001a FFF7FEFF 		bl	DIP3_Read
+  61              	.LVL5:
+  62 001e 0028     		cmp	r0, #0
+  63 0020 00D1     		bne	.L4
+  70:main.c        ****         address += 4;
+  64              		.loc 1 70 0
+  65 0022 0434     		adds	r4, r4, #4
+  66              	.LVL6:
+  67              	.L4:
+  71:main.c        **** 
+  72:main.c        ****     if (DIP4_Read()==0)
+  68              		.loc 1 72 0
+  69 0024 FFF7FEFF 		bl	DIP4_Read
+  70              	.LVL7:
+  71 0028 0028     		cmp	r0, #0
+  72 002a 00D1     		bne	.L5
+  73:main.c        ****         address += 8;
+  73              		.loc 1 73 0
+  74 002c 0834     		adds	r4, r4, #8
+  75              	.LVL8:
+  76              	.L5:
+  74:main.c        ****     
+  75:main.c        ****     if (address == 0)
+  77              		.loc 1 75 0
+  78 002e 002C     		cmp	r4, #0
+  79 0030 00D1     		bne	.L6
+  76:main.c        ****         address = DEVICE_SERIAL_TELEM_LOCALIZATION;
+  80              		.loc 1 76 0
+  81 0032 0134     		adds	r4, r4, #1
+  82              	.LVL9:
+  83              	.L6:
+  77:main.c        ****     
+  78:main.c        ****     return address;
+  79:main.c        **** }
+  84              		.loc 1 79 0
+  85 0034 2000     		movs	r0, r4
+  86              		@ sp needed
+  87              	.LVL10:
+  88 0036 10BD     		pop	{r4, pc}
+  89              		.cfi_endproc
+  90              	.LFE35:
+  91              		.size	getSerialAddress, .-getSerialAddress
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 4
+
+
+  92              		.section	.text.sendRequestedData,"ax",%progbits
+  93              		.align	2
+  94              		.global	sendRequestedData
+  95              		.code	16
+  96              		.thumb_func
+  97              		.type	sendRequestedData, %function
+  98              	sendRequestedData:
+  99              	.LFB36:
+  80:main.c        **** 
+  81:main.c        **** //Using the Telemetry Type Code (TTC), sends appropriate data to respond
+  82:main.c        **** //to a telemetry request
+  83:main.c        **** 
+  84:main.c        **** void sendRequestedData(int TTC)
+  85:main.c        **** {
+ 100              		.loc 1 85 0
+ 101              		.cfi_startproc
+ 102              		@ args = 0, pretend = 0, frame = 0
+ 103              		@ frame_needed = 0, uses_anonymous_args = 0
+ 104              	.LVL11:
+ 105 0000 10B5     		push	{r4, lr}
+ 106              		.cfi_def_cfa_offset 8
+ 107              		.cfi_offset 4, -8
+ 108              		.cfi_offset 14, -4
+ 109 0002 82B0     		sub	sp, sp, #8
+ 110              		.cfi_def_cfa_offset 16
+ 111 0004 0400     		movs	r4, r0
+ 112              	.LVL12:
+  86:main.c        ****     int32_t data = 0;
+  87:main.c        ****     
+  88:main.c        ****     switch(TTC)
+  89:main.c        ****     {
+  90:main.c        ****         // USE CONSTANTS FOR CASES
+  91:main.c        ****         case(0):
+  92:main.c        ****             // ADD CODE HERE
+  93:main.c        ****         default:
+  94:main.c        ****             Print("Cannot Send That Data Type!\n\r");
+ 113              		.loc 1 94 0
+ 114 0006 0E48     		ldr	r0, .L11
+ 115              	.LVL13:
+ 116 0008 FFF7FEFF 		bl	DBG_UART_UartPutString
+ 117              	.LVL14:
+  95:main.c        ****     }   
+  96:main.c        ****     
+  97:main.c        ****     // Assemble and send packet
+  98:main.c        ****     AssembleTelemetryReportPacket(&send, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, TTC, data);
+ 118              		.loc 1 98 0
+ 119 000c E3B2     		uxtb	r3, r4
+ 120 000e 0D4C     		ldr	r4, .L11+4
+ 121              	.LVL15:
+ 122 0010 0022     		movs	r2, #0
+ 123 0012 0092     		str	r2, [sp]
+ 124 0014 0132     		adds	r2, r2, #1
+ 125 0016 0221     		movs	r1, #2
+ 126 0018 2000     		movs	r0, r4
+ 127 001a FFF7FEFF 		bl	AssembleTelemetryReportPacket
+ 128              	.LVL16:
+  99:main.c        ****     int check = SendCANPacket( &send );
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 5
+
+
+ 129              		.loc 1 99 0
+ 130 001e 2000     		movs	r0, r4
+ 131 0020 FFF7FEFF 		bl	SendCANPacket
+ 132              	.LVL17:
+ 100:main.c        ****     
+ 101:main.c        ****     // Blink LED if packet sent correctly
+ 102:main.c        ****     if (check == ERROR_NONE){
+ 133              		.loc 1 102 0
+ 134 0024 0028     		cmp	r0, #0
+ 135 0026 09D1     		bne	.L9
+ 103:main.c        ****         BlinkDBG();
+ 136              		.loc 1 103 0
+ 137 0028 FFF7FEFF 		bl	DBG_Read
+ 138              	.LVL18:
+ 139 002c 4342     		rsbs	r3, r0, #0
+ 140 002e 5841     		adcs	r0, r0, r3
+ 141 0030 C0B2     		uxtb	r0, r0
+ 142 0032 FFF7FEFF 		bl	DBG_Write
+ 143              	.LVL19:
+ 104:main.c        ****         CyDelay(50);
+ 144              		.loc 1 104 0
+ 145 0036 3220     		movs	r0, #50
+ 146 0038 FFF7FEFF 		bl	CyDelay
+ 147              	.LVL20:
+ 148              	.L9:
+ 105:main.c        ****     }
+ 106:main.c        **** }
+ 149              		.loc 1 106 0
+ 150 003c 02B0     		add	sp, sp, #8
+ 151              		@ sp needed
+ 152 003e 10BD     		pop	{r4, pc}
+ 153              	.L12:
+ 154              		.align	2
+ 155              	.L11:
+ 156 0040 00000000 		.word	.LC0
+ 157 0044 00000000 		.word	send
+ 158              		.cfi_endproc
+ 159              	.LFE36:
+ 160              		.size	sendRequestedData, .-sendRequestedData
+ 161              		.section	.text.main,"ax",%progbits
+ 162              		.align	2
+ 163              		.global	main
+ 164              		.code	16
+ 165              		.thumb_func
+ 166              		.type	main, %function
+ 167              	main:
+ 168              	.LFB34:
+  17:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */ 
+ 169              		.loc 1 17 0
+ 170              		.cfi_startproc
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173 0000 10B5     		push	{r4, lr}
+ 174              		.cfi_def_cfa_offset 8
+ 175              		.cfi_offset 4, -8
+ 176              		.cfi_offset 14, -4
+  18:main.c        ****     DBG_UART_Start();
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 6
+
+
+ 177              		.loc 1 18 0
+ 178              		.syntax divided
+ 179              	@ 18 "main.c" 1
+ 180 0002 62B6     		CPSIE   i
+ 181              	@ 0 "" 2
+  19:main.c        ****     InitCAN( DEVICE_GROUP_MOTOR_CONTROL, getSerialAddress() ); /*UPDATE THIS FOR EACH BOARD*/
+ 182              		.loc 1 19 0
+ 183              		.thumb
+ 184              		.syntax unified
+ 185 0004 FFF7FEFF 		bl	DBG_UART_Start
+ 186              	.LVL21:
+  20:main.c        ****            
+ 187              		.loc 1 20 0
+ 188 0008 FFF7FEFF 		bl	getSerialAddress
+ 189              	.LVL22:
+ 190 000c 0100     		movs	r1, r0
+ 191 000e 0420     		movs	r0, #4
+ 192 0010 FFF7FEFF 		bl	InitCAN
+ 193              	.LVL23:
+  22:main.c        ****     Print("\r\n***************\r\nBOARD INITIALIZED\n\r***************\r\n");
+ 194              		.loc 1 22 0
+ 195 0014 1548     		ldr	r0, .L20
+ 196 0016 FFF7FEFF 		bl	DBG_UART_UartPutString
+ 197              	.LVL24:
+  23:main.c        ****     
+ 198              		.loc 1 23 0
+ 199 001a 1548     		ldr	r0, .L20+4
+ 200 001c FFF7FEFF 		bl	DBG_UART_UartPutString
+ 201              	.LVL25:
+ 202              	.L15:
+  30:main.c        ****         {
+ 203              		.loc 1 30 0
+ 204 0020 144B     		ldr	r3, .L20+8
+ 205 0022 1B68     		ldr	r3, [r3]
+ 206 0024 002B     		cmp	r3, #0
+ 207 0026 02D0     		beq	.L16
+ 208 0028 012B     		cmp	r3, #1
+ 209 002a 04D0     		beq	.L17
+ 210 002c F8E7     		b	.L15
+ 211              	.L16:
+  35:main.c        ****                 break;
+ 212              		.loc 1 35 0
+ 213 002e 0122     		movs	r2, #1
+ 214 0030 104B     		ldr	r3, .L20+8
+ 215 0032 1A60     		str	r2, [r3]
+  36:main.c        ****             
+ 216              		.loc 1 36 0
+ 217 0034 F4E7     		b	.L15
+ 218              	.L17:
+  41:main.c        ****                 {
+ 219              		.loc 1 41 0
+ 220 0036 1048     		ldr	r0, .L20+12
+ 221 0038 FFF7FEFF 		bl	PollAndReceiveCANPacket
+ 222              	.LVL26:
+ 223 003c 0028     		cmp	r0, #0
+ 224 003e 11D1     		bne	.L19
+  43:main.c        ****                     if(GetPacketID( &receive ) == ID_TELEMETRY_PULL)
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 7
+
+
+ 225              		.loc 1 43 0
+ 226 0040 0E48     		ldr	r0, .L20+16
+ 227 0042 FFF7FEFF 		bl	DBG_UART_UartPutString
+ 228              	.LVL27:
+  44:main.c        ****                     {
+ 229              		.loc 1 44 0
+ 230 0046 0C48     		ldr	r0, .L20+12
+ 231 0048 FFF7FEFF 		bl	GetPacketID
+ 232              	.LVL28:
+ 233 004c F528     		cmp	r0, #245
+ 234 004e 09D1     		bne	.L19
+ 235              	.LBB2:
+  46:main.c        ****                         Print("Sending CAN Packet...\r\n");      
+ 236              		.loc 1 46 0
+ 237 0050 0948     		ldr	r0, .L20+12
+ 238 0052 FFF7FEFF 		bl	DecodeTelemetryType
+ 239              	.LVL29:
+ 240 0056 0400     		movs	r4, r0
+ 241              	.LVL30:
+  47:main.c        ****                         sendRequestedData(TTC);
+ 242              		.loc 1 47 0
+ 243 0058 0948     		ldr	r0, .L20+20
+ 244 005a FFF7FEFF 		bl	DBG_UART_UartPutString
+ 245              	.LVL31:
+  48:main.c        ****                     }
+ 246              		.loc 1 48 0
+ 247 005e 2000     		movs	r0, r4
+ 248 0060 FFF7FEFF 		bl	sendRequestedData
+ 249              	.LVL32:
+ 250              	.L19:
+ 251              	.LBE2:
+  52:main.c        ****                 break;
+ 252              		.loc 1 52 0
+ 253 0064 0022     		movs	r2, #0
+ 254 0066 034B     		ldr	r3, .L20+8
+ 255 0068 1A60     		str	r2, [r3]
+  53:main.c        **** 
+ 256              		.loc 1 53 0
+ 257 006a D9E7     		b	.L15
+ 258              	.L21:
+ 259              		.align	2
+ 260              	.L20:
+ 261 006c 20000000 		.word	.LC3
+ 262 0070 24000000 		.word	.LC5
+ 263 0074 00000000 		.word	.LANCHOR0
+ 264 0078 00000000 		.word	receive
+ 265 007c 5C000000 		.word	.LC9
+ 266 0080 6C000000 		.word	.LC11
+ 267              		.cfi_endproc
+ 268              	.LFE34:
+ 269              		.size	main, .-main
+ 270              		.comm	receive,12,4
+ 271              		.comm	send,12,4
+ 272              		.global	state
+ 273              		.comm	debugOutput,32,4
+ 274              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 275              		.align	2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 8
+
+
+ 276              	.LC0:
+ 277 0000 43616E6E 		.ascii	"Cannot Send That Data Type!\012\015\000"
+ 277      6F742053 
+ 277      656E6420 
+ 277      54686174 
+ 277      20446174 
+ 278 001e 0000     		.space	2
+ 279              	.LC3:
+ 280 0020 0D0A00   		.ascii	"\015\012\000"
+ 281 0023 00       		.space	1
+ 282              	.LC5:
+ 283 0024 0D0A2A2A 		.ascii	"\015\012***************\015\012BOARD INITIALIZED\012"
+ 283      2A2A2A2A 
+ 283      2A2A2A2A 
+ 283      2A2A2A2A 
+ 283      2A0D0A42 
+ 284 0049 0D2A2A2A 		.ascii	"\015***************\015\012\000"
+ 284      2A2A2A2A 
+ 284      2A2A2A2A 
+ 284      2A2A2A2A 
+ 284      0D0A00
+ 285              	.LC9:
+ 286 005c 5061636B 		.ascii	"Packet Found!\015\012\000"
+ 286      65742046 
+ 286      6F756E64 
+ 286      210D0A00 
+ 287              	.LC11:
+ 288 006c 53656E64 		.ascii	"Sending CAN Packet...\015\012\000"
+ 288      696E6720 
+ 288      43414E20 
+ 288      5061636B 
+ 288      65742E2E 
+ 289              		.bss
+ 290              		.align	2
+ 291              		.set	.LANCHOR0,. + 0
+ 292              		.type	state, %object
+ 293              		.size	state, 4
+ 294              	state:
+ 295 0000 00000000 		.space	4
+ 296              		.text
+ 297              	.Letext0:
+ 298              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 299              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 300              		.file 4 ".\\HindsightCAN/CANPacket.h"
+ 301              		.file 5 "main.h"
+ 302              		.file 6 "Generated_Source\\PSoC4/DIP1.h"
+ 303              		.file 7 "Generated_Source\\PSoC4/DIP2.h"
+ 304              		.file 8 "Generated_Source\\PSoC4/DIP3.h"
+ 305              		.file 9 "Generated_Source\\PSoC4/DIP4.h"
+ 306              		.file 10 "Generated_Source\\PSoC4/DBG_UART_SPI_UART.h"
+ 307              		.file 11 ".\\HindsightCAN/CANCommon.h"
+ 308              		.file 12 ".\\HindsightCAN/Port.h"
+ 309              		.file 13 "Generated_Source\\PSoC4/DBG.h"
+ 310              		.file 14 "Generated_Source\\PSoC4/CyLib.h"
+ 311              		.file 15 "Generated_Source\\PSoC4/DBG_UART.h"
+ 312              		.section	.debug_info,"",%progbits
+ 313              	.Ldebug_info0:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 9
+
+
+ 314 0000 27040000 		.4byte	0x427
+ 315 0004 0400     		.2byte	0x4
+ 316 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 317 000a 04       		.byte	0x4
+ 318 000b 01       		.uleb128 0x1
+ 319 000c D4010000 		.4byte	.LASF45
+ 320 0010 0C       		.byte	0xc
+ 321 0011 8B020000 		.4byte	.LASF46
+ 322 0015 F7000000 		.4byte	.LASF47
+ 323 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 324 001d 00000000 		.4byte	0
+ 325 0021 00000000 		.4byte	.Ldebug_line0
+ 326 0025 02       		.uleb128 0x2
+ 327 0026 01       		.byte	0x1
+ 328 0027 06       		.byte	0x6
+ 329 0028 C8010000 		.4byte	.LASF0
+ 330 002c 03       		.uleb128 0x3
+ 331 002d 00000000 		.4byte	.LASF3
+ 332 0031 02       		.byte	0x2
+ 333 0032 1D       		.byte	0x1d
+ 334 0033 37000000 		.4byte	0x37
+ 335 0037 02       		.uleb128 0x2
+ 336 0038 01       		.byte	0x1
+ 337 0039 08       		.byte	0x8
+ 338 003a B2000000 		.4byte	.LASF1
+ 339 003e 02       		.uleb128 0x2
+ 340 003f 02       		.byte	0x2
+ 341 0040 05       		.byte	0x5
+ 342 0041 49000000 		.4byte	.LASF2
+ 343 0045 03       		.uleb128 0x3
+ 344 0046 5B010000 		.4byte	.LASF4
+ 345 004a 02       		.byte	0x2
+ 346 004b 2B       		.byte	0x2b
+ 347 004c 50000000 		.4byte	0x50
+ 348 0050 02       		.uleb128 0x2
+ 349 0051 02       		.byte	0x2
+ 350 0052 07       		.byte	0x7
+ 351 0053 E4000000 		.4byte	.LASF5
+ 352 0057 03       		.uleb128 0x3
+ 353 0058 2E000000 		.4byte	.LASF6
+ 354 005c 02       		.byte	0x2
+ 355 005d 3F       		.byte	0x3f
+ 356 005e 62000000 		.4byte	0x62
+ 357 0062 02       		.uleb128 0x2
+ 358 0063 04       		.byte	0x4
+ 359 0064 05       		.byte	0x5
+ 360 0065 38000000 		.4byte	.LASF7
+ 361 0069 02       		.uleb128 0x2
+ 362 006a 04       		.byte	0x4
+ 363 006b 07       		.byte	0x7
+ 364 006c D2000000 		.4byte	.LASF8
+ 365 0070 02       		.uleb128 0x2
+ 366 0071 08       		.byte	0x8
+ 367 0072 05       		.byte	0x5
+ 368 0073 7D020000 		.4byte	.LASF9
+ 369 0077 02       		.uleb128 0x2
+ 370 0078 08       		.byte	0x8
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 10
+
+
+ 371 0079 07       		.byte	0x7
+ 372 007a A9010000 		.4byte	.LASF10
+ 373 007e 04       		.uleb128 0x4
+ 374 007f 04       		.byte	0x4
+ 375 0080 05       		.byte	0x5
+ 376 0081 696E7400 		.ascii	"int\000"
+ 377 0085 02       		.uleb128 0x2
+ 378 0086 04       		.byte	0x4
+ 379 0087 07       		.byte	0x7
+ 380 0088 8F010000 		.4byte	.LASF11
+ 381 008c 03       		.uleb128 0x3
+ 382 008d C0010000 		.4byte	.LASF12
+ 383 0091 03       		.byte	0x3
+ 384 0092 18       		.byte	0x18
+ 385 0093 2C000000 		.4byte	0x2c
+ 386 0097 03       		.uleb128 0x3
+ 387 0098 BA020000 		.4byte	.LASF13
+ 388 009c 03       		.byte	0x3
+ 389 009d 24       		.byte	0x24
+ 390 009e 45000000 		.4byte	0x45
+ 391 00a2 03       		.uleb128 0x3
+ 392 00a3 62020000 		.4byte	.LASF14
+ 393 00a7 03       		.byte	0x3
+ 394 00a8 2C       		.byte	0x2c
+ 395 00a9 57000000 		.4byte	0x57
+ 396 00ad 02       		.uleb128 0x2
+ 397 00ae 04       		.byte	0x4
+ 398 00af 04       		.byte	0x4
+ 399 00b0 99000000 		.4byte	.LASF15
+ 400 00b4 02       		.uleb128 0x2
+ 401 00b5 08       		.byte	0x8
+ 402 00b6 04       		.byte	0x4
+ 403 00b7 66010000 		.4byte	.LASF16
+ 404 00bb 02       		.uleb128 0x2
+ 405 00bc 01       		.byte	0x1
+ 406 00bd 08       		.byte	0x8
+ 407 00be 92020000 		.4byte	.LASF17
+ 408 00c2 02       		.uleb128 0x2
+ 409 00c3 08       		.byte	0x8
+ 410 00c4 04       		.byte	0x4
+ 411 00c5 D9020000 		.4byte	.LASF18
+ 412 00c9 02       		.uleb128 0x2
+ 413 00ca 04       		.byte	0x4
+ 414 00cb 07       		.byte	0x7
+ 415 00cc 74020000 		.4byte	.LASF19
+ 416 00d0 05       		.uleb128 0x5
+ 417 00d1 0C       		.byte	0xc
+ 418 00d2 04       		.byte	0x4
+ 419 00d3 0F       		.byte	0xf
+ 420 00d4 FC000000 		.4byte	0xfc
+ 421 00d8 06       		.uleb128 0x6
+ 422 00d9 696400   		.ascii	"id\000"
+ 423 00dc 04       		.byte	0x4
+ 424 00dd 11       		.byte	0x11
+ 425 00de 97000000 		.4byte	0x97
+ 426 00e2 00       		.byte	0
+ 427 00e3 06       		.uleb128 0x6
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 11
+
+
+ 428 00e4 646C6300 		.ascii	"dlc\000"
+ 429 00e8 04       		.byte	0x4
+ 430 00e9 12       		.byte	0x12
+ 431 00ea 8C000000 		.4byte	0x8c
+ 432 00ee 02       		.byte	0x2
+ 433 00ef 07       		.uleb128 0x7
+ 434 00f0 9F000000 		.4byte	.LASF20
+ 435 00f4 04       		.byte	0x4
+ 436 00f5 13       		.byte	0x13
+ 437 00f6 FC000000 		.4byte	0xfc
+ 438 00fa 03       		.byte	0x3
+ 439 00fb 00       		.byte	0
+ 440 00fc 08       		.uleb128 0x8
+ 441 00fd 8C000000 		.4byte	0x8c
+ 442 0101 0C010000 		.4byte	0x10c
+ 443 0105 09       		.uleb128 0x9
+ 444 0106 C9000000 		.4byte	0xc9
+ 445 010a 07       		.byte	0x7
+ 446 010b 00       		.byte	0
+ 447 010c 03       		.uleb128 0x3
+ 448 010d 6A020000 		.4byte	.LASF21
+ 449 0111 04       		.byte	0x4
+ 450 0112 14       		.byte	0x14
+ 451 0113 D0000000 		.4byte	0xd0
+ 452 0117 0A       		.uleb128 0xa
+ 453 0118 A1020000 		.4byte	.LASF22
+ 454 011c 01       		.byte	0x1
+ 455 011d 3C       		.byte	0x3c
+ 456 011e 7E000000 		.4byte	0x7e
+ 457 0122 00000000 		.4byte	.LFB35
+ 458 0126 38000000 		.4byte	.LFE35-.LFB35
+ 459 012a 01       		.uleb128 0x1
+ 460 012b 9C       		.byte	0x9c
+ 461 012c 64010000 		.4byte	0x164
+ 462 0130 0B       		.uleb128 0xb
+ 463 0131 A1010000 		.4byte	.LASF24
+ 464 0135 01       		.byte	0x1
+ 465 0136 3E       		.byte	0x3e
+ 466 0137 7E000000 		.4byte	0x7e
+ 467 013b 00000000 		.4byte	.LLST0
+ 468 013f 0C       		.uleb128 0xc
+ 469 0140 06000000 		.4byte	.LVL1
+ 470 0144 84030000 		.4byte	0x384
+ 471 0148 0C       		.uleb128 0xc
+ 472 0149 14000000 		.4byte	.LVL3
+ 473 014d 8F030000 		.4byte	0x38f
+ 474 0151 0C       		.uleb128 0xc
+ 475 0152 1E000000 		.4byte	.LVL5
+ 476 0156 9A030000 		.4byte	0x39a
+ 477 015a 0C       		.uleb128 0xc
+ 478 015b 28000000 		.4byte	.LVL7
+ 479 015f A5030000 		.4byte	0x3a5
+ 480 0163 00       		.byte	0
+ 481 0164 0D       		.uleb128 0xd
+ 482 0165 C0000000 		.4byte	.LASF23
+ 483 0169 01       		.byte	0x1
+ 484 016a 54       		.byte	0x54
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 12
+
+
+ 485 016b 00000000 		.4byte	.LFB36
+ 486 016f 48000000 		.4byte	.LFE36-.LFB36
+ 487 0173 01       		.uleb128 0x1
+ 488 0174 9C       		.byte	0x9c
+ 489 0175 1C020000 		.4byte	0x21c
+ 490 0179 0E       		.uleb128 0xe
+ 491 017a 54544300 		.ascii	"TTC\000"
+ 492 017e 01       		.byte	0x1
+ 493 017f 54       		.byte	0x54
+ 494 0180 7E000000 		.4byte	0x7e
+ 495 0184 2A000000 		.4byte	.LLST1
+ 496 0188 0F       		.uleb128 0xf
+ 497 0189 9F000000 		.4byte	.LASF20
+ 498 018d 01       		.byte	0x1
+ 499 018e 56       		.byte	0x56
+ 500 018f A2000000 		.4byte	0xa2
+ 501 0193 00       		.byte	0
+ 502 0194 0B       		.uleb128 0xb
+ 503 0195 5D000000 		.4byte	.LASF25
+ 504 0199 01       		.byte	0x1
+ 505 019a 63       		.byte	0x63
+ 506 019b 7E000000 		.4byte	0x7e
+ 507 019f 56000000 		.4byte	.LLST2
+ 508 01a3 10       		.uleb128 0x10
+ 509 01a4 0C000000 		.4byte	.LVL14
+ 510 01a8 B0030000 		.4byte	0x3b0
+ 511 01ac BA010000 		.4byte	0x1ba
+ 512 01b0 11       		.uleb128 0x11
+ 513 01b1 01       		.uleb128 0x1
+ 514 01b2 50       		.byte	0x50
+ 515 01b3 05       		.uleb128 0x5
+ 516 01b4 03       		.byte	0x3
+ 517 01b5 00000000 		.4byte	.LC0
+ 518 01b9 00       		.byte	0
+ 519 01ba 10       		.uleb128 0x10
+ 520 01bb 1E000000 		.4byte	.LVL16
+ 521 01bf BC030000 		.4byte	0x3bc
+ 522 01c3 E5010000 		.4byte	0x1e5
+ 523 01c7 11       		.uleb128 0x11
+ 524 01c8 01       		.uleb128 0x1
+ 525 01c9 50       		.byte	0x50
+ 526 01ca 02       		.uleb128 0x2
+ 527 01cb 74       		.byte	0x74
+ 528 01cc 00       		.sleb128 0
+ 529 01cd 11       		.uleb128 0x11
+ 530 01ce 01       		.uleb128 0x1
+ 531 01cf 51       		.byte	0x51
+ 532 01d0 01       		.uleb128 0x1
+ 533 01d1 32       		.byte	0x32
+ 534 01d2 11       		.uleb128 0x11
+ 535 01d3 01       		.uleb128 0x1
+ 536 01d4 52       		.byte	0x52
+ 537 01d5 01       		.uleb128 0x1
+ 538 01d6 31       		.byte	0x31
+ 539 01d7 11       		.uleb128 0x11
+ 540 01d8 01       		.uleb128 0x1
+ 541 01d9 53       		.byte	0x53
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 13
+
+
+ 542 01da 03       		.uleb128 0x3
+ 543 01db F3       		.byte	0xf3
+ 544 01dc 01       		.uleb128 0x1
+ 545 01dd 50       		.byte	0x50
+ 546 01de 11       		.uleb128 0x11
+ 547 01df 02       		.uleb128 0x2
+ 548 01e0 7D       		.byte	0x7d
+ 549 01e1 00       		.sleb128 0
+ 550 01e2 01       		.uleb128 0x1
+ 551 01e3 30       		.byte	0x30
+ 552 01e4 00       		.byte	0
+ 553 01e5 10       		.uleb128 0x10
+ 554 01e6 24000000 		.4byte	.LVL17
+ 555 01ea C7030000 		.4byte	0x3c7
+ 556 01ee F9010000 		.4byte	0x1f9
+ 557 01f2 11       		.uleb128 0x11
+ 558 01f3 01       		.uleb128 0x1
+ 559 01f4 50       		.byte	0x50
+ 560 01f5 02       		.uleb128 0x2
+ 561 01f6 74       		.byte	0x74
+ 562 01f7 00       		.sleb128 0
+ 563 01f8 00       		.byte	0
+ 564 01f9 0C       		.uleb128 0xc
+ 565 01fa 2C000000 		.4byte	.LVL18
+ 566 01fe D2030000 		.4byte	0x3d2
+ 567 0202 0C       		.uleb128 0xc
+ 568 0203 36000000 		.4byte	.LVL19
+ 569 0207 DD030000 		.4byte	0x3dd
+ 570 020b 12       		.uleb128 0x12
+ 571 020c 3C000000 		.4byte	.LVL20
+ 572 0210 E8030000 		.4byte	0x3e8
+ 573 0214 11       		.uleb128 0x11
+ 574 0215 01       		.uleb128 0x1
+ 575 0216 50       		.byte	0x50
+ 576 0217 02       		.uleb128 0x2
+ 577 0218 08       		.byte	0x8
+ 578 0219 32       		.byte	0x32
+ 579 021a 00       		.byte	0
+ 580 021b 00       		.byte	0
+ 581 021c 13       		.uleb128 0x13
+ 582 021d 77010000 		.4byte	.LASF48
+ 583 0221 01       		.byte	0x1
+ 584 0222 10       		.byte	0x10
+ 585 0223 7E000000 		.4byte	0x7e
+ 586 0227 00000000 		.4byte	.LFB34
+ 587 022b 84000000 		.4byte	.LFE34-.LFB34
+ 588 022f 01       		.uleb128 0x1
+ 589 0230 9C       		.byte	0x9c
+ 590 0231 30030000 		.4byte	0x330
+ 591 0235 14       		.uleb128 0x14
+ 592 0236 0A000000 		.4byte	.LASF49
+ 593 023a 01       		.byte	0x1
+ 594 023b 1A       		.byte	0x1a
+ 595 023c 7E000000 		.4byte	0x7e
+ 596 0240 15       		.uleb128 0x15
+ 597 0241 50000000 		.4byte	.LBB2
+ 598 0245 14000000 		.4byte	.LBE2-.LBB2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 14
+
+
+ 599 0249 9B020000 		.4byte	0x29b
+ 600 024d 16       		.uleb128 0x16
+ 601 024e 54544300 		.ascii	"TTC\000"
+ 602 0252 01       		.byte	0x1
+ 603 0253 2E       		.byte	0x2e
+ 604 0254 8C000000 		.4byte	0x8c
+ 605 0258 69000000 		.4byte	.LLST3
+ 606 025c 10       		.uleb128 0x10
+ 607 025d 56000000 		.4byte	.LVL29
+ 608 0261 F3030000 		.4byte	0x3f3
+ 609 0265 73020000 		.4byte	0x273
+ 610 0269 11       		.uleb128 0x11
+ 611 026a 01       		.uleb128 0x1
+ 612 026b 50       		.byte	0x50
+ 613 026c 05       		.uleb128 0x5
+ 614 026d 03       		.byte	0x3
+ 615 026e 00000000 		.4byte	receive
+ 616 0272 00       		.byte	0
+ 617 0273 10       		.uleb128 0x10
+ 618 0274 5E000000 		.4byte	.LVL31
+ 619 0278 B0030000 		.4byte	0x3b0
+ 620 027c 8A020000 		.4byte	0x28a
+ 621 0280 11       		.uleb128 0x11
+ 622 0281 01       		.uleb128 0x1
+ 623 0282 50       		.byte	0x50
+ 624 0283 05       		.uleb128 0x5
+ 625 0284 03       		.byte	0x3
+ 626 0285 6C000000 		.4byte	.LC11
+ 627 0289 00       		.byte	0
+ 628 028a 12       		.uleb128 0x12
+ 629 028b 64000000 		.4byte	.LVL32
+ 630 028f 64010000 		.4byte	0x164
+ 631 0293 11       		.uleb128 0x11
+ 632 0294 01       		.uleb128 0x1
+ 633 0295 50       		.byte	0x50
+ 634 0296 02       		.uleb128 0x2
+ 635 0297 74       		.byte	0x74
+ 636 0298 00       		.sleb128 0
+ 637 0299 00       		.byte	0
+ 638 029a 00       		.byte	0
+ 639 029b 0C       		.uleb128 0xc
+ 640 029c 08000000 		.4byte	.LVL21
+ 641 02a0 FE030000 		.4byte	0x3fe
+ 642 02a4 0C       		.uleb128 0xc
+ 643 02a5 0C000000 		.4byte	.LVL22
+ 644 02a9 17010000 		.4byte	0x117
+ 645 02ad 10       		.uleb128 0x10
+ 646 02ae 14000000 		.4byte	.LVL23
+ 647 02b2 09040000 		.4byte	0x409
+ 648 02b6 C0020000 		.4byte	0x2c0
+ 649 02ba 11       		.uleb128 0x11
+ 650 02bb 01       		.uleb128 0x1
+ 651 02bc 50       		.byte	0x50
+ 652 02bd 01       		.uleb128 0x1
+ 653 02be 34       		.byte	0x34
+ 654 02bf 00       		.byte	0
+ 655 02c0 10       		.uleb128 0x10
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 15
+
+
+ 656 02c1 1A000000 		.4byte	.LVL24
+ 657 02c5 B0030000 		.4byte	0x3b0
+ 658 02c9 D7020000 		.4byte	0x2d7
+ 659 02cd 11       		.uleb128 0x11
+ 660 02ce 01       		.uleb128 0x1
+ 661 02cf 50       		.byte	0x50
+ 662 02d0 05       		.uleb128 0x5
+ 663 02d1 03       		.byte	0x3
+ 664 02d2 20000000 		.4byte	.LC3
+ 665 02d6 00       		.byte	0
+ 666 02d7 10       		.uleb128 0x10
+ 667 02d8 20000000 		.4byte	.LVL25
+ 668 02dc B0030000 		.4byte	0x3b0
+ 669 02e0 EE020000 		.4byte	0x2ee
+ 670 02e4 11       		.uleb128 0x11
+ 671 02e5 01       		.uleb128 0x1
+ 672 02e6 50       		.byte	0x50
+ 673 02e7 05       		.uleb128 0x5
+ 674 02e8 03       		.byte	0x3
+ 675 02e9 24000000 		.4byte	.LC5
+ 676 02ed 00       		.byte	0
+ 677 02ee 10       		.uleb128 0x10
+ 678 02ef 3C000000 		.4byte	.LVL26
+ 679 02f3 14040000 		.4byte	0x414
+ 680 02f7 05030000 		.4byte	0x305
+ 681 02fb 11       		.uleb128 0x11
+ 682 02fc 01       		.uleb128 0x1
+ 683 02fd 50       		.byte	0x50
+ 684 02fe 05       		.uleb128 0x5
+ 685 02ff 03       		.byte	0x3
+ 686 0300 00000000 		.4byte	receive
+ 687 0304 00       		.byte	0
+ 688 0305 10       		.uleb128 0x10
+ 689 0306 46000000 		.4byte	.LVL27
+ 690 030a B0030000 		.4byte	0x3b0
+ 691 030e 1C030000 		.4byte	0x31c
+ 692 0312 11       		.uleb128 0x11
+ 693 0313 01       		.uleb128 0x1
+ 694 0314 50       		.byte	0x50
+ 695 0315 05       		.uleb128 0x5
+ 696 0316 03       		.byte	0x3
+ 697 0317 5C000000 		.4byte	.LC9
+ 698 031b 00       		.byte	0
+ 699 031c 12       		.uleb128 0x12
+ 700 031d 4C000000 		.4byte	.LVL28
+ 701 0321 1F040000 		.4byte	0x41f
+ 702 0325 11       		.uleb128 0x11
+ 703 0326 01       		.uleb128 0x1
+ 704 0327 50       		.byte	0x50
+ 705 0328 05       		.uleb128 0x5
+ 706 0329 03       		.byte	0x3
+ 707 032a 00000000 		.4byte	receive
+ 708 032e 00       		.byte	0
+ 709 032f 00       		.byte	0
+ 710 0330 08       		.uleb128 0x8
+ 711 0331 BB000000 		.4byte	0xbb
+ 712 0335 40030000 		.4byte	0x340
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 16
+
+
+ 713 0339 09       		.uleb128 0x9
+ 714 033a C9000000 		.4byte	0xc9
+ 715 033e 1F       		.byte	0x1f
+ 716 033f 00       		.byte	0
+ 717 0340 17       		.uleb128 0x17
+ 718 0341 CD020000 		.4byte	.LASF26
+ 719 0345 05       		.byte	0x5
+ 720 0346 0F       		.byte	0xf
+ 721 0347 30030000 		.4byte	0x330
+ 722 034b 05       		.uleb128 0x5
+ 723 034c 03       		.byte	0x3
+ 724 034d 00000000 		.4byte	debugOutput
+ 725 0351 17       		.uleb128 0x17
+ 726 0352 28000000 		.4byte	.LASF27
+ 727 0356 05       		.byte	0x5
+ 728 0357 16       		.byte	0x16
+ 729 0358 7E000000 		.4byte	0x7e
+ 730 035c 05       		.uleb128 0x5
+ 731 035d 03       		.byte	0x3
+ 732 035e 00000000 		.4byte	state
+ 733 0362 17       		.uleb128 0x17
+ 734 0363 9C010000 		.4byte	.LASF28
+ 735 0367 05       		.byte	0x5
+ 736 0368 1A       		.byte	0x1a
+ 737 0369 0C010000 		.4byte	0x10c
+ 738 036d 05       		.uleb128 0x5
+ 739 036e 03       		.byte	0x3
+ 740 036f 00000000 		.4byte	send
+ 741 0373 17       		.uleb128 0x17
+ 742 0374 41000000 		.4byte	.LASF29
+ 743 0378 05       		.byte	0x5
+ 744 0379 1B       		.byte	0x1b
+ 745 037a 0C010000 		.4byte	0x10c
+ 746 037e 05       		.uleb128 0x5
+ 747 037f 03       		.byte	0x3
+ 748 0380 00000000 		.4byte	receive
+ 749 0384 18       		.uleb128 0x18
+ 750 0385 6D010000 		.4byte	.LASF30
+ 751 0389 6D010000 		.4byte	.LASF30
+ 752 038d 06       		.byte	0x6
+ 753 038e 32       		.byte	0x32
+ 754 038f 18       		.uleb128 0x18
+ 755 0390 C3020000 		.4byte	.LASF31
+ 756 0394 C3020000 		.4byte	.LASF31
+ 757 0398 07       		.byte	0x7
+ 758 0399 32       		.byte	0x32
+ 759 039a 18       		.uleb128 0x18
+ 760 039b 53000000 		.4byte	.LASF32
+ 761 039f 53000000 		.4byte	.LASF32
+ 762 03a3 08       		.byte	0x8
+ 763 03a4 32       		.byte	0x32
+ 764 03a5 18       		.uleb128 0x18
+ 765 03a6 7C010000 		.4byte	.LASF33
+ 766 03aa 7C010000 		.4byte	.LASF33
+ 767 03ae 09       		.byte	0x9
+ 768 03af 32       		.byte	0x32
+ 769 03b0 19       		.uleb128 0x19
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 17
+
+
+ 770 03b1 11000000 		.4byte	.LASF34
+ 771 03b5 11000000 		.4byte	.LASF34
+ 772 03b9 0A       		.byte	0xa
+ 773 03ba 2A03     		.2byte	0x32a
+ 774 03bc 18       		.uleb128 0x18
+ 775 03bd 63000000 		.4byte	.LASF35
+ 776 03c1 63000000 		.4byte	.LASF35
+ 777 03c5 0B       		.byte	0xb
+ 778 03c6 3C       		.byte	0x3c
+ 779 03c7 18       		.uleb128 0x18
+ 780 03c8 A4000000 		.4byte	.LASF36
+ 781 03cc A4000000 		.4byte	.LASF36
+ 782 03d0 0C       		.byte	0xc
+ 783 03d1 1C       		.byte	0x1c
+ 784 03d2 18       		.uleb128 0x18
+ 785 03d3 86010000 		.4byte	.LASF37
+ 786 03d7 86010000 		.4byte	.LASF37
+ 787 03db 0D       		.byte	0xd
+ 788 03dc 32       		.byte	0x32
+ 789 03dd 18       		.uleb128 0x18
+ 790 03de 97020000 		.4byte	.LASF38
+ 791 03e2 97020000 		.4byte	.LASF38
+ 792 03e6 0D       		.byte	0xd
+ 793 03e7 33       		.byte	0x33
+ 794 03e8 18       		.uleb128 0x18
+ 795 03e9 08030000 		.4byte	.LASF39
+ 796 03ed 08030000 		.4byte	.LASF39
+ 797 03f1 0E       		.byte	0xe
+ 798 03f2 EC       		.byte	0xec
+ 799 03f3 18       		.uleb128 0x18
+ 800 03f4 F4020000 		.4byte	.LASF40
+ 801 03f8 F4020000 		.4byte	.LASF40
+ 802 03fc 0B       		.byte	0xb
+ 803 03fd 44       		.byte	0x44
+ 804 03fe 18       		.uleb128 0x18
+ 805 03ff E5020000 		.4byte	.LASF41
+ 806 0403 E5020000 		.4byte	.LASF41
+ 807 0407 0F       		.byte	0xf
+ 808 0408 72       		.byte	0x72
+ 809 0409 18       		.uleb128 0x18
+ 810 040a B2020000 		.4byte	.LASF42
+ 811 040e B2020000 		.4byte	.LASF42
+ 812 0412 0C       		.byte	0xc
+ 813 0413 15       		.byte	0x15
+ 814 0414 18       		.uleb128 0x18
+ 815 0415 81000000 		.4byte	.LASF43
+ 816 0419 81000000 		.4byte	.LASF43
+ 817 041d 0C       		.byte	0xc
+ 818 041e 22       		.byte	0x22
+ 819 041f 18       		.uleb128 0x18
+ 820 0420 4F010000 		.4byte	.LASF44
+ 821 0424 4F010000 		.4byte	.LASF44
+ 822 0428 04       		.byte	0x4
+ 823 0429 29       		.byte	0x29
+ 824 042a 00       		.byte	0
+ 825              		.section	.debug_abbrev,"",%progbits
+ 826              	.Ldebug_abbrev0:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 18
+
+
+ 827 0000 01       		.uleb128 0x1
+ 828 0001 11       		.uleb128 0x11
+ 829 0002 01       		.byte	0x1
+ 830 0003 25       		.uleb128 0x25
+ 831 0004 0E       		.uleb128 0xe
+ 832 0005 13       		.uleb128 0x13
+ 833 0006 0B       		.uleb128 0xb
+ 834 0007 03       		.uleb128 0x3
+ 835 0008 0E       		.uleb128 0xe
+ 836 0009 1B       		.uleb128 0x1b
+ 837 000a 0E       		.uleb128 0xe
+ 838 000b 55       		.uleb128 0x55
+ 839 000c 17       		.uleb128 0x17
+ 840 000d 11       		.uleb128 0x11
+ 841 000e 01       		.uleb128 0x1
+ 842 000f 10       		.uleb128 0x10
+ 843 0010 17       		.uleb128 0x17
+ 844 0011 00       		.byte	0
+ 845 0012 00       		.byte	0
+ 846 0013 02       		.uleb128 0x2
+ 847 0014 24       		.uleb128 0x24
+ 848 0015 00       		.byte	0
+ 849 0016 0B       		.uleb128 0xb
+ 850 0017 0B       		.uleb128 0xb
+ 851 0018 3E       		.uleb128 0x3e
+ 852 0019 0B       		.uleb128 0xb
+ 853 001a 03       		.uleb128 0x3
+ 854 001b 0E       		.uleb128 0xe
+ 855 001c 00       		.byte	0
+ 856 001d 00       		.byte	0
+ 857 001e 03       		.uleb128 0x3
+ 858 001f 16       		.uleb128 0x16
+ 859 0020 00       		.byte	0
+ 860 0021 03       		.uleb128 0x3
+ 861 0022 0E       		.uleb128 0xe
+ 862 0023 3A       		.uleb128 0x3a
+ 863 0024 0B       		.uleb128 0xb
+ 864 0025 3B       		.uleb128 0x3b
+ 865 0026 0B       		.uleb128 0xb
+ 866 0027 49       		.uleb128 0x49
+ 867 0028 13       		.uleb128 0x13
+ 868 0029 00       		.byte	0
+ 869 002a 00       		.byte	0
+ 870 002b 04       		.uleb128 0x4
+ 871 002c 24       		.uleb128 0x24
+ 872 002d 00       		.byte	0
+ 873 002e 0B       		.uleb128 0xb
+ 874 002f 0B       		.uleb128 0xb
+ 875 0030 3E       		.uleb128 0x3e
+ 876 0031 0B       		.uleb128 0xb
+ 877 0032 03       		.uleb128 0x3
+ 878 0033 08       		.uleb128 0x8
+ 879 0034 00       		.byte	0
+ 880 0035 00       		.byte	0
+ 881 0036 05       		.uleb128 0x5
+ 882 0037 13       		.uleb128 0x13
+ 883 0038 01       		.byte	0x1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 19
+
+
+ 884 0039 0B       		.uleb128 0xb
+ 885 003a 0B       		.uleb128 0xb
+ 886 003b 3A       		.uleb128 0x3a
+ 887 003c 0B       		.uleb128 0xb
+ 888 003d 3B       		.uleb128 0x3b
+ 889 003e 0B       		.uleb128 0xb
+ 890 003f 01       		.uleb128 0x1
+ 891 0040 13       		.uleb128 0x13
+ 892 0041 00       		.byte	0
+ 893 0042 00       		.byte	0
+ 894 0043 06       		.uleb128 0x6
+ 895 0044 0D       		.uleb128 0xd
+ 896 0045 00       		.byte	0
+ 897 0046 03       		.uleb128 0x3
+ 898 0047 08       		.uleb128 0x8
+ 899 0048 3A       		.uleb128 0x3a
+ 900 0049 0B       		.uleb128 0xb
+ 901 004a 3B       		.uleb128 0x3b
+ 902 004b 0B       		.uleb128 0xb
+ 903 004c 49       		.uleb128 0x49
+ 904 004d 13       		.uleb128 0x13
+ 905 004e 38       		.uleb128 0x38
+ 906 004f 0B       		.uleb128 0xb
+ 907 0050 00       		.byte	0
+ 908 0051 00       		.byte	0
+ 909 0052 07       		.uleb128 0x7
+ 910 0053 0D       		.uleb128 0xd
+ 911 0054 00       		.byte	0
+ 912 0055 03       		.uleb128 0x3
+ 913 0056 0E       		.uleb128 0xe
+ 914 0057 3A       		.uleb128 0x3a
+ 915 0058 0B       		.uleb128 0xb
+ 916 0059 3B       		.uleb128 0x3b
+ 917 005a 0B       		.uleb128 0xb
+ 918 005b 49       		.uleb128 0x49
+ 919 005c 13       		.uleb128 0x13
+ 920 005d 38       		.uleb128 0x38
+ 921 005e 0B       		.uleb128 0xb
+ 922 005f 00       		.byte	0
+ 923 0060 00       		.byte	0
+ 924 0061 08       		.uleb128 0x8
+ 925 0062 01       		.uleb128 0x1
+ 926 0063 01       		.byte	0x1
+ 927 0064 49       		.uleb128 0x49
+ 928 0065 13       		.uleb128 0x13
+ 929 0066 01       		.uleb128 0x1
+ 930 0067 13       		.uleb128 0x13
+ 931 0068 00       		.byte	0
+ 932 0069 00       		.byte	0
+ 933 006a 09       		.uleb128 0x9
+ 934 006b 21       		.uleb128 0x21
+ 935 006c 00       		.byte	0
+ 936 006d 49       		.uleb128 0x49
+ 937 006e 13       		.uleb128 0x13
+ 938 006f 2F       		.uleb128 0x2f
+ 939 0070 0B       		.uleb128 0xb
+ 940 0071 00       		.byte	0
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 20
+
+
+ 941 0072 00       		.byte	0
+ 942 0073 0A       		.uleb128 0xa
+ 943 0074 2E       		.uleb128 0x2e
+ 944 0075 01       		.byte	0x1
+ 945 0076 3F       		.uleb128 0x3f
+ 946 0077 19       		.uleb128 0x19
+ 947 0078 03       		.uleb128 0x3
+ 948 0079 0E       		.uleb128 0xe
+ 949 007a 3A       		.uleb128 0x3a
+ 950 007b 0B       		.uleb128 0xb
+ 951 007c 3B       		.uleb128 0x3b
+ 952 007d 0B       		.uleb128 0xb
+ 953 007e 49       		.uleb128 0x49
+ 954 007f 13       		.uleb128 0x13
+ 955 0080 11       		.uleb128 0x11
+ 956 0081 01       		.uleb128 0x1
+ 957 0082 12       		.uleb128 0x12
+ 958 0083 06       		.uleb128 0x6
+ 959 0084 40       		.uleb128 0x40
+ 960 0085 18       		.uleb128 0x18
+ 961 0086 9742     		.uleb128 0x2117
+ 962 0088 19       		.uleb128 0x19
+ 963 0089 01       		.uleb128 0x1
+ 964 008a 13       		.uleb128 0x13
+ 965 008b 00       		.byte	0
+ 966 008c 00       		.byte	0
+ 967 008d 0B       		.uleb128 0xb
+ 968 008e 34       		.uleb128 0x34
+ 969 008f 00       		.byte	0
+ 970 0090 03       		.uleb128 0x3
+ 971 0091 0E       		.uleb128 0xe
+ 972 0092 3A       		.uleb128 0x3a
+ 973 0093 0B       		.uleb128 0xb
+ 974 0094 3B       		.uleb128 0x3b
+ 975 0095 0B       		.uleb128 0xb
+ 976 0096 49       		.uleb128 0x49
+ 977 0097 13       		.uleb128 0x13
+ 978 0098 02       		.uleb128 0x2
+ 979 0099 17       		.uleb128 0x17
+ 980 009a 00       		.byte	0
+ 981 009b 00       		.byte	0
+ 982 009c 0C       		.uleb128 0xc
+ 983 009d 898201   		.uleb128 0x4109
+ 984 00a0 00       		.byte	0
+ 985 00a1 11       		.uleb128 0x11
+ 986 00a2 01       		.uleb128 0x1
+ 987 00a3 31       		.uleb128 0x31
+ 988 00a4 13       		.uleb128 0x13
+ 989 00a5 00       		.byte	0
+ 990 00a6 00       		.byte	0
+ 991 00a7 0D       		.uleb128 0xd
+ 992 00a8 2E       		.uleb128 0x2e
+ 993 00a9 01       		.byte	0x1
+ 994 00aa 3F       		.uleb128 0x3f
+ 995 00ab 19       		.uleb128 0x19
+ 996 00ac 03       		.uleb128 0x3
+ 997 00ad 0E       		.uleb128 0xe
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 21
+
+
+ 998 00ae 3A       		.uleb128 0x3a
+ 999 00af 0B       		.uleb128 0xb
+ 1000 00b0 3B       		.uleb128 0x3b
+ 1001 00b1 0B       		.uleb128 0xb
+ 1002 00b2 27       		.uleb128 0x27
+ 1003 00b3 19       		.uleb128 0x19
+ 1004 00b4 11       		.uleb128 0x11
+ 1005 00b5 01       		.uleb128 0x1
+ 1006 00b6 12       		.uleb128 0x12
+ 1007 00b7 06       		.uleb128 0x6
+ 1008 00b8 40       		.uleb128 0x40
+ 1009 00b9 18       		.uleb128 0x18
+ 1010 00ba 9742     		.uleb128 0x2117
+ 1011 00bc 19       		.uleb128 0x19
+ 1012 00bd 01       		.uleb128 0x1
+ 1013 00be 13       		.uleb128 0x13
+ 1014 00bf 00       		.byte	0
+ 1015 00c0 00       		.byte	0
+ 1016 00c1 0E       		.uleb128 0xe
+ 1017 00c2 05       		.uleb128 0x5
+ 1018 00c3 00       		.byte	0
+ 1019 00c4 03       		.uleb128 0x3
+ 1020 00c5 08       		.uleb128 0x8
+ 1021 00c6 3A       		.uleb128 0x3a
+ 1022 00c7 0B       		.uleb128 0xb
+ 1023 00c8 3B       		.uleb128 0x3b
+ 1024 00c9 0B       		.uleb128 0xb
+ 1025 00ca 49       		.uleb128 0x49
+ 1026 00cb 13       		.uleb128 0x13
+ 1027 00cc 02       		.uleb128 0x2
+ 1028 00cd 17       		.uleb128 0x17
+ 1029 00ce 00       		.byte	0
+ 1030 00cf 00       		.byte	0
+ 1031 00d0 0F       		.uleb128 0xf
+ 1032 00d1 34       		.uleb128 0x34
+ 1033 00d2 00       		.byte	0
+ 1034 00d3 03       		.uleb128 0x3
+ 1035 00d4 0E       		.uleb128 0xe
+ 1036 00d5 3A       		.uleb128 0x3a
+ 1037 00d6 0B       		.uleb128 0xb
+ 1038 00d7 3B       		.uleb128 0x3b
+ 1039 00d8 0B       		.uleb128 0xb
+ 1040 00d9 49       		.uleb128 0x49
+ 1041 00da 13       		.uleb128 0x13
+ 1042 00db 1C       		.uleb128 0x1c
+ 1043 00dc 0B       		.uleb128 0xb
+ 1044 00dd 00       		.byte	0
+ 1045 00de 00       		.byte	0
+ 1046 00df 10       		.uleb128 0x10
+ 1047 00e0 898201   		.uleb128 0x4109
+ 1048 00e3 01       		.byte	0x1
+ 1049 00e4 11       		.uleb128 0x11
+ 1050 00e5 01       		.uleb128 0x1
+ 1051 00e6 31       		.uleb128 0x31
+ 1052 00e7 13       		.uleb128 0x13
+ 1053 00e8 01       		.uleb128 0x1
+ 1054 00e9 13       		.uleb128 0x13
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 22
+
+
+ 1055 00ea 00       		.byte	0
+ 1056 00eb 00       		.byte	0
+ 1057 00ec 11       		.uleb128 0x11
+ 1058 00ed 8A8201   		.uleb128 0x410a
+ 1059 00f0 00       		.byte	0
+ 1060 00f1 02       		.uleb128 0x2
+ 1061 00f2 18       		.uleb128 0x18
+ 1062 00f3 9142     		.uleb128 0x2111
+ 1063 00f5 18       		.uleb128 0x18
+ 1064 00f6 00       		.byte	0
+ 1065 00f7 00       		.byte	0
+ 1066 00f8 12       		.uleb128 0x12
+ 1067 00f9 898201   		.uleb128 0x4109
+ 1068 00fc 01       		.byte	0x1
+ 1069 00fd 11       		.uleb128 0x11
+ 1070 00fe 01       		.uleb128 0x1
+ 1071 00ff 31       		.uleb128 0x31
+ 1072 0100 13       		.uleb128 0x13
+ 1073 0101 00       		.byte	0
+ 1074 0102 00       		.byte	0
+ 1075 0103 13       		.uleb128 0x13
+ 1076 0104 2E       		.uleb128 0x2e
+ 1077 0105 01       		.byte	0x1
+ 1078 0106 3F       		.uleb128 0x3f
+ 1079 0107 19       		.uleb128 0x19
+ 1080 0108 03       		.uleb128 0x3
+ 1081 0109 0E       		.uleb128 0xe
+ 1082 010a 3A       		.uleb128 0x3a
+ 1083 010b 0B       		.uleb128 0xb
+ 1084 010c 3B       		.uleb128 0x3b
+ 1085 010d 0B       		.uleb128 0xb
+ 1086 010e 27       		.uleb128 0x27
+ 1087 010f 19       		.uleb128 0x19
+ 1088 0110 49       		.uleb128 0x49
+ 1089 0111 13       		.uleb128 0x13
+ 1090 0112 8701     		.uleb128 0x87
+ 1091 0114 19       		.uleb128 0x19
+ 1092 0115 11       		.uleb128 0x11
+ 1093 0116 01       		.uleb128 0x1
+ 1094 0117 12       		.uleb128 0x12
+ 1095 0118 06       		.uleb128 0x6
+ 1096 0119 40       		.uleb128 0x40
+ 1097 011a 18       		.uleb128 0x18
+ 1098 011b 9742     		.uleb128 0x2117
+ 1099 011d 19       		.uleb128 0x19
+ 1100 011e 01       		.uleb128 0x1
+ 1101 011f 13       		.uleb128 0x13
+ 1102 0120 00       		.byte	0
+ 1103 0121 00       		.byte	0
+ 1104 0122 14       		.uleb128 0x14
+ 1105 0123 34       		.uleb128 0x34
+ 1106 0124 00       		.byte	0
+ 1107 0125 03       		.uleb128 0x3
+ 1108 0126 0E       		.uleb128 0xe
+ 1109 0127 3A       		.uleb128 0x3a
+ 1110 0128 0B       		.uleb128 0xb
+ 1111 0129 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 23
+
+
+ 1112 012a 0B       		.uleb128 0xb
+ 1113 012b 49       		.uleb128 0x49
+ 1114 012c 13       		.uleb128 0x13
+ 1115 012d 00       		.byte	0
+ 1116 012e 00       		.byte	0
+ 1117 012f 15       		.uleb128 0x15
+ 1118 0130 0B       		.uleb128 0xb
+ 1119 0131 01       		.byte	0x1
+ 1120 0132 11       		.uleb128 0x11
+ 1121 0133 01       		.uleb128 0x1
+ 1122 0134 12       		.uleb128 0x12
+ 1123 0135 06       		.uleb128 0x6
+ 1124 0136 01       		.uleb128 0x1
+ 1125 0137 13       		.uleb128 0x13
+ 1126 0138 00       		.byte	0
+ 1127 0139 00       		.byte	0
+ 1128 013a 16       		.uleb128 0x16
+ 1129 013b 34       		.uleb128 0x34
+ 1130 013c 00       		.byte	0
+ 1131 013d 03       		.uleb128 0x3
+ 1132 013e 08       		.uleb128 0x8
+ 1133 013f 3A       		.uleb128 0x3a
+ 1134 0140 0B       		.uleb128 0xb
+ 1135 0141 3B       		.uleb128 0x3b
+ 1136 0142 0B       		.uleb128 0xb
+ 1137 0143 49       		.uleb128 0x49
+ 1138 0144 13       		.uleb128 0x13
+ 1139 0145 02       		.uleb128 0x2
+ 1140 0146 17       		.uleb128 0x17
+ 1141 0147 00       		.byte	0
+ 1142 0148 00       		.byte	0
+ 1143 0149 17       		.uleb128 0x17
+ 1144 014a 34       		.uleb128 0x34
+ 1145 014b 00       		.byte	0
+ 1146 014c 03       		.uleb128 0x3
+ 1147 014d 0E       		.uleb128 0xe
+ 1148 014e 3A       		.uleb128 0x3a
+ 1149 014f 0B       		.uleb128 0xb
+ 1150 0150 3B       		.uleb128 0x3b
+ 1151 0151 0B       		.uleb128 0xb
+ 1152 0152 49       		.uleb128 0x49
+ 1153 0153 13       		.uleb128 0x13
+ 1154 0154 3F       		.uleb128 0x3f
+ 1155 0155 19       		.uleb128 0x19
+ 1156 0156 02       		.uleb128 0x2
+ 1157 0157 18       		.uleb128 0x18
+ 1158 0158 00       		.byte	0
+ 1159 0159 00       		.byte	0
+ 1160 015a 18       		.uleb128 0x18
+ 1161 015b 2E       		.uleb128 0x2e
+ 1162 015c 00       		.byte	0
+ 1163 015d 3F       		.uleb128 0x3f
+ 1164 015e 19       		.uleb128 0x19
+ 1165 015f 3C       		.uleb128 0x3c
+ 1166 0160 19       		.uleb128 0x19
+ 1167 0161 6E       		.uleb128 0x6e
+ 1168 0162 0E       		.uleb128 0xe
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 24
+
+
+ 1169 0163 03       		.uleb128 0x3
+ 1170 0164 0E       		.uleb128 0xe
+ 1171 0165 3A       		.uleb128 0x3a
+ 1172 0166 0B       		.uleb128 0xb
+ 1173 0167 3B       		.uleb128 0x3b
+ 1174 0168 0B       		.uleb128 0xb
+ 1175 0169 00       		.byte	0
+ 1176 016a 00       		.byte	0
+ 1177 016b 19       		.uleb128 0x19
+ 1178 016c 2E       		.uleb128 0x2e
+ 1179 016d 00       		.byte	0
+ 1180 016e 3F       		.uleb128 0x3f
+ 1181 016f 19       		.uleb128 0x19
+ 1182 0170 3C       		.uleb128 0x3c
+ 1183 0171 19       		.uleb128 0x19
+ 1184 0172 6E       		.uleb128 0x6e
+ 1185 0173 0E       		.uleb128 0xe
+ 1186 0174 03       		.uleb128 0x3
+ 1187 0175 0E       		.uleb128 0xe
+ 1188 0176 3A       		.uleb128 0x3a
+ 1189 0177 0B       		.uleb128 0xb
+ 1190 0178 3B       		.uleb128 0x3b
+ 1191 0179 05       		.uleb128 0x5
+ 1192 017a 00       		.byte	0
+ 1193 017b 00       		.byte	0
+ 1194 017c 00       		.byte	0
+ 1195              		.section	.debug_loc,"",%progbits
+ 1196              	.Ldebug_loc0:
+ 1197              	.LLST0:
+ 1198 0000 02000000 		.4byte	.LVL0
+ 1199 0004 10000000 		.4byte	.LVL2
+ 1200 0008 0200     		.2byte	0x2
+ 1201 000a 30       		.byte	0x30
+ 1202 000b 9F       		.byte	0x9f
+ 1203 000c 10000000 		.4byte	.LVL2
+ 1204 0010 36000000 		.4byte	.LVL10
+ 1205 0014 0100     		.2byte	0x1
+ 1206 0016 54       		.byte	0x54
+ 1207 0017 36000000 		.4byte	.LVL10
+ 1208 001b 38000000 		.4byte	.LFE35
+ 1209 001f 0100     		.2byte	0x1
+ 1210 0021 50       		.byte	0x50
+ 1211 0022 00000000 		.4byte	0
+ 1212 0026 00000000 		.4byte	0
+ 1213              	.LLST1:
+ 1214 002a 00000000 		.4byte	.LVL11
+ 1215 002e 08000000 		.4byte	.LVL13
+ 1216 0032 0100     		.2byte	0x1
+ 1217 0034 50       		.byte	0x50
+ 1218 0035 08000000 		.4byte	.LVL13
+ 1219 0039 10000000 		.4byte	.LVL15
+ 1220 003d 0100     		.2byte	0x1
+ 1221 003f 54       		.byte	0x54
+ 1222 0040 10000000 		.4byte	.LVL15
+ 1223 0044 48000000 		.4byte	.LFE36
+ 1224 0048 0400     		.2byte	0x4
+ 1225 004a F3       		.byte	0xf3
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 25
+
+
+ 1226 004b 01       		.uleb128 0x1
+ 1227 004c 50       		.byte	0x50
+ 1228 004d 9F       		.byte	0x9f
+ 1229 004e 00000000 		.4byte	0
+ 1230 0052 00000000 		.4byte	0
+ 1231              	.LLST2:
+ 1232 0056 24000000 		.4byte	.LVL17
+ 1233 005a 2B000000 		.4byte	.LVL18-1
+ 1234 005e 0100     		.2byte	0x1
+ 1235 0060 50       		.byte	0x50
+ 1236 0061 00000000 		.4byte	0
+ 1237 0065 00000000 		.4byte	0
+ 1238              	.LLST3:
+ 1239 0069 58000000 		.4byte	.LVL30
+ 1240 006d 64000000 		.4byte	.LVL32
+ 1241 0071 0100     		.2byte	0x1
+ 1242 0073 54       		.byte	0x54
+ 1243 0074 00000000 		.4byte	0
+ 1244 0078 00000000 		.4byte	0
+ 1245              		.section	.debug_aranges,"",%progbits
+ 1246 0000 2C000000 		.4byte	0x2c
+ 1247 0004 0200     		.2byte	0x2
+ 1248 0006 00000000 		.4byte	.Ldebug_info0
+ 1249 000a 04       		.byte	0x4
+ 1250 000b 00       		.byte	0
+ 1251 000c 0000     		.2byte	0
+ 1252 000e 0000     		.2byte	0
+ 1253 0010 00000000 		.4byte	.LFB35
+ 1254 0014 38000000 		.4byte	.LFE35-.LFB35
+ 1255 0018 00000000 		.4byte	.LFB36
+ 1256 001c 48000000 		.4byte	.LFE36-.LFB36
+ 1257 0020 00000000 		.4byte	.LFB34
+ 1258 0024 84000000 		.4byte	.LFE34-.LFB34
+ 1259 0028 00000000 		.4byte	0
+ 1260 002c 00000000 		.4byte	0
+ 1261              		.section	.debug_ranges,"",%progbits
+ 1262              	.Ldebug_ranges0:
+ 1263 0000 00000000 		.4byte	.LFB35
+ 1264 0004 38000000 		.4byte	.LFE35
+ 1265 0008 00000000 		.4byte	.LFB36
+ 1266 000c 48000000 		.4byte	.LFE36
+ 1267 0010 00000000 		.4byte	.LFB34
+ 1268 0014 84000000 		.4byte	.LFE34
+ 1269 0018 00000000 		.4byte	0
+ 1270 001c 00000000 		.4byte	0
+ 1271              		.section	.debug_line,"",%progbits
+ 1272              	.Ldebug_line0:
+ 1273 0000 2C020000 		.section	.debug_str,"MS",%progbits,1
+ 1273      0200D301 
+ 1273      00000201 
+ 1273      FB0E0D00 
+ 1273      01010101 
+ 1274              	.LASF3:
+ 1275 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1275      6E74385F 
+ 1275      7400
+ 1276              	.LASF49:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 26
+
+
+ 1277 000a 73746174 		.ascii	"status\000"
+ 1277      757300
+ 1278              	.LASF34:
+ 1279 0011 4442475F 		.ascii	"DBG_UART_UartPutString\000"
+ 1279      55415254 
+ 1279      5F556172 
+ 1279      74507574 
+ 1279      53747269 
+ 1280              	.LASF27:
+ 1281 0028 73746174 		.ascii	"state\000"
+ 1281      6500
+ 1282              	.LASF6:
+ 1283 002e 5F5F696E 		.ascii	"__int32_t\000"
+ 1283      7433325F 
+ 1283      7400
+ 1284              	.LASF7:
+ 1285 0038 6C6F6E67 		.ascii	"long int\000"
+ 1285      20696E74 
+ 1285      00
+ 1286              	.LASF29:
+ 1287 0041 72656365 		.ascii	"receive\000"
+ 1287      69766500 
+ 1288              	.LASF2:
+ 1289 0049 73686F72 		.ascii	"short int\000"
+ 1289      7420696E 
+ 1289      7400
+ 1290              	.LASF32:
+ 1291 0053 44495033 		.ascii	"DIP3_Read\000"
+ 1291      5F526561 
+ 1291      6400
+ 1292              	.LASF25:
+ 1293 005d 63686563 		.ascii	"check\000"
+ 1293      6B00
+ 1294              	.LASF35:
+ 1295 0063 41737365 		.ascii	"AssembleTelemetryReportPacket\000"
+ 1295      6D626C65 
+ 1295      54656C65 
+ 1295      6D657472 
+ 1295      79526570 
+ 1296              	.LASF43:
+ 1297 0081 506F6C6C 		.ascii	"PollAndReceiveCANPacket\000"
+ 1297      416E6452 
+ 1297      65636569 
+ 1297      76654341 
+ 1297      4E506163 
+ 1298              	.LASF15:
+ 1299 0099 666C6F61 		.ascii	"float\000"
+ 1299      7400
+ 1300              	.LASF20:
+ 1301 009f 64617461 		.ascii	"data\000"
+ 1301      00
+ 1302              	.LASF36:
+ 1303 00a4 53656E64 		.ascii	"SendCANPacket\000"
+ 1303      43414E50 
+ 1303      61636B65 
+ 1303      7400
+ 1304              	.LASF1:
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 27
+
+
+ 1305 00b2 756E7369 		.ascii	"unsigned char\000"
+ 1305      676E6564 
+ 1305      20636861 
+ 1305      7200
+ 1306              	.LASF23:
+ 1307 00c0 73656E64 		.ascii	"sendRequestedData\000"
+ 1307      52657175 
+ 1307      65737465 
+ 1307      64446174 
+ 1307      6100
+ 1308              	.LASF8:
+ 1309 00d2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1309      20756E73 
+ 1309      69676E65 
+ 1309      6420696E 
+ 1309      7400
+ 1310              	.LASF5:
+ 1311 00e4 73686F72 		.ascii	"short unsigned int\000"
+ 1311      7420756E 
+ 1311      7369676E 
+ 1311      65642069 
+ 1311      6E7400
+ 1312              	.LASF47:
+ 1313 00f7 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\PSoC_Pro"
+ 1313      73657273 
+ 1313      5C646176 
+ 1313      69735C44 
+ 1313      6F63756D 
+ 1314 0125 6A656374 		.ascii	"ject_Template\\PSoC Project Template.cydsn\000"
+ 1314      5F54656D 
+ 1314      706C6174 
+ 1314      655C5053 
+ 1314      6F432050 
+ 1315              	.LASF44:
+ 1316 014f 47657450 		.ascii	"GetPacketID\000"
+ 1316      61636B65 
+ 1316      74494400 
+ 1317              	.LASF4:
+ 1318 015b 5F5F7569 		.ascii	"__uint16_t\000"
+ 1318      6E743136 
+ 1318      5F7400
+ 1319              	.LASF16:
+ 1320 0166 646F7562 		.ascii	"double\000"
+ 1320      6C6500
+ 1321              	.LASF30:
+ 1322 016d 44495031 		.ascii	"DIP1_Read\000"
+ 1322      5F526561 
+ 1322      6400
+ 1323              	.LASF48:
+ 1324 0177 6D61696E 		.ascii	"main\000"
+ 1324      00
+ 1325              	.LASF33:
+ 1326 017c 44495034 		.ascii	"DIP4_Read\000"
+ 1326      5F526561 
+ 1326      6400
+ 1327              	.LASF37:
+ 1328 0186 4442475F 		.ascii	"DBG_Read\000"
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 28
+
+
+ 1328      52656164 
+ 1328      00
+ 1329              	.LASF11:
+ 1330 018f 756E7369 		.ascii	"unsigned int\000"
+ 1330      676E6564 
+ 1330      20696E74 
+ 1330      00
+ 1331              	.LASF28:
+ 1332 019c 73656E64 		.ascii	"send\000"
+ 1332      00
+ 1333              	.LASF24:
+ 1334 01a1 61646472 		.ascii	"address\000"
+ 1334      65737300 
+ 1335              	.LASF10:
+ 1336 01a9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1336      206C6F6E 
+ 1336      6720756E 
+ 1336      7369676E 
+ 1336      65642069 
+ 1337              	.LASF12:
+ 1338 01c0 75696E74 		.ascii	"uint8_t\000"
+ 1338      385F7400 
+ 1339              	.LASF0:
+ 1340 01c8 7369676E 		.ascii	"signed char\000"
+ 1340      65642063 
+ 1340      68617200 
+ 1341              	.LASF45:
+ 1342 01d4 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1342      43313120 
+ 1342      352E342E 
+ 1342      31203230 
+ 1342      31363036 
+ 1343 0207 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1343      20726576 
+ 1343      6973696F 
+ 1343      6E203233 
+ 1343      37373135 
+ 1344 023a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1344      66756E63 
+ 1344      74696F6E 
+ 1344      2D736563 
+ 1344      74696F6E 
+ 1345              	.LASF14:
+ 1346 0262 696E7433 		.ascii	"int32_t\000"
+ 1346      325F7400 
+ 1347              	.LASF21:
+ 1348 026a 43414E50 		.ascii	"CANPacket\000"
+ 1348      61636B65 
+ 1348      7400
+ 1349              	.LASF19:
+ 1350 0274 73697A65 		.ascii	"sizetype\000"
+ 1350      74797065 
+ 1350      00
+ 1351              	.LASF9:
+ 1352 027d 6C6F6E67 		.ascii	"long long int\000"
+ 1352      206C6F6E 
+ 1352      6720696E 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccvDVzaS.s 			page 29
+
+
+ 1352      7400
+ 1353              	.LASF46:
+ 1354 028b 6D61696E 		.ascii	"main.c\000"
+ 1354      2E6300
+ 1355              	.LASF17:
+ 1356 0292 63686172 		.ascii	"char\000"
+ 1356      00
+ 1357              	.LASF38:
+ 1358 0297 4442475F 		.ascii	"DBG_Write\000"
+ 1358      57726974 
+ 1358      6500
+ 1359              	.LASF22:
+ 1360 02a1 67657453 		.ascii	"getSerialAddress\000"
+ 1360      65726961 
+ 1360      6C416464 
+ 1360      72657373 
+ 1360      00
+ 1361              	.LASF42:
+ 1362 02b2 496E6974 		.ascii	"InitCAN\000"
+ 1362      43414E00 
+ 1363              	.LASF13:
+ 1364 02ba 75696E74 		.ascii	"uint16_t\000"
+ 1364      31365F74 
+ 1364      00
+ 1365              	.LASF31:
+ 1366 02c3 44495032 		.ascii	"DIP2_Read\000"
+ 1366      5F526561 
+ 1366      6400
+ 1367              	.LASF26:
+ 1368 02cd 64656275 		.ascii	"debugOutput\000"
+ 1368      674F7574 
+ 1368      70757400 
+ 1369              	.LASF18:
+ 1370 02d9 6C6F6E67 		.ascii	"long double\000"
+ 1370      20646F75 
+ 1370      626C6500 
+ 1371              	.LASF41:
+ 1372 02e5 4442475F 		.ascii	"DBG_UART_Start\000"
+ 1372      55415254 
+ 1372      5F537461 
+ 1372      727400
+ 1373              	.LASF40:
+ 1374 02f4 4465636F 		.ascii	"DecodeTelemetryType\000"
+ 1374      64655465 
+ 1374      6C656D65 
+ 1374      74727954 
+ 1374      79706500 
+ 1375              	.LASF39:
+ 1376 0308 43794465 		.ascii	"CyDelay\000"
+ 1376      6C617900 
+ 1377              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
