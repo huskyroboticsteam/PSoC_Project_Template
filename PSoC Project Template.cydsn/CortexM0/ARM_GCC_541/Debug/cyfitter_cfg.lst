@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
   29:Generated_Source\PSoC4/cyfitter_cfg.c **** #if defined(__GNUC__) || defined(__ARMCC_VERSION)
   30:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYPACKED 
   31:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYPACKED_ATTR __attribute__ ((packed))
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 2
 
 
   32:Generated_Source\PSoC4/cyfitter_cfg.c ****     #define CYALIGNED __attribute__ ((aligned))
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
   86:Generated_Source\PSoC4/cyfitter_cfg.c **** }
   87:Generated_Source\PSoC4/cyfitter_cfg.c **** CY_CFG_UNUSED
   88:Generated_Source\PSoC4/cyfitter_cfg.c **** static void CYCONFIGCPYCODE(void *dest, const void *src, size_t n);
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 3
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 3
 
 
   89:Generated_Source\PSoC4/cyfitter_cfg.c **** CY_CFG_UNUSED
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  143:Generated_Source\PSoC4/cyfitter_cfg.c ****     /* `#END` */
  144:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  145:Generated_Source\PSoC4/cyfitter_cfg.c ****     while(1) {}
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 4
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 4
 
 
  146:Generated_Source\PSoC4/cyfitter_cfg.c **** #endif /* CY_CFG_CLOCK_STARTUP_ERROR_CALLBACK */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  200:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_CLK_SELECT), 0x00040000u);
  201:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  202:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* CYDEV_PERI_PCLK_CTL5 Starting address: CYDEV_PERI_PCLK_CTL5 */
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 5
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 5
 
 
  203:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL5), 0x00000041u);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
   48              	.L2:
   49 0014 30003040 		.word	1076887600
   50 0018 30003140 		.word	1076953136
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 6
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 6
 
 
   51 001c 000E3F40 		.word	1077874176
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  100              		.loc 1 174 0
  101 0002 1222     		movs	r2, #18
  102 0004 194B     		ldr	r3, .L6
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 7
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 7
 
 
  103 0006 1A60     		str	r2, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  146 0046 134B     		ldr	r3, .L6+40
  147 0048 1A60     		str	r2, [r3]
  200:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 8
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 8
 
 
  148              		.loc 1 200 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  197              	.LFB6:
  236:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  237:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 9
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 9
 
 
  238:Generated_Source\PSoC4/cyfitter_cfg.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  275:Generated_Source\PSoC4/cyfitter_cfg.c **** 		uint8 CYDATA i;
  276:Generated_Source\PSoC4/cyfitter_cfg.c **** 
  277:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Zero out critical memory blocks before beginning configuration */
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 10
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 10
 
 
  278:Generated_Source\PSoC4/cyfitter_cfg.c **** 		for (i = 0u; i < (sizeof(cfg_memset_list)/sizeof(cfg_memset_list[0])); i++)
@@ -552,7 +552,7 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  280:Generated_Source\PSoC4/cyfitter_cfg.c **** 			const cfg_memset_t CYCODE * CYDATA ms = &cfg_memset_list[i];
  281:Generated_Source\PSoC4/cyfitter_cfg.c **** 			CYMEMZERO(ms->address, (size_t)(uint32)(ms->size));
  221              		.loc 1 281 0 discriminator 3
- 222 00ac 2A48     		ldr	r0, .L11
+ 222 00ac 2748     		ldr	r0, .L11
  223 00ae 6200     		lsls	r2, r4, #1
  224 00b0 1319     		adds	r3, r2, r4
  225 00b2 5900     		lsls	r1, r3, #1
@@ -584,21 +584,21 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  285:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_HSIOM_BASE), 0x000000AAu);
  246              		.loc 1 285 0 is_stmt 1
  247 00d0 AA22     		movs	r2, #170
- 248 00d2 224B     		ldr	r3, .L11+4
+ 248 00d2 1F4B     		ldr	r3, .L11+4
  249 00d4 1A60     		str	r2, [r3]
  286:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL3), 0x0000EE00u);
  250              		.loc 1 286 0
  251 00d6 EE22     		movs	r2, #238
  252 00d8 1202     		lsls	r2, r2, #8
- 253 00da 214B     		ldr	r3, .L11+8
+ 253 00da 1E4B     		ldr	r3, .L11+8
  254 00dc 1A60     		str	r2, [r3]
  287:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL7), 0x00000099u);
  255              		.loc 1 287 0
  256 00de 9922     		movs	r2, #153
- 257 00e0 204B     		ldr	r3, .L11+12
+ 257 00e0 1D4B     		ldr	r3, .L11+12
  258 00e2 1A60     		str	r2, [r3]
  288:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 11
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 11
 
 
  289:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
@@ -606,1243 +606,1223 @@ ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 1
  259              		.loc 1 290 0
  260 00e4 9923     		movs	r3, #153
  261 00e6 1B04     		lsls	r3, r3, #16
- 262 00e8 1F4A     		ldr	r2, .L11+16
+ 262 00e8 1C4A     		ldr	r2, .L11+16
  263 00ea 1360     		str	r3, [r2]
  291:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 292:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
- 293:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA2_BASE), 0x00990000u);
+ 292:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_4 Starting address: CYDEV_UDB_PA4_BASE */
+ 293:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA4_BASE), 0x00990000u);
  264              		.loc 1 293 0
- 265 00ec 1F4A     		ldr	r2, .L11+20
+ 265 00ec 1C4A     		ldr	r2, .L11+20
  266 00ee 1360     		str	r3, [r2]
  294:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 295:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_4 Starting address: CYDEV_UDB_PA4_BASE */
- 296:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA4_BASE), 0x00990000u);
+ 295:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_5 Starting address: CYDEV_UDB_PA5_BASE */
+ 296:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA5_BASE), 0x00990000u);
  267              		.loc 1 296 0
- 268 00f0 1F4A     		ldr	r2, .L11+24
+ 268 00f0 1C4A     		ldr	r2, .L11+24
  269 00f2 1360     		str	r3, [r2]
  297:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 298:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_5 Starting address: CYDEV_UDB_PA5_BASE */
- 299:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA5_BASE), 0x00990000u);
+ 298:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_7 Starting address: CYDEV_UDB_PA7_BASE */
+ 299:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA7_BASE), 0x00990000u);
  270              		.loc 1 299 0
- 271 00f4 1F4A     		ldr	r2, .L11+28
+ 271 00f4 1C4A     		ldr	r2, .L11+28
  272 00f6 1360     		str	r3, [r2]
  300:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 301:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* UDB_PA_7 Starting address: CYDEV_UDB_PA7_BASE */
- 302:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_REG32((void *)(CYDEV_UDB_PA7_BASE), 0x00990000u);
+ 301:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable digital routing */
+ 302:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDB_BANK_CTL, (uint8)(CY_GET_XTND_REG8((void *)CYREG_UDB_UDB_B
  273              		.loc 1 302 0
- 274 00f8 1F4A     		ldr	r2, .L11+32
- 275 00fa 1360     		str	r3, [r2]
- 303:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 304:Generated_Source\PSoC4/cyfitter_cfg.c **** 		/* Enable digital routing */
- 305:Generated_Source\PSoC4/cyfitter_cfg.c **** 		CY_SET_XTND_REG8((void *)CYREG_UDB_UDB_BANK_CTL, (uint8)(CY_GET_XTND_REG8((void *)CYREG_UDB_UDB_B
- 276              		.loc 1 305 0
- 277 00fc 1F4A     		ldr	r2, .L11+36
- 278 00fe 1178     		ldrb	r1, [r2]
- 279 0100 0623     		movs	r3, #6
- 280 0102 0B43     		orrs	r3, r1
- 281 0104 DBB2     		uxtb	r3, r3
- 282 0106 1370     		strb	r3, [r2]
- 283              	.LBE2:
- 306:Generated_Source\PSoC4/cyfitter_cfg.c **** 	}
- 307:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 308:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform second pass device configuration. These items must be configured in specific order afte
- 309:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
- 310:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT0_BASE), 0x00000002u);
- 284              		.loc 1 310 0
- 285 0108 0223     		movs	r3, #2
- 286 010a 1D4A     		ldr	r2, .L11+40
- 287 010c 1360     		str	r3, [r2]
- 311:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x00000031u);
- 288              		.loc 1 311 0
- 289 010e 3122     		movs	r2, #49
- 290 0110 1C49     		ldr	r1, .L11+44
- 291 0112 0A60     		str	r2, [r1]
- 312:Generated_Source\PSoC4/cyfitter_cfg.c **** 
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 12
+ 274 00f8 1C4A     		ldr	r2, .L11+32
+ 275 00fa 1178     		ldrb	r1, [r2]
+ 276 00fc 0623     		movs	r3, #6
+ 277 00fe 0B43     		orrs	r3, r1
+ 278 0100 DBB2     		uxtb	r3, r3
+ 279 0102 1370     		strb	r3, [r2]
+ 280              	.LBE2:
+ 303:Generated_Source\PSoC4/cyfitter_cfg.c **** 	}
+ 304:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 305:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform second pass device configuration. These items must be configured in specific order afte
+ 306:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
+ 307:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT0_BASE), 0x00000006u);
+ 281              		.loc 1 307 0
+ 282 0104 1A4B     		ldr	r3, .L11+36
+ 283 0106 0622     		movs	r2, #6
+ 284 0108 1A60     		str	r2, [r3]
+ 308:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x000000F1u);
+ 285              		.loc 1 308 0
+ 286 010a EB32     		adds	r2, r2, #235
+ 287 010c 194B     		ldr	r3, .L11+40
+ 288 010e 1A60     		str	r2, [r3]
+ 309:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 310:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
+ 311:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT1_BASE), 0x0000003Cu);
+ 289              		.loc 1 311 0
+ 290 0110 B53A     		subs	r2, r2, #181
+ 291 0112 194B     		ldr	r3, .L11+44
+ 292 0114 1A60     		str	r2, [r3]
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 12
 
 
- 313:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
- 314:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT1_BASE), 0x0000000Fu);
- 292              		.loc 1 314 0
- 293 0114 0F20     		movs	r0, #15
- 294 0116 1C49     		ldr	r1, .L11+48
- 295 0118 0860     		str	r0, [r1]
- 315:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT1_PC), 0x00000492u);
- 296              		.loc 1 315 0
- 297 011a 1C48     		ldr	r0, .L11+52
- 298 011c 1C49     		ldr	r1, .L11+56
- 299 011e 0860     		str	r0, [r1]
+ 312:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT1_PC), 0x00012480u);
+ 293              		.loc 1 312 0
+ 294 0116 194A     		ldr	r2, .L11+48
+ 295 0118 194B     		ldr	r3, .L11+52
+ 296 011a 1A60     		str	r2, [r3]
+ 313:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 314:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
+ 315:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT3_PC), 0x00000D80u);
+ 297              		.loc 1 315 0
+ 298 011c D822     		movs	r2, #216
+ 299 011e 1201     		lsls	r2, r2, #4
+ 300 0120 184B     		ldr	r3, .L11+56
+ 301 0122 1A60     		str	r2, [r3]
  316:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 317:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_2 Starting address: CYDEV_GPIO_PRT2_BASE */
- 318:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT2_BASE), 0x00000080u);
- 300              		.loc 1 318 0
- 301 0120 8020     		movs	r0, #128
- 302 0122 1C49     		ldr	r1, .L11+60
- 303 0124 0860     		str	r0, [r1]
- 319:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT2_PC), 0x00C00000u);
- 304              		.loc 1 319 0
- 305 0126 C020     		movs	r0, #192
- 306 0128 0004     		lsls	r0, r0, #16
- 307 012a 1B49     		ldr	r1, .L11+64
- 308 012c 0860     		str	r0, [r1]
+ 317:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_4 Starting address: CYDEV_GPIO_PRT4_BASE */
+ 318:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT4_BASE), 0x0000000Au);
+ 302              		.loc 1 318 0
+ 303 0124 0A22     		movs	r2, #10
+ 304 0126 184B     		ldr	r3, .L11+60
+ 305 0128 1A60     		str	r2, [r3]
+ 319:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT4_PC), 0x00000630u);
+ 306              		.loc 1 319 0
+ 307 012a C622     		movs	r2, #198
+ 308 012c D200     		lsls	r2, r2, #3
+ 309 012e 174B     		ldr	r3, .L11+64
+ 310 0130 1A60     		str	r2, [r3]
  320:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 321:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_3 Starting address: CYDEV_GPIO_PRT3_BASE */
- 322:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT3_PC), 0x00000D80u);
- 309              		.loc 1 322 0
- 310 012e D820     		movs	r0, #216
- 311 0130 0001     		lsls	r0, r0, #4
- 312 0132 1A49     		ldr	r1, .L11+68
- 313 0134 0860     		str	r0, [r1]
- 323:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 324:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_4 Starting address: CYDEV_GPIO_PRT4_BASE */
- 325:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT4_BASE), 0x0000002Au);
- 314              		.loc 1 325 0
- 315 0136 2A20     		movs	r0, #42
- 316 0138 1949     		ldr	r1, .L11+72
- 317 013a 0860     		str	r0, [r1]
- 326:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT4_PC), 0x00018630u);
- 318              		.loc 1 326 0
- 319 013c 1948     		ldr	r0, .L11+76
- 320 013e 1A49     		ldr	r1, .L11+80
- 321 0140 0860     		str	r0, [r1]
- 327:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 328:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_7 Starting address: CYDEV_GPIO_PRT7_BASE */
- 329:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT7_BASE), 0x00000002u);
- 322              		.loc 1 329 0
- 323 0142 1A49     		ldr	r1, .L11+84
- 324 0144 0B60     		str	r3, [r1]
- 330:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT7_PC), 0x00000031u);
- 325              		.loc 1 330 0
- 326 0146 1A49     		ldr	r1, .L11+88
- 327 0148 0A60     		str	r2, [r1]
- 331:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT7_PC2), 0x00000002u);
- 328              		.loc 1 331 0
- 329 014a 1A4A     		ldr	r2, .L11+92
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 13
-
-
- 330 014c 1360     		str	r3, [r2]
+ 321:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* IOPINS0_7 Starting address: CYDEV_GPIO_PRT7_BASE */
+ 322:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT7_BASE), 0x00000002u);
+ 311              		.loc 1 322 0
+ 312 0132 0223     		movs	r3, #2
+ 313 0134 164A     		ldr	r2, .L11+68
+ 314 0136 1360     		str	r3, [r2]
+ 323:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT7_PC), 0x00000031u);
+ 315              		.loc 1 323 0
+ 316 0138 3121     		movs	r1, #49
+ 317 013a 164A     		ldr	r2, .L11+72
+ 318 013c 1160     		str	r1, [r2]
+ 324:Generated_Source\PSoC4/cyfitter_cfg.c **** 	CY_SET_REG32((void *)(CYREG_GPIO_PRT7_PC2), 0x00000002u);
+ 319              		.loc 1 324 0
+ 320 013e 164A     		ldr	r2, .L11+76
+ 321 0140 1360     		str	r3, [r2]
+ 325:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 326:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 327:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup clocks based on selections from Clock DWR */
+ 328:Generated_Source\PSoC4/cyfitter_cfg.c **** 	ClockSetup();
+ 322              		.loc 1 328 0
+ 323 0142 FFF75DFF 		bl	ClockSetup
+ 324              	.LVL14:
+ 329:Generated_Source\PSoC4/cyfitter_cfg.c **** 
+ 330:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform basic analog initialization to defaults */
+ 331:Generated_Source\PSoC4/cyfitter_cfg.c **** 	AnalogSetDefault();
+ 325              		.loc 1 331 0
+ 326 0146 FFF7FEFF 		bl	AnalogSetDefault
+ 327              	.LVL15:
  332:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 333:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 334:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Setup clocks based on selections from Clock DWR */
- 335:Generated_Source\PSoC4/cyfitter_cfg.c **** 	ClockSetup();
- 331              		.loc 1 335 0
- 332 014e FFF757FF 		bl	ClockSetup
- 333              	.LVL14:
- 336:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 337:Generated_Source\PSoC4/cyfitter_cfg.c **** 	/* Perform basic analog initialization to defaults */
- 338:Generated_Source\PSoC4/cyfitter_cfg.c **** 	AnalogSetDefault();
- 334              		.loc 1 338 0
- 335 0152 FFF7FEFF 		bl	AnalogSetDefault
- 336              	.LVL15:
- 339:Generated_Source\PSoC4/cyfitter_cfg.c **** 
- 340:Generated_Source\PSoC4/cyfitter_cfg.c **** }
- 337              		.loc 1 340 0
- 338              		@ sp needed
- 339              	.LVL16:
- 340 0156 10BD     		pop	{r4, pc}
- 341              	.L12:
- 342              		.align	2
- 343              	.L11:
- 344 0158 00000000 		.word	.LANCHOR0
- 345 015c 00000240 		.word	1073872896
- 346 0160 00030240 		.word	1073873664
- 347 0164 00070240 		.word	1073874688
- 348 0168 10500F40 		.word	1074745360
- 349 016c 20500F40 		.word	1074745376
- 350 0170 40500F40 		.word	1074745408
- 351 0174 50500F40 		.word	1074745424
- 352 0178 70500F40 		.word	1074745456
- 353 017c 00700F40 		.word	1074753536
- 354 0180 00000440 		.word	1074003968
- 355 0184 08000440 		.word	1074003976
- 356 0188 00010440 		.word	1074004224
- 357 018c 92040000 		.word	1170
- 358 0190 08010440 		.word	1074004232
- 359 0194 00020440 		.word	1074004480
- 360 0198 08020440 		.word	1074004488
- 361 019c 08030440 		.word	1074004744
- 362 01a0 00040440 		.word	1074004992
- 363 01a4 30860100 		.word	99888
- 364 01a8 08040440 		.word	1074005000
- 365 01ac 00070440 		.word	1074005760
- 366 01b0 08070440 		.word	1074005768
- 367 01b4 18070440 		.word	1074005784
- 368              		.cfi_endproc
- 369              	.LFE6:
- 370              		.size	cyfitter_cfg, .-cyfitter_cfg
- 371              		.section	.rodata
- 372              		.align	2
- 373              		.set	.LANCHOR0,. + 0
- 374              		.type	cfg_memset_list.4948, %object
- 375              		.size	cfg_memset_list.4948, 12
- 376              	cfg_memset_list.4948:
- 377 0000 00300F40 		.word	1074737152
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 14
+ 333:Generated_Source\PSoC4/cyfitter_cfg.c **** }
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 13
 
 
- 378 0004 0008     		.short	2048
- 379 0006 00400F40 		.4byte	1074741248
- 380 000a 0008     		.short	2048
- 381              		.text
- 382              	.Letext0:
- 383              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
- 384              		.file 3 "Generated_Source\\PSoC4\\cytypes.h"
- 385              		.file 4 "Generated_Source\\PSoC4\\CyLFClk.h"
- 386              		.file 5 "Generated_Source\\PSoC4\\CyLib.h"
- 387              		.section	.debug_info,"",%progbits
- 388              	.Ldebug_info0:
- 389 0000 DF020000 		.4byte	0x2df
- 390 0004 0400     		.2byte	0x4
- 391 0006 00000000 		.4byte	.Ldebug_abbrev0
- 392 000a 04       		.byte	0x4
- 393 000b 01       		.uleb128 0x1
- 394 000c 73010000 		.4byte	.LASF32
- 395 0010 0C       		.byte	0xc
- 396 0011 83020000 		.4byte	.LASF33
- 397 0015 AC000000 		.4byte	.LASF34
- 398 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 399 001d 00000000 		.4byte	0
- 400 0021 00000000 		.4byte	.Ldebug_line0
- 401 0025 02       		.uleb128 0x2
- 402 0026 04       		.byte	0x4
- 403 0027 05       		.byte	0x5
- 404 0028 696E7400 		.ascii	"int\000"
- 405 002c 03       		.uleb128 0x3
- 406 002d 14000000 		.4byte	.LASF12
- 407 0031 02       		.byte	0x2
- 408 0032 D8       		.byte	0xd8
- 409 0033 37000000 		.4byte	0x37
- 410 0037 04       		.uleb128 0x4
- 411 0038 04       		.byte	0x4
- 412 0039 07       		.byte	0x7
- 413 003a 3A010000 		.4byte	.LASF0
- 414 003e 04       		.uleb128 0x4
- 415 003f 08       		.byte	0x8
- 416 0040 05       		.byte	0x5
- 417 0041 17020000 		.4byte	.LASF1
- 418 0045 04       		.uleb128 0x4
- 419 0046 08       		.byte	0x8
- 420 0047 04       		.byte	0x4
- 421 0048 6B020000 		.4byte	.LASF2
- 422 004c 04       		.uleb128 0x4
- 423 004d 01       		.byte	0x1
- 424 004e 06       		.byte	0x6
- 425 004f 77020000 		.4byte	.LASF3
- 426 0053 04       		.uleb128 0x4
- 427 0054 01       		.byte	0x1
- 428 0055 08       		.byte	0x8
- 429 0056 04010000 		.4byte	.LASF4
- 430 005a 04       		.uleb128 0x4
- 431 005b 02       		.byte	0x2
- 432 005c 05       		.byte	0x5
- 433 005d 2A020000 		.4byte	.LASF5
- 434 0061 04       		.uleb128 0x4
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 15
+ 328              		.loc 1 333 0
+ 329              		@ sp needed
+ 330              	.LVL16:
+ 331 014a 10BD     		pop	{r4, pc}
+ 332              	.L12:
+ 333              		.align	2
+ 334              	.L11:
+ 335 014c 00000000 		.word	.LANCHOR0
+ 336 0150 00000240 		.word	1073872896
+ 337 0154 00030240 		.word	1073873664
+ 338 0158 00070240 		.word	1073874688
+ 339 015c 10500F40 		.word	1074745360
+ 340 0160 40500F40 		.word	1074745408
+ 341 0164 50500F40 		.word	1074745424
+ 342 0168 70500F40 		.word	1074745456
+ 343 016c 00700F40 		.word	1074753536
+ 344 0170 00000440 		.word	1074003968
+ 345 0174 08000440 		.word	1074003976
+ 346 0178 00010440 		.word	1074004224
+ 347 017c 80240100 		.word	74880
+ 348 0180 08010440 		.word	1074004232
+ 349 0184 08030440 		.word	1074004744
+ 350 0188 00040440 		.word	1074004992
+ 351 018c 08040440 		.word	1074005000
+ 352 0190 00070440 		.word	1074005760
+ 353 0194 08070440 		.word	1074005768
+ 354 0198 18070440 		.word	1074005784
+ 355              		.cfi_endproc
+ 356              	.LFE6:
+ 357              		.size	cyfitter_cfg, .-cyfitter_cfg
+ 358              		.section	.rodata
+ 359              		.align	2
+ 360              		.set	.LANCHOR0,. + 0
+ 361              		.type	cfg_memset_list.4948, %object
+ 362              		.size	cfg_memset_list.4948, 12
+ 363              	cfg_memset_list.4948:
+ 364 0000 00300F40 		.word	1074737152
+ 365 0004 0008     		.short	2048
+ 366 0006 00400F40 		.4byte	1074741248
+ 367 000a 0008     		.short	2048
+ 368              		.text
+ 369              	.Letext0:
+ 370              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 371              		.file 3 "Generated_Source\\PSoC4\\cytypes.h"
+ 372              		.file 4 "Generated_Source\\PSoC4\\CyLFClk.h"
+ 373              		.file 5 "Generated_Source\\PSoC4\\CyLib.h"
+ 374              		.section	.debug_info,"",%progbits
+ 375              	.Ldebug_info0:
+ 376 0000 DF020000 		.4byte	0x2df
+ 377 0004 0400     		.2byte	0x4
+ 378 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 379 000a 04       		.byte	0x4
+ 380 000b 01       		.uleb128 0x1
+ 381 000c 73010000 		.4byte	.LASF32
+ 382 0010 0C       		.byte	0xc
+ 383 0011 83020000 		.4byte	.LASF33
+ 384 0015 AC000000 		.4byte	.LASF34
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 14
 
 
- 435 0062 02       		.byte	0x2
- 436 0063 07       		.byte	0x7
- 437 0064 56000000 		.4byte	.LASF6
- 438 0068 04       		.uleb128 0x4
- 439 0069 04       		.byte	0x4
- 440 006a 05       		.byte	0x5
- 441 006b 62020000 		.4byte	.LASF7
- 442 006f 04       		.uleb128 0x4
- 443 0070 04       		.byte	0x4
- 444 0071 07       		.byte	0x7
- 445 0072 79000000 		.4byte	.LASF8
- 446 0076 04       		.uleb128 0x4
- 447 0077 08       		.byte	0x8
- 448 0078 07       		.byte	0x7
- 449 0079 5C010000 		.4byte	.LASF9
- 450 007d 04       		.uleb128 0x4
- 451 007e 04       		.byte	0x4
- 452 007f 07       		.byte	0x7
- 453 0080 0E020000 		.4byte	.LASF10
- 454 0084 05       		.uleb128 0x5
- 455 0085 04       		.byte	0x4
- 456 0086 04       		.uleb128 0x4
- 457 0087 01       		.byte	0x1
- 458 0088 08       		.byte	0x8
- 459 0089 25020000 		.4byte	.LASF11
- 460 008d 06       		.uleb128 0x6
- 461 008e 8B000000 		.4byte	.LASF13
- 462 0092 03       		.byte	0x3
- 463 0093 FB01     		.2byte	0x1fb
- 464 0095 53000000 		.4byte	0x53
- 465 0099 06       		.uleb128 0x6
- 466 009a 2C010000 		.4byte	.LASF14
- 467 009e 03       		.byte	0x3
- 468 009f FC01     		.2byte	0x1fc
- 469 00a1 61000000 		.4byte	0x61
- 470 00a5 06       		.uleb128 0x6
- 471 00a6 33010000 		.4byte	.LASF15
- 472 00aa 03       		.byte	0x3
- 473 00ab FD01     		.2byte	0x1fd
- 474 00ad 6F000000 		.4byte	0x6f
- 475 00b1 04       		.uleb128 0x4
- 476 00b2 04       		.byte	0x4
- 477 00b3 04       		.byte	0x4
- 478 00b4 69000000 		.4byte	.LASF16
- 479 00b8 04       		.uleb128 0x4
- 480 00b9 08       		.byte	0x8
- 481 00ba 04       		.byte	0x4
- 482 00bb 19010000 		.4byte	.LASF17
- 483 00bf 06       		.uleb128 0x6
- 484 00c0 74000000 		.4byte	.LASF18
- 485 00c4 03       		.byte	0x3
- 486 00c5 A502     		.2byte	0x2a5
- 487 00c7 CB000000 		.4byte	0xcb
- 488 00cb 07       		.uleb128 0x7
- 489 00cc 8D000000 		.4byte	0x8d
- 490 00d0 06       		.uleb128 0x6
- 491 00d1 0E000000 		.4byte	.LASF19
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 16
+ 385 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 386 001d 00000000 		.4byte	0
+ 387 0021 00000000 		.4byte	.Ldebug_line0
+ 388 0025 02       		.uleb128 0x2
+ 389 0026 04       		.byte	0x4
+ 390 0027 05       		.byte	0x5
+ 391 0028 696E7400 		.ascii	"int\000"
+ 392 002c 03       		.uleb128 0x3
+ 393 002d 14000000 		.4byte	.LASF12
+ 394 0031 02       		.byte	0x2
+ 395 0032 D8       		.byte	0xd8
+ 396 0033 37000000 		.4byte	0x37
+ 397 0037 04       		.uleb128 0x4
+ 398 0038 04       		.byte	0x4
+ 399 0039 07       		.byte	0x7
+ 400 003a 3A010000 		.4byte	.LASF0
+ 401 003e 04       		.uleb128 0x4
+ 402 003f 08       		.byte	0x8
+ 403 0040 05       		.byte	0x5
+ 404 0041 17020000 		.4byte	.LASF1
+ 405 0045 04       		.uleb128 0x4
+ 406 0046 08       		.byte	0x8
+ 407 0047 04       		.byte	0x4
+ 408 0048 6B020000 		.4byte	.LASF2
+ 409 004c 04       		.uleb128 0x4
+ 410 004d 01       		.byte	0x1
+ 411 004e 06       		.byte	0x6
+ 412 004f 77020000 		.4byte	.LASF3
+ 413 0053 04       		.uleb128 0x4
+ 414 0054 01       		.byte	0x1
+ 415 0055 08       		.byte	0x8
+ 416 0056 04010000 		.4byte	.LASF4
+ 417 005a 04       		.uleb128 0x4
+ 418 005b 02       		.byte	0x2
+ 419 005c 05       		.byte	0x5
+ 420 005d 2A020000 		.4byte	.LASF5
+ 421 0061 04       		.uleb128 0x4
+ 422 0062 02       		.byte	0x2
+ 423 0063 07       		.byte	0x7
+ 424 0064 56000000 		.4byte	.LASF6
+ 425 0068 04       		.uleb128 0x4
+ 426 0069 04       		.byte	0x4
+ 427 006a 05       		.byte	0x5
+ 428 006b 62020000 		.4byte	.LASF7
+ 429 006f 04       		.uleb128 0x4
+ 430 0070 04       		.byte	0x4
+ 431 0071 07       		.byte	0x7
+ 432 0072 79000000 		.4byte	.LASF8
+ 433 0076 04       		.uleb128 0x4
+ 434 0077 08       		.byte	0x8
+ 435 0078 07       		.byte	0x7
+ 436 0079 5C010000 		.4byte	.LASF9
+ 437 007d 04       		.uleb128 0x4
+ 438 007e 04       		.byte	0x4
+ 439 007f 07       		.byte	0x7
+ 440 0080 0E020000 		.4byte	.LASF10
+ 441 0084 05       		.uleb128 0x5
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 15
 
 
- 492 00d5 03       		.byte	0x3
- 493 00d6 A702     		.2byte	0x2a7
- 494 00d8 DC000000 		.4byte	0xdc
- 495 00dc 07       		.uleb128 0x7
- 496 00dd A5000000 		.4byte	0xa5
- 497 00e1 08       		.uleb128 0x8
- 498 00e2 1B000000 		.4byte	.LASF35
- 499 00e6 01       		.byte	0x1
- 500 00e7 E6       		.byte	0xe6
- 501 00e8 00000000 		.4byte	.LFB5
- 502 00ec 20000000 		.4byte	.LFE5-.LFB5
- 503 00f0 01       		.uleb128 0x1
- 504 00f1 9C       		.byte	0x9c
- 505 00f2 09       		.uleb128 0x9
- 506 00f3 A2000000 		.4byte	.LASF20
- 507 00f7 01       		.byte	0x1
- 508 00f8 4C       		.byte	0x4c
- 509 00f9 00000000 		.4byte	.LFB1
- 510 00fd 0C000000 		.4byte	.LFE1-.LFB1
- 511 0101 01       		.uleb128 0x1
- 512 0102 9C       		.byte	0x9c
- 513 0103 3F010000 		.4byte	0x13f
- 514 0107 0A       		.uleb128 0xa
- 515 0108 7300     		.ascii	"s\000"
- 516 010a 01       		.byte	0x1
- 517 010b 4C       		.byte	0x4c
- 518 010c 84000000 		.4byte	0x84
- 519 0110 00000000 		.4byte	.LLST0
- 520 0114 0A       		.uleb128 0xa
- 521 0115 6E00     		.ascii	"n\000"
- 522 0117 01       		.byte	0x1
- 523 0118 4C       		.byte	0x4c
- 524 0119 2C000000 		.4byte	0x2c
- 525 011d 21000000 		.4byte	.LLST1
- 526 0121 0B       		.uleb128 0xb
- 527 0122 0A000000 		.4byte	.LVL2
- 528 0126 97020000 		.4byte	0x297
- 529 012a 0C       		.uleb128 0xc
- 530 012b 01       		.uleb128 0x1
- 531 012c 50       		.byte	0x50
- 532 012d 03       		.uleb128 0x3
- 533 012e F3       		.byte	0xf3
- 534 012f 01       		.uleb128 0x1
- 535 0130 50       		.byte	0x50
- 536 0131 0C       		.uleb128 0xc
- 537 0132 01       		.uleb128 0x1
- 538 0133 51       		.byte	0x51
- 539 0134 01       		.uleb128 0x1
- 540 0135 30       		.byte	0x30
- 541 0136 0C       		.uleb128 0xc
- 542 0137 01       		.uleb128 0x1
- 543 0138 52       		.byte	0x52
- 544 0139 03       		.uleb128 0x3
- 545 013a F3       		.byte	0xf3
- 546 013b 01       		.uleb128 0x1
- 547 013c 51       		.byte	0x51
- 548 013d 00       		.byte	0
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 17
+ 442 0085 04       		.byte	0x4
+ 443 0086 04       		.uleb128 0x4
+ 444 0087 01       		.byte	0x1
+ 445 0088 08       		.byte	0x8
+ 446 0089 25020000 		.4byte	.LASF11
+ 447 008d 06       		.uleb128 0x6
+ 448 008e 8B000000 		.4byte	.LASF13
+ 449 0092 03       		.byte	0x3
+ 450 0093 FC01     		.2byte	0x1fc
+ 451 0095 53000000 		.4byte	0x53
+ 452 0099 06       		.uleb128 0x6
+ 453 009a 2C010000 		.4byte	.LASF14
+ 454 009e 03       		.byte	0x3
+ 455 009f FD01     		.2byte	0x1fd
+ 456 00a1 61000000 		.4byte	0x61
+ 457 00a5 06       		.uleb128 0x6
+ 458 00a6 33010000 		.4byte	.LASF15
+ 459 00aa 03       		.byte	0x3
+ 460 00ab FE01     		.2byte	0x1fe
+ 461 00ad 6F000000 		.4byte	0x6f
+ 462 00b1 04       		.uleb128 0x4
+ 463 00b2 04       		.byte	0x4
+ 464 00b3 04       		.byte	0x4
+ 465 00b4 69000000 		.4byte	.LASF16
+ 466 00b8 04       		.uleb128 0x4
+ 467 00b9 08       		.byte	0x8
+ 468 00ba 04       		.byte	0x4
+ 469 00bb 19010000 		.4byte	.LASF17
+ 470 00bf 06       		.uleb128 0x6
+ 471 00c0 74000000 		.4byte	.LASF18
+ 472 00c4 03       		.byte	0x3
+ 473 00c5 A602     		.2byte	0x2a6
+ 474 00c7 CB000000 		.4byte	0xcb
+ 475 00cb 07       		.uleb128 0x7
+ 476 00cc 8D000000 		.4byte	0x8d
+ 477 00d0 06       		.uleb128 0x6
+ 478 00d1 0E000000 		.4byte	.LASF19
+ 479 00d5 03       		.byte	0x3
+ 480 00d6 A802     		.2byte	0x2a8
+ 481 00d8 DC000000 		.4byte	0xdc
+ 482 00dc 07       		.uleb128 0x7
+ 483 00dd A5000000 		.4byte	0xa5
+ 484 00e1 08       		.uleb128 0x8
+ 485 00e2 1B000000 		.4byte	.LASF35
+ 486 00e6 01       		.byte	0x1
+ 487 00e7 E6       		.byte	0xe6
+ 488 00e8 00000000 		.4byte	.LFB5
+ 489 00ec 20000000 		.4byte	.LFE5-.LFB5
+ 490 00f0 01       		.uleb128 0x1
+ 491 00f1 9C       		.byte	0x9c
+ 492 00f2 09       		.uleb128 0x9
+ 493 00f3 A2000000 		.4byte	.LASF20
+ 494 00f7 01       		.byte	0x1
+ 495 00f8 4C       		.byte	0x4c
+ 496 00f9 00000000 		.4byte	.LFB1
+ 497 00fd 0C000000 		.4byte	.LFE1-.LFB1
+ 498 0101 01       		.uleb128 0x1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 16
 
 
- 549 013e 00       		.byte	0
- 550 013f 09       		.uleb128 0x9
- 551 0140 4B000000 		.4byte	.LASF21
- 552 0144 01       		.byte	0x1
- 553 0145 AA       		.byte	0xaa
- 554 0146 00000000 		.4byte	.LFB4
- 555 014a A4000000 		.4byte	.LFE4-.LFB4
- 556 014e 01       		.uleb128 0x1
- 557 014f 9C       		.byte	0x9c
- 558 0150 B4010000 		.4byte	0x1b4
- 559 0154 0D       		.uleb128 0xd
- 560 0155 0C000000 		.4byte	.LVL3
- 561 0159 A0020000 		.4byte	0x2a0
- 562 015d 0E       		.uleb128 0xe
- 563 015e 12000000 		.4byte	.LVL4
- 564 0162 AB020000 		.4byte	0x2ab
- 565 0166 74010000 		.4byte	0x174
- 566 016a 0C       		.uleb128 0xc
- 567 016b 01       		.uleb128 0x1
- 568 016c 50       		.byte	0x50
- 569 016d 05       		.uleb128 0x5
- 570 016e 0C       		.byte	0xc
- 571 016f 001BB700 		.4byte	0xb71b00
- 572 0173 00       		.byte	0
- 573 0174 0E       		.uleb128 0xe
- 574 0175 18000000 		.4byte	.LVL5
- 575 0179 B6020000 		.4byte	0x2b6
- 576 017d 88010000 		.4byte	0x188
- 577 0181 0C       		.uleb128 0xc
- 578 0182 01       		.uleb128 0x1
- 579 0183 50       		.byte	0x50
- 580 0184 02       		.uleb128 0x2
- 581 0185 08       		.byte	0x8
- 582 0186 30       		.byte	0x30
- 583 0187 00       		.byte	0
- 584 0188 0D       		.uleb128 0xd
- 585 0189 1C000000 		.4byte	.LVL6
- 586 018d C1020000 		.4byte	0x2c1
- 587 0191 0E       		.uleb128 0xe
- 588 0192 60000000 		.4byte	.LVL7
- 589 0196 CC020000 		.4byte	0x2cc
- 590 019a A4010000 		.4byte	0x1a4
- 591 019e 0C       		.uleb128 0xc
- 592 019f 01       		.uleb128 0x1
- 593 01a0 50       		.byte	0x50
- 594 01a1 01       		.uleb128 0x1
- 595 01a2 38       		.byte	0x38
- 596 01a3 00       		.byte	0
- 597 01a4 0B       		.uleb128 0xb
- 598 01a5 66000000 		.4byte	.LVL8
- 599 01a9 D7020000 		.4byte	0x2d7
- 600 01ad 0C       		.uleb128 0xc
- 601 01ae 01       		.uleb128 0x1
- 602 01af 50       		.byte	0x50
- 603 01b0 01       		.uleb128 0x1
- 604 01b1 38       		.byte	0x38
- 605 01b2 00       		.byte	0
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 18
+ 499 0102 9C       		.byte	0x9c
+ 500 0103 3F010000 		.4byte	0x13f
+ 501 0107 0A       		.uleb128 0xa
+ 502 0108 7300     		.ascii	"s\000"
+ 503 010a 01       		.byte	0x1
+ 504 010b 4C       		.byte	0x4c
+ 505 010c 84000000 		.4byte	0x84
+ 506 0110 00000000 		.4byte	.LLST0
+ 507 0114 0A       		.uleb128 0xa
+ 508 0115 6E00     		.ascii	"n\000"
+ 509 0117 01       		.byte	0x1
+ 510 0118 4C       		.byte	0x4c
+ 511 0119 2C000000 		.4byte	0x2c
+ 512 011d 21000000 		.4byte	.LLST1
+ 513 0121 0B       		.uleb128 0xb
+ 514 0122 0A000000 		.4byte	.LVL2
+ 515 0126 97020000 		.4byte	0x297
+ 516 012a 0C       		.uleb128 0xc
+ 517 012b 01       		.uleb128 0x1
+ 518 012c 50       		.byte	0x50
+ 519 012d 03       		.uleb128 0x3
+ 520 012e F3       		.byte	0xf3
+ 521 012f 01       		.uleb128 0x1
+ 522 0130 50       		.byte	0x50
+ 523 0131 0C       		.uleb128 0xc
+ 524 0132 01       		.uleb128 0x1
+ 525 0133 51       		.byte	0x51
+ 526 0134 01       		.uleb128 0x1
+ 527 0135 30       		.byte	0x30
+ 528 0136 0C       		.uleb128 0xc
+ 529 0137 01       		.uleb128 0x1
+ 530 0138 52       		.byte	0x52
+ 531 0139 03       		.uleb128 0x3
+ 532 013a F3       		.byte	0xf3
+ 533 013b 01       		.uleb128 0x1
+ 534 013c 51       		.byte	0x51
+ 535 013d 00       		.byte	0
+ 536 013e 00       		.byte	0
+ 537 013f 09       		.uleb128 0x9
+ 538 0140 4B000000 		.4byte	.LASF21
+ 539 0144 01       		.byte	0x1
+ 540 0145 AA       		.byte	0xaa
+ 541 0146 00000000 		.4byte	.LFB4
+ 542 014a A4000000 		.4byte	.LFE4-.LFB4
+ 543 014e 01       		.uleb128 0x1
+ 544 014f 9C       		.byte	0x9c
+ 545 0150 B4010000 		.4byte	0x1b4
+ 546 0154 0D       		.uleb128 0xd
+ 547 0155 0C000000 		.4byte	.LVL3
+ 548 0159 A0020000 		.4byte	0x2a0
+ 549 015d 0E       		.uleb128 0xe
+ 550 015e 12000000 		.4byte	.LVL4
+ 551 0162 AB020000 		.4byte	0x2ab
+ 552 0166 74010000 		.4byte	0x174
+ 553 016a 0C       		.uleb128 0xc
+ 554 016b 01       		.uleb128 0x1
+ 555 016c 50       		.byte	0x50
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 17
 
 
- 606 01b3 00       		.byte	0
- 607 01b4 0F       		.uleb128 0xf
- 608 01b5 47010000 		.4byte	.LASF36
- 609 01b9 01       		.byte	0x1
- 610 01ba 0101     		.2byte	0x101
- 611 01bc A4000000 		.4byte	.LFB6
- 612 01c0 14010000 		.4byte	.LFE6-.LFB6
- 613 01c4 01       		.uleb128 0x1
- 614 01c5 9C       		.byte	0x9c
- 615 01c6 97020000 		.4byte	0x297
- 616 01ca 10       		.uleb128 0x10
- 617 01cb A8000000 		.4byte	.LBB2
- 618 01cf 60000000 		.4byte	.LBE2-.LBB2
- 619 01d3 84020000 		.4byte	0x284
- 620 01d7 11       		.uleb128 0x11
- 621 01d8 06       		.byte	0x6
- 622 01d9 01       		.byte	0x1
- 623 01da 0801     		.2byte	0x108
- 624 01dc FB010000 		.4byte	0x1fb
- 625 01e0 12       		.uleb128 0x12
- 626 01e1 54010000 		.4byte	.LASF22
- 627 01e5 01       		.byte	0x1
- 628 01e6 0901     		.2byte	0x109
- 629 01e8 84000000 		.4byte	0x84
- 630 01ec 00       		.byte	0
- 631 01ed 12       		.uleb128 0x12
- 632 01ee 6F000000 		.4byte	.LASF23
- 633 01f2 01       		.byte	0x1
- 634 01f3 0A01     		.2byte	0x10a
- 635 01f5 99000000 		.4byte	0x99
- 636 01f9 04       		.byte	0x4
- 637 01fa 00       		.byte	0
- 638 01fb 06       		.uleb128 0x6
- 639 01fc 01020000 		.4byte	.LASF24
- 640 0200 01       		.byte	0x1
- 641 0201 0B01     		.2byte	0x10b
- 642 0203 D7010000 		.4byte	0x1d7
- 643 0207 13       		.uleb128 0x13
- 644 0208 17020000 		.4byte	0x217
- 645 020c 17020000 		.4byte	0x217
- 646 0210 14       		.uleb128 0x14
- 647 0211 7D000000 		.4byte	0x7d
- 648 0215 01       		.byte	0x1
- 649 0216 00       		.byte	0
- 650 0217 15       		.uleb128 0x15
- 651 0218 FB010000 		.4byte	0x1fb
- 652 021c 16       		.uleb128 0x16
- 653 021d 3B000000 		.4byte	.LASF25
- 654 0221 01       		.byte	0x1
- 655 0222 0D01     		.2byte	0x10d
- 656 0224 2E020000 		.4byte	0x22e
- 657 0228 05       		.uleb128 0x5
- 658 0229 03       		.byte	0x3
- 659 022a 00000000 		.4byte	cfg_memset_list.4948
- 660 022e 15       		.uleb128 0x15
- 661 022f 07020000 		.4byte	0x207
- 662 0233 17       		.uleb128 0x17
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 19
+ 556 016d 05       		.uleb128 0x5
+ 557 016e 0C       		.byte	0xc
+ 558 016f 001BB700 		.4byte	0xb71b00
+ 559 0173 00       		.byte	0
+ 560 0174 0E       		.uleb128 0xe
+ 561 0175 18000000 		.4byte	.LVL5
+ 562 0179 B6020000 		.4byte	0x2b6
+ 563 017d 88010000 		.4byte	0x188
+ 564 0181 0C       		.uleb128 0xc
+ 565 0182 01       		.uleb128 0x1
+ 566 0183 50       		.byte	0x50
+ 567 0184 02       		.uleb128 0x2
+ 568 0185 08       		.byte	0x8
+ 569 0186 30       		.byte	0x30
+ 570 0187 00       		.byte	0
+ 571 0188 0D       		.uleb128 0xd
+ 572 0189 1C000000 		.4byte	.LVL6
+ 573 018d C1020000 		.4byte	0x2c1
+ 574 0191 0E       		.uleb128 0xe
+ 575 0192 60000000 		.4byte	.LVL7
+ 576 0196 CC020000 		.4byte	0x2cc
+ 577 019a A4010000 		.4byte	0x1a4
+ 578 019e 0C       		.uleb128 0xc
+ 579 019f 01       		.uleb128 0x1
+ 580 01a0 50       		.byte	0x50
+ 581 01a1 01       		.uleb128 0x1
+ 582 01a2 38       		.byte	0x38
+ 583 01a3 00       		.byte	0
+ 584 01a4 0B       		.uleb128 0xb
+ 585 01a5 66000000 		.4byte	.LVL8
+ 586 01a9 D7020000 		.4byte	0x2d7
+ 587 01ad 0C       		.uleb128 0xc
+ 588 01ae 01       		.uleb128 0x1
+ 589 01af 50       		.byte	0x50
+ 590 01b0 01       		.uleb128 0x1
+ 591 01b1 38       		.byte	0x38
+ 592 01b2 00       		.byte	0
+ 593 01b3 00       		.byte	0
+ 594 01b4 0F       		.uleb128 0xf
+ 595 01b5 47010000 		.4byte	.LASF36
+ 596 01b9 01       		.byte	0x1
+ 597 01ba 0101     		.2byte	0x101
+ 598 01bc A4000000 		.4byte	.LFB6
+ 599 01c0 F8000000 		.4byte	.LFE6-.LFB6
+ 600 01c4 01       		.uleb128 0x1
+ 601 01c5 9C       		.byte	0x9c
+ 602 01c6 97020000 		.4byte	0x297
+ 603 01ca 10       		.uleb128 0x10
+ 604 01cb A8000000 		.4byte	.LBB2
+ 605 01cf 5C000000 		.4byte	.LBE2-.LBB2
+ 606 01d3 84020000 		.4byte	0x284
+ 607 01d7 11       		.uleb128 0x11
+ 608 01d8 06       		.byte	0x6
+ 609 01d9 01       		.byte	0x1
+ 610 01da 0801     		.2byte	0x108
+ 611 01dc FB010000 		.4byte	0x1fb
+ 612 01e0 12       		.uleb128 0x12
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 18
 
 
- 663 0234 6900     		.ascii	"i\000"
- 664 0236 01       		.byte	0x1
- 665 0237 1301     		.2byte	0x113
- 666 0239 8D000000 		.4byte	0x8d
- 667 023d 4D000000 		.4byte	.LLST2
- 668 0241 18       		.uleb128 0x18
- 669 0242 AC000000 		.4byte	.LBB3
- 670 0246 1C000000 		.4byte	.LBE3-.LBB3
- 671 024a 17       		.uleb128 0x17
- 672 024b 6D7300   		.ascii	"ms\000"
- 673 024e 01       		.byte	0x1
- 674 024f 1801     		.2byte	0x118
- 675 0251 59020000 		.4byte	0x259
- 676 0255 77000000 		.4byte	.LLST3
- 677 0259 19       		.uleb128 0x19
- 678 025a 04       		.byte	0x4
- 679 025b 17020000 		.4byte	0x217
- 680 025f 0B       		.uleb128 0xb
- 681 0260 C8000000 		.4byte	.LVL11
- 682 0264 F2000000 		.4byte	0xf2
- 683 0268 0C       		.uleb128 0xc
- 684 0269 01       		.uleb128 0x1
- 685 026a 51       		.byte	0x51
- 686 026b 15       		.uleb128 0x15
- 687 026c 74       		.byte	0x74
- 688 026d 00       		.sleb128 0
- 689 026e 31       		.byte	0x31
- 690 026f 24       		.byte	0x24
- 691 0270 74       		.byte	0x74
- 692 0271 00       		.sleb128 0
- 693 0272 22       		.byte	0x22
- 694 0273 31       		.byte	0x31
- 695 0274 24       		.byte	0x24
- 696 0275 03       		.byte	0x3
- 697 0276 04000000 		.4byte	.LANCHOR0+4
- 698 027a 22       		.byte	0x22
- 699 027b 94       		.byte	0x94
- 700 027c 02       		.byte	0x2
- 701 027d 0A       		.byte	0xa
- 702 027e FFFF     		.2byte	0xffff
- 703 0280 1A       		.byte	0x1a
- 704 0281 00       		.byte	0
- 705 0282 00       		.byte	0
- 706 0283 00       		.byte	0
- 707 0284 0D       		.uleb128 0xd
- 708 0285 52010000 		.4byte	.LVL14
- 709 0289 3F010000 		.4byte	0x13f
- 710 028d 0D       		.uleb128 0xd
- 711 028e 56010000 		.4byte	.LVL15
- 712 0292 E1000000 		.4byte	0xe1
- 713 0296 00       		.byte	0
- 714 0297 1A       		.uleb128 0x1a
- 715 0298 12010000 		.4byte	.LASF37
- 716 029c 12010000 		.4byte	.LASF37
- 717 02a0 1B       		.uleb128 0x1b
- 718 02a1 91000000 		.4byte	.LASF26
- 719 02a5 91000000 		.4byte	.LASF26
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 20
+ 613 01e1 54010000 		.4byte	.LASF22
+ 614 01e5 01       		.byte	0x1
+ 615 01e6 0901     		.2byte	0x109
+ 616 01e8 84000000 		.4byte	0x84
+ 617 01ec 00       		.byte	0
+ 618 01ed 12       		.uleb128 0x12
+ 619 01ee 6F000000 		.4byte	.LASF23
+ 620 01f2 01       		.byte	0x1
+ 621 01f3 0A01     		.2byte	0x10a
+ 622 01f5 99000000 		.4byte	0x99
+ 623 01f9 04       		.byte	0x4
+ 624 01fa 00       		.byte	0
+ 625 01fb 06       		.uleb128 0x6
+ 626 01fc 01020000 		.4byte	.LASF24
+ 627 0200 01       		.byte	0x1
+ 628 0201 0B01     		.2byte	0x10b
+ 629 0203 D7010000 		.4byte	0x1d7
+ 630 0207 13       		.uleb128 0x13
+ 631 0208 17020000 		.4byte	0x217
+ 632 020c 17020000 		.4byte	0x217
+ 633 0210 14       		.uleb128 0x14
+ 634 0211 7D000000 		.4byte	0x7d
+ 635 0215 01       		.byte	0x1
+ 636 0216 00       		.byte	0
+ 637 0217 15       		.uleb128 0x15
+ 638 0218 FB010000 		.4byte	0x1fb
+ 639 021c 16       		.uleb128 0x16
+ 640 021d 3B000000 		.4byte	.LASF25
+ 641 0221 01       		.byte	0x1
+ 642 0222 0D01     		.2byte	0x10d
+ 643 0224 2E020000 		.4byte	0x22e
+ 644 0228 05       		.uleb128 0x5
+ 645 0229 03       		.byte	0x3
+ 646 022a 00000000 		.4byte	cfg_memset_list.4948
+ 647 022e 15       		.uleb128 0x15
+ 648 022f 07020000 		.4byte	0x207
+ 649 0233 17       		.uleb128 0x17
+ 650 0234 6900     		.ascii	"i\000"
+ 651 0236 01       		.byte	0x1
+ 652 0237 1301     		.2byte	0x113
+ 653 0239 8D000000 		.4byte	0x8d
+ 654 023d 4D000000 		.4byte	.LLST2
+ 655 0241 18       		.uleb128 0x18
+ 656 0242 AC000000 		.4byte	.LBB3
+ 657 0246 1C000000 		.4byte	.LBE3-.LBB3
+ 658 024a 17       		.uleb128 0x17
+ 659 024b 6D7300   		.ascii	"ms\000"
+ 660 024e 01       		.byte	0x1
+ 661 024f 1801     		.2byte	0x118
+ 662 0251 59020000 		.4byte	0x259
+ 663 0255 77000000 		.4byte	.LLST3
+ 664 0259 19       		.uleb128 0x19
+ 665 025a 04       		.byte	0x4
+ 666 025b 17020000 		.4byte	0x217
+ 667 025f 0B       		.uleb128 0xb
+ 668 0260 C8000000 		.4byte	.LVL11
+ 669 0264 F2000000 		.4byte	0xf2
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 19
 
 
- 720 02a9 04       		.byte	0x4
- 721 02aa 4E       		.byte	0x4e
- 722 02ab 1B       		.uleb128 0x1b
- 723 02ac 00000000 		.4byte	.LASF27
- 724 02b0 00000000 		.4byte	.LASF27
- 725 02b4 05       		.byte	0x5
- 726 02b5 EF       		.byte	0xef
- 727 02b6 1B       		.uleb128 0x1b
- 728 02b7 34020000 		.4byte	.LASF28
- 729 02bb 34020000 		.4byte	.LASF28
- 730 02bf 05       		.byte	0x5
- 731 02c0 6C       		.byte	0x6c
- 732 02c1 1B       		.uleb128 0x1b
- 733 02c2 49020000 		.4byte	.LASF29
- 734 02c6 49020000 		.4byte	.LASF29
- 735 02ca 05       		.byte	0x5
- 736 02cb 5C       		.byte	0x5c
- 737 02cc 1B       		.uleb128 0x1b
- 738 02cd 2C000000 		.4byte	.LASF30
- 739 02d1 2C000000 		.4byte	.LASF30
- 740 02d5 05       		.byte	0x5
- 741 02d6 D0       		.byte	0xd0
- 742 02d7 1B       		.uleb128 0x1b
- 743 02d8 20010000 		.4byte	.LASF31
- 744 02dc 20010000 		.4byte	.LASF31
- 745 02e0 05       		.byte	0x5
- 746 02e1 D6       		.byte	0xd6
- 747 02e2 00       		.byte	0
- 748              		.section	.debug_abbrev,"",%progbits
- 749              	.Ldebug_abbrev0:
- 750 0000 01       		.uleb128 0x1
- 751 0001 11       		.uleb128 0x11
- 752 0002 01       		.byte	0x1
- 753 0003 25       		.uleb128 0x25
- 754 0004 0E       		.uleb128 0xe
- 755 0005 13       		.uleb128 0x13
- 756 0006 0B       		.uleb128 0xb
- 757 0007 03       		.uleb128 0x3
- 758 0008 0E       		.uleb128 0xe
- 759 0009 1B       		.uleb128 0x1b
- 760 000a 0E       		.uleb128 0xe
- 761 000b 55       		.uleb128 0x55
- 762 000c 17       		.uleb128 0x17
- 763 000d 11       		.uleb128 0x11
- 764 000e 01       		.uleb128 0x1
- 765 000f 10       		.uleb128 0x10
- 766 0010 17       		.uleb128 0x17
- 767 0011 00       		.byte	0
- 768 0012 00       		.byte	0
- 769 0013 02       		.uleb128 0x2
- 770 0014 24       		.uleb128 0x24
- 771 0015 00       		.byte	0
- 772 0016 0B       		.uleb128 0xb
- 773 0017 0B       		.uleb128 0xb
- 774 0018 3E       		.uleb128 0x3e
- 775 0019 0B       		.uleb128 0xb
- 776 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 21
+ 670 0268 0C       		.uleb128 0xc
+ 671 0269 01       		.uleb128 0x1
+ 672 026a 51       		.byte	0x51
+ 673 026b 15       		.uleb128 0x15
+ 674 026c 74       		.byte	0x74
+ 675 026d 00       		.sleb128 0
+ 676 026e 31       		.byte	0x31
+ 677 026f 24       		.byte	0x24
+ 678 0270 74       		.byte	0x74
+ 679 0271 00       		.sleb128 0
+ 680 0272 22       		.byte	0x22
+ 681 0273 31       		.byte	0x31
+ 682 0274 24       		.byte	0x24
+ 683 0275 03       		.byte	0x3
+ 684 0276 04000000 		.4byte	.LANCHOR0+4
+ 685 027a 22       		.byte	0x22
+ 686 027b 94       		.byte	0x94
+ 687 027c 02       		.byte	0x2
+ 688 027d 0A       		.byte	0xa
+ 689 027e FFFF     		.2byte	0xffff
+ 690 0280 1A       		.byte	0x1a
+ 691 0281 00       		.byte	0
+ 692 0282 00       		.byte	0
+ 693 0283 00       		.byte	0
+ 694 0284 0D       		.uleb128 0xd
+ 695 0285 46010000 		.4byte	.LVL14
+ 696 0289 3F010000 		.4byte	0x13f
+ 697 028d 0D       		.uleb128 0xd
+ 698 028e 4A010000 		.4byte	.LVL15
+ 699 0292 E1000000 		.4byte	0xe1
+ 700 0296 00       		.byte	0
+ 701 0297 1A       		.uleb128 0x1a
+ 702 0298 12010000 		.4byte	.LASF37
+ 703 029c 12010000 		.4byte	.LASF37
+ 704 02a0 1B       		.uleb128 0x1b
+ 705 02a1 91000000 		.4byte	.LASF26
+ 706 02a5 91000000 		.4byte	.LASF26
+ 707 02a9 04       		.byte	0x4
+ 708 02aa 4E       		.byte	0x4e
+ 709 02ab 1B       		.uleb128 0x1b
+ 710 02ac 00000000 		.4byte	.LASF27
+ 711 02b0 00000000 		.4byte	.LASF27
+ 712 02b4 05       		.byte	0x5
+ 713 02b5 EF       		.byte	0xef
+ 714 02b6 1B       		.uleb128 0x1b
+ 715 02b7 34020000 		.4byte	.LASF28
+ 716 02bb 34020000 		.4byte	.LASF28
+ 717 02bf 05       		.byte	0x5
+ 718 02c0 6C       		.byte	0x6c
+ 719 02c1 1B       		.uleb128 0x1b
+ 720 02c2 49020000 		.4byte	.LASF29
+ 721 02c6 49020000 		.4byte	.LASF29
+ 722 02ca 05       		.byte	0x5
+ 723 02cb 5C       		.byte	0x5c
+ 724 02cc 1B       		.uleb128 0x1b
+ 725 02cd 2C000000 		.4byte	.LASF30
+ 726 02d1 2C000000 		.4byte	.LASF30
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 20
 
 
- 777 001b 08       		.uleb128 0x8
- 778 001c 00       		.byte	0
- 779 001d 00       		.byte	0
- 780 001e 03       		.uleb128 0x3
- 781 001f 16       		.uleb128 0x16
- 782 0020 00       		.byte	0
- 783 0021 03       		.uleb128 0x3
- 784 0022 0E       		.uleb128 0xe
- 785 0023 3A       		.uleb128 0x3a
- 786 0024 0B       		.uleb128 0xb
- 787 0025 3B       		.uleb128 0x3b
- 788 0026 0B       		.uleb128 0xb
- 789 0027 49       		.uleb128 0x49
- 790 0028 13       		.uleb128 0x13
- 791 0029 00       		.byte	0
- 792 002a 00       		.byte	0
- 793 002b 04       		.uleb128 0x4
- 794 002c 24       		.uleb128 0x24
- 795 002d 00       		.byte	0
- 796 002e 0B       		.uleb128 0xb
- 797 002f 0B       		.uleb128 0xb
- 798 0030 3E       		.uleb128 0x3e
- 799 0031 0B       		.uleb128 0xb
- 800 0032 03       		.uleb128 0x3
- 801 0033 0E       		.uleb128 0xe
- 802 0034 00       		.byte	0
- 803 0035 00       		.byte	0
- 804 0036 05       		.uleb128 0x5
- 805 0037 0F       		.uleb128 0xf
- 806 0038 00       		.byte	0
- 807 0039 0B       		.uleb128 0xb
- 808 003a 0B       		.uleb128 0xb
- 809 003b 00       		.byte	0
- 810 003c 00       		.byte	0
- 811 003d 06       		.uleb128 0x6
- 812 003e 16       		.uleb128 0x16
- 813 003f 00       		.byte	0
- 814 0040 03       		.uleb128 0x3
- 815 0041 0E       		.uleb128 0xe
- 816 0042 3A       		.uleb128 0x3a
- 817 0043 0B       		.uleb128 0xb
- 818 0044 3B       		.uleb128 0x3b
- 819 0045 05       		.uleb128 0x5
- 820 0046 49       		.uleb128 0x49
- 821 0047 13       		.uleb128 0x13
- 822 0048 00       		.byte	0
- 823 0049 00       		.byte	0
- 824 004a 07       		.uleb128 0x7
- 825 004b 35       		.uleb128 0x35
- 826 004c 00       		.byte	0
- 827 004d 49       		.uleb128 0x49
- 828 004e 13       		.uleb128 0x13
- 829 004f 00       		.byte	0
- 830 0050 00       		.byte	0
- 831 0051 08       		.uleb128 0x8
- 832 0052 2E       		.uleb128 0x2e
- 833 0053 00       		.byte	0
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 22
+ 727 02d5 05       		.byte	0x5
+ 728 02d6 D0       		.byte	0xd0
+ 729 02d7 1B       		.uleb128 0x1b
+ 730 02d8 20010000 		.4byte	.LASF31
+ 731 02dc 20010000 		.4byte	.LASF31
+ 732 02e0 05       		.byte	0x5
+ 733 02e1 D6       		.byte	0xd6
+ 734 02e2 00       		.byte	0
+ 735              		.section	.debug_abbrev,"",%progbits
+ 736              	.Ldebug_abbrev0:
+ 737 0000 01       		.uleb128 0x1
+ 738 0001 11       		.uleb128 0x11
+ 739 0002 01       		.byte	0x1
+ 740 0003 25       		.uleb128 0x25
+ 741 0004 0E       		.uleb128 0xe
+ 742 0005 13       		.uleb128 0x13
+ 743 0006 0B       		.uleb128 0xb
+ 744 0007 03       		.uleb128 0x3
+ 745 0008 0E       		.uleb128 0xe
+ 746 0009 1B       		.uleb128 0x1b
+ 747 000a 0E       		.uleb128 0xe
+ 748 000b 55       		.uleb128 0x55
+ 749 000c 17       		.uleb128 0x17
+ 750 000d 11       		.uleb128 0x11
+ 751 000e 01       		.uleb128 0x1
+ 752 000f 10       		.uleb128 0x10
+ 753 0010 17       		.uleb128 0x17
+ 754 0011 00       		.byte	0
+ 755 0012 00       		.byte	0
+ 756 0013 02       		.uleb128 0x2
+ 757 0014 24       		.uleb128 0x24
+ 758 0015 00       		.byte	0
+ 759 0016 0B       		.uleb128 0xb
+ 760 0017 0B       		.uleb128 0xb
+ 761 0018 3E       		.uleb128 0x3e
+ 762 0019 0B       		.uleb128 0xb
+ 763 001a 03       		.uleb128 0x3
+ 764 001b 08       		.uleb128 0x8
+ 765 001c 00       		.byte	0
+ 766 001d 00       		.byte	0
+ 767 001e 03       		.uleb128 0x3
+ 768 001f 16       		.uleb128 0x16
+ 769 0020 00       		.byte	0
+ 770 0021 03       		.uleb128 0x3
+ 771 0022 0E       		.uleb128 0xe
+ 772 0023 3A       		.uleb128 0x3a
+ 773 0024 0B       		.uleb128 0xb
+ 774 0025 3B       		.uleb128 0x3b
+ 775 0026 0B       		.uleb128 0xb
+ 776 0027 49       		.uleb128 0x49
+ 777 0028 13       		.uleb128 0x13
+ 778 0029 00       		.byte	0
+ 779 002a 00       		.byte	0
+ 780 002b 04       		.uleb128 0x4
+ 781 002c 24       		.uleb128 0x24
+ 782 002d 00       		.byte	0
+ 783 002e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 21
 
 
- 834 0054 03       		.uleb128 0x3
- 835 0055 0E       		.uleb128 0xe
- 836 0056 3A       		.uleb128 0x3a
- 837 0057 0B       		.uleb128 0xb
- 838 0058 3B       		.uleb128 0x3b
- 839 0059 0B       		.uleb128 0xb
- 840 005a 27       		.uleb128 0x27
- 841 005b 19       		.uleb128 0x19
- 842 005c 11       		.uleb128 0x11
- 843 005d 01       		.uleb128 0x1
- 844 005e 12       		.uleb128 0x12
- 845 005f 06       		.uleb128 0x6
- 846 0060 40       		.uleb128 0x40
- 847 0061 18       		.uleb128 0x18
- 848 0062 9742     		.uleb128 0x2117
- 849 0064 19       		.uleb128 0x19
- 850 0065 00       		.byte	0
- 851 0066 00       		.byte	0
- 852 0067 09       		.uleb128 0x9
- 853 0068 2E       		.uleb128 0x2e
- 854 0069 01       		.byte	0x1
- 855 006a 03       		.uleb128 0x3
- 856 006b 0E       		.uleb128 0xe
- 857 006c 3A       		.uleb128 0x3a
- 858 006d 0B       		.uleb128 0xb
- 859 006e 3B       		.uleb128 0x3b
- 860 006f 0B       		.uleb128 0xb
- 861 0070 27       		.uleb128 0x27
- 862 0071 19       		.uleb128 0x19
- 863 0072 11       		.uleb128 0x11
- 864 0073 01       		.uleb128 0x1
- 865 0074 12       		.uleb128 0x12
- 866 0075 06       		.uleb128 0x6
- 867 0076 40       		.uleb128 0x40
- 868 0077 18       		.uleb128 0x18
- 869 0078 9742     		.uleb128 0x2117
- 870 007a 19       		.uleb128 0x19
- 871 007b 01       		.uleb128 0x1
- 872 007c 13       		.uleb128 0x13
- 873 007d 00       		.byte	0
- 874 007e 00       		.byte	0
- 875 007f 0A       		.uleb128 0xa
- 876 0080 05       		.uleb128 0x5
- 877 0081 00       		.byte	0
- 878 0082 03       		.uleb128 0x3
- 879 0083 08       		.uleb128 0x8
- 880 0084 3A       		.uleb128 0x3a
- 881 0085 0B       		.uleb128 0xb
- 882 0086 3B       		.uleb128 0x3b
- 883 0087 0B       		.uleb128 0xb
- 884 0088 49       		.uleb128 0x49
- 885 0089 13       		.uleb128 0x13
- 886 008a 02       		.uleb128 0x2
- 887 008b 17       		.uleb128 0x17
- 888 008c 00       		.byte	0
- 889 008d 00       		.byte	0
- 890 008e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 23
+ 784 002f 0B       		.uleb128 0xb
+ 785 0030 3E       		.uleb128 0x3e
+ 786 0031 0B       		.uleb128 0xb
+ 787 0032 03       		.uleb128 0x3
+ 788 0033 0E       		.uleb128 0xe
+ 789 0034 00       		.byte	0
+ 790 0035 00       		.byte	0
+ 791 0036 05       		.uleb128 0x5
+ 792 0037 0F       		.uleb128 0xf
+ 793 0038 00       		.byte	0
+ 794 0039 0B       		.uleb128 0xb
+ 795 003a 0B       		.uleb128 0xb
+ 796 003b 00       		.byte	0
+ 797 003c 00       		.byte	0
+ 798 003d 06       		.uleb128 0x6
+ 799 003e 16       		.uleb128 0x16
+ 800 003f 00       		.byte	0
+ 801 0040 03       		.uleb128 0x3
+ 802 0041 0E       		.uleb128 0xe
+ 803 0042 3A       		.uleb128 0x3a
+ 804 0043 0B       		.uleb128 0xb
+ 805 0044 3B       		.uleb128 0x3b
+ 806 0045 05       		.uleb128 0x5
+ 807 0046 49       		.uleb128 0x49
+ 808 0047 13       		.uleb128 0x13
+ 809 0048 00       		.byte	0
+ 810 0049 00       		.byte	0
+ 811 004a 07       		.uleb128 0x7
+ 812 004b 35       		.uleb128 0x35
+ 813 004c 00       		.byte	0
+ 814 004d 49       		.uleb128 0x49
+ 815 004e 13       		.uleb128 0x13
+ 816 004f 00       		.byte	0
+ 817 0050 00       		.byte	0
+ 818 0051 08       		.uleb128 0x8
+ 819 0052 2E       		.uleb128 0x2e
+ 820 0053 00       		.byte	0
+ 821 0054 03       		.uleb128 0x3
+ 822 0055 0E       		.uleb128 0xe
+ 823 0056 3A       		.uleb128 0x3a
+ 824 0057 0B       		.uleb128 0xb
+ 825 0058 3B       		.uleb128 0x3b
+ 826 0059 0B       		.uleb128 0xb
+ 827 005a 27       		.uleb128 0x27
+ 828 005b 19       		.uleb128 0x19
+ 829 005c 11       		.uleb128 0x11
+ 830 005d 01       		.uleb128 0x1
+ 831 005e 12       		.uleb128 0x12
+ 832 005f 06       		.uleb128 0x6
+ 833 0060 40       		.uleb128 0x40
+ 834 0061 18       		.uleb128 0x18
+ 835 0062 9742     		.uleb128 0x2117
+ 836 0064 19       		.uleb128 0x19
+ 837 0065 00       		.byte	0
+ 838 0066 00       		.byte	0
+ 839 0067 09       		.uleb128 0x9
+ 840 0068 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 22
 
 
- 891 008f 898201   		.uleb128 0x4109
- 892 0092 01       		.byte	0x1
- 893 0093 11       		.uleb128 0x11
- 894 0094 01       		.uleb128 0x1
- 895 0095 31       		.uleb128 0x31
- 896 0096 13       		.uleb128 0x13
- 897 0097 00       		.byte	0
- 898 0098 00       		.byte	0
- 899 0099 0C       		.uleb128 0xc
- 900 009a 8A8201   		.uleb128 0x410a
- 901 009d 00       		.byte	0
- 902 009e 02       		.uleb128 0x2
- 903 009f 18       		.uleb128 0x18
- 904 00a0 9142     		.uleb128 0x2111
- 905 00a2 18       		.uleb128 0x18
- 906 00a3 00       		.byte	0
- 907 00a4 00       		.byte	0
- 908 00a5 0D       		.uleb128 0xd
- 909 00a6 898201   		.uleb128 0x4109
- 910 00a9 00       		.byte	0
- 911 00aa 11       		.uleb128 0x11
- 912 00ab 01       		.uleb128 0x1
- 913 00ac 31       		.uleb128 0x31
- 914 00ad 13       		.uleb128 0x13
- 915 00ae 00       		.byte	0
- 916 00af 00       		.byte	0
- 917 00b0 0E       		.uleb128 0xe
- 918 00b1 898201   		.uleb128 0x4109
- 919 00b4 01       		.byte	0x1
- 920 00b5 11       		.uleb128 0x11
- 921 00b6 01       		.uleb128 0x1
- 922 00b7 31       		.uleb128 0x31
- 923 00b8 13       		.uleb128 0x13
- 924 00b9 01       		.uleb128 0x1
- 925 00ba 13       		.uleb128 0x13
- 926 00bb 00       		.byte	0
- 927 00bc 00       		.byte	0
- 928 00bd 0F       		.uleb128 0xf
- 929 00be 2E       		.uleb128 0x2e
- 930 00bf 01       		.byte	0x1
- 931 00c0 3F       		.uleb128 0x3f
- 932 00c1 19       		.uleb128 0x19
- 933 00c2 03       		.uleb128 0x3
- 934 00c3 0E       		.uleb128 0xe
- 935 00c4 3A       		.uleb128 0x3a
- 936 00c5 0B       		.uleb128 0xb
- 937 00c6 3B       		.uleb128 0x3b
- 938 00c7 05       		.uleb128 0x5
- 939 00c8 27       		.uleb128 0x27
- 940 00c9 19       		.uleb128 0x19
- 941 00ca 11       		.uleb128 0x11
- 942 00cb 01       		.uleb128 0x1
- 943 00cc 12       		.uleb128 0x12
- 944 00cd 06       		.uleb128 0x6
- 945 00ce 40       		.uleb128 0x40
- 946 00cf 18       		.uleb128 0x18
- 947 00d0 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 24
+ 841 0069 01       		.byte	0x1
+ 842 006a 03       		.uleb128 0x3
+ 843 006b 0E       		.uleb128 0xe
+ 844 006c 3A       		.uleb128 0x3a
+ 845 006d 0B       		.uleb128 0xb
+ 846 006e 3B       		.uleb128 0x3b
+ 847 006f 0B       		.uleb128 0xb
+ 848 0070 27       		.uleb128 0x27
+ 849 0071 19       		.uleb128 0x19
+ 850 0072 11       		.uleb128 0x11
+ 851 0073 01       		.uleb128 0x1
+ 852 0074 12       		.uleb128 0x12
+ 853 0075 06       		.uleb128 0x6
+ 854 0076 40       		.uleb128 0x40
+ 855 0077 18       		.uleb128 0x18
+ 856 0078 9742     		.uleb128 0x2117
+ 857 007a 19       		.uleb128 0x19
+ 858 007b 01       		.uleb128 0x1
+ 859 007c 13       		.uleb128 0x13
+ 860 007d 00       		.byte	0
+ 861 007e 00       		.byte	0
+ 862 007f 0A       		.uleb128 0xa
+ 863 0080 05       		.uleb128 0x5
+ 864 0081 00       		.byte	0
+ 865 0082 03       		.uleb128 0x3
+ 866 0083 08       		.uleb128 0x8
+ 867 0084 3A       		.uleb128 0x3a
+ 868 0085 0B       		.uleb128 0xb
+ 869 0086 3B       		.uleb128 0x3b
+ 870 0087 0B       		.uleb128 0xb
+ 871 0088 49       		.uleb128 0x49
+ 872 0089 13       		.uleb128 0x13
+ 873 008a 02       		.uleb128 0x2
+ 874 008b 17       		.uleb128 0x17
+ 875 008c 00       		.byte	0
+ 876 008d 00       		.byte	0
+ 877 008e 0B       		.uleb128 0xb
+ 878 008f 898201   		.uleb128 0x4109
+ 879 0092 01       		.byte	0x1
+ 880 0093 11       		.uleb128 0x11
+ 881 0094 01       		.uleb128 0x1
+ 882 0095 31       		.uleb128 0x31
+ 883 0096 13       		.uleb128 0x13
+ 884 0097 00       		.byte	0
+ 885 0098 00       		.byte	0
+ 886 0099 0C       		.uleb128 0xc
+ 887 009a 8A8201   		.uleb128 0x410a
+ 888 009d 00       		.byte	0
+ 889 009e 02       		.uleb128 0x2
+ 890 009f 18       		.uleb128 0x18
+ 891 00a0 9142     		.uleb128 0x2111
+ 892 00a2 18       		.uleb128 0x18
+ 893 00a3 00       		.byte	0
+ 894 00a4 00       		.byte	0
+ 895 00a5 0D       		.uleb128 0xd
+ 896 00a6 898201   		.uleb128 0x4109
+ 897 00a9 00       		.byte	0
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 23
 
 
- 948 00d2 19       		.uleb128 0x19
- 949 00d3 01       		.uleb128 0x1
- 950 00d4 13       		.uleb128 0x13
- 951 00d5 00       		.byte	0
- 952 00d6 00       		.byte	0
- 953 00d7 10       		.uleb128 0x10
- 954 00d8 0B       		.uleb128 0xb
- 955 00d9 01       		.byte	0x1
- 956 00da 11       		.uleb128 0x11
- 957 00db 01       		.uleb128 0x1
- 958 00dc 12       		.uleb128 0x12
- 959 00dd 06       		.uleb128 0x6
- 960 00de 01       		.uleb128 0x1
- 961 00df 13       		.uleb128 0x13
- 962 00e0 00       		.byte	0
- 963 00e1 00       		.byte	0
- 964 00e2 11       		.uleb128 0x11
- 965 00e3 13       		.uleb128 0x13
- 966 00e4 01       		.byte	0x1
- 967 00e5 0B       		.uleb128 0xb
- 968 00e6 0B       		.uleb128 0xb
- 969 00e7 3A       		.uleb128 0x3a
- 970 00e8 0B       		.uleb128 0xb
- 971 00e9 3B       		.uleb128 0x3b
- 972 00ea 05       		.uleb128 0x5
- 973 00eb 01       		.uleb128 0x1
- 974 00ec 13       		.uleb128 0x13
- 975 00ed 00       		.byte	0
- 976 00ee 00       		.byte	0
- 977 00ef 12       		.uleb128 0x12
- 978 00f0 0D       		.uleb128 0xd
- 979 00f1 00       		.byte	0
- 980 00f2 03       		.uleb128 0x3
- 981 00f3 0E       		.uleb128 0xe
- 982 00f4 3A       		.uleb128 0x3a
- 983 00f5 0B       		.uleb128 0xb
- 984 00f6 3B       		.uleb128 0x3b
- 985 00f7 05       		.uleb128 0x5
- 986 00f8 49       		.uleb128 0x49
- 987 00f9 13       		.uleb128 0x13
- 988 00fa 38       		.uleb128 0x38
- 989 00fb 0B       		.uleb128 0xb
- 990 00fc 00       		.byte	0
- 991 00fd 00       		.byte	0
- 992 00fe 13       		.uleb128 0x13
- 993 00ff 01       		.uleb128 0x1
- 994 0100 01       		.byte	0x1
- 995 0101 49       		.uleb128 0x49
- 996 0102 13       		.uleb128 0x13
- 997 0103 01       		.uleb128 0x1
- 998 0104 13       		.uleb128 0x13
- 999 0105 00       		.byte	0
- 1000 0106 00       		.byte	0
- 1001 0107 14       		.uleb128 0x14
- 1002 0108 21       		.uleb128 0x21
- 1003 0109 00       		.byte	0
- 1004 010a 49       		.uleb128 0x49
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 25
+ 898 00aa 11       		.uleb128 0x11
+ 899 00ab 01       		.uleb128 0x1
+ 900 00ac 31       		.uleb128 0x31
+ 901 00ad 13       		.uleb128 0x13
+ 902 00ae 00       		.byte	0
+ 903 00af 00       		.byte	0
+ 904 00b0 0E       		.uleb128 0xe
+ 905 00b1 898201   		.uleb128 0x4109
+ 906 00b4 01       		.byte	0x1
+ 907 00b5 11       		.uleb128 0x11
+ 908 00b6 01       		.uleb128 0x1
+ 909 00b7 31       		.uleb128 0x31
+ 910 00b8 13       		.uleb128 0x13
+ 911 00b9 01       		.uleb128 0x1
+ 912 00ba 13       		.uleb128 0x13
+ 913 00bb 00       		.byte	0
+ 914 00bc 00       		.byte	0
+ 915 00bd 0F       		.uleb128 0xf
+ 916 00be 2E       		.uleb128 0x2e
+ 917 00bf 01       		.byte	0x1
+ 918 00c0 3F       		.uleb128 0x3f
+ 919 00c1 19       		.uleb128 0x19
+ 920 00c2 03       		.uleb128 0x3
+ 921 00c3 0E       		.uleb128 0xe
+ 922 00c4 3A       		.uleb128 0x3a
+ 923 00c5 0B       		.uleb128 0xb
+ 924 00c6 3B       		.uleb128 0x3b
+ 925 00c7 05       		.uleb128 0x5
+ 926 00c8 27       		.uleb128 0x27
+ 927 00c9 19       		.uleb128 0x19
+ 928 00ca 11       		.uleb128 0x11
+ 929 00cb 01       		.uleb128 0x1
+ 930 00cc 12       		.uleb128 0x12
+ 931 00cd 06       		.uleb128 0x6
+ 932 00ce 40       		.uleb128 0x40
+ 933 00cf 18       		.uleb128 0x18
+ 934 00d0 9742     		.uleb128 0x2117
+ 935 00d2 19       		.uleb128 0x19
+ 936 00d3 01       		.uleb128 0x1
+ 937 00d4 13       		.uleb128 0x13
+ 938 00d5 00       		.byte	0
+ 939 00d6 00       		.byte	0
+ 940 00d7 10       		.uleb128 0x10
+ 941 00d8 0B       		.uleb128 0xb
+ 942 00d9 01       		.byte	0x1
+ 943 00da 11       		.uleb128 0x11
+ 944 00db 01       		.uleb128 0x1
+ 945 00dc 12       		.uleb128 0x12
+ 946 00dd 06       		.uleb128 0x6
+ 947 00de 01       		.uleb128 0x1
+ 948 00df 13       		.uleb128 0x13
+ 949 00e0 00       		.byte	0
+ 950 00e1 00       		.byte	0
+ 951 00e2 11       		.uleb128 0x11
+ 952 00e3 13       		.uleb128 0x13
+ 953 00e4 01       		.byte	0x1
+ 954 00e5 0B       		.uleb128 0xb
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 24
 
 
- 1005 010b 13       		.uleb128 0x13
- 1006 010c 2F       		.uleb128 0x2f
- 1007 010d 0B       		.uleb128 0xb
- 1008 010e 00       		.byte	0
- 1009 010f 00       		.byte	0
- 1010 0110 15       		.uleb128 0x15
- 1011 0111 26       		.uleb128 0x26
- 1012 0112 00       		.byte	0
- 1013 0113 49       		.uleb128 0x49
- 1014 0114 13       		.uleb128 0x13
- 1015 0115 00       		.byte	0
- 1016 0116 00       		.byte	0
- 1017 0117 16       		.uleb128 0x16
- 1018 0118 34       		.uleb128 0x34
- 1019 0119 00       		.byte	0
- 1020 011a 03       		.uleb128 0x3
- 1021 011b 0E       		.uleb128 0xe
- 1022 011c 3A       		.uleb128 0x3a
- 1023 011d 0B       		.uleb128 0xb
- 1024 011e 3B       		.uleb128 0x3b
- 1025 011f 05       		.uleb128 0x5
- 1026 0120 49       		.uleb128 0x49
- 1027 0121 13       		.uleb128 0x13
- 1028 0122 02       		.uleb128 0x2
- 1029 0123 18       		.uleb128 0x18
- 1030 0124 00       		.byte	0
- 1031 0125 00       		.byte	0
- 1032 0126 17       		.uleb128 0x17
- 1033 0127 34       		.uleb128 0x34
- 1034 0128 00       		.byte	0
- 1035 0129 03       		.uleb128 0x3
- 1036 012a 08       		.uleb128 0x8
- 1037 012b 3A       		.uleb128 0x3a
- 1038 012c 0B       		.uleb128 0xb
- 1039 012d 3B       		.uleb128 0x3b
- 1040 012e 05       		.uleb128 0x5
- 1041 012f 49       		.uleb128 0x49
- 1042 0130 13       		.uleb128 0x13
- 1043 0131 02       		.uleb128 0x2
- 1044 0132 17       		.uleb128 0x17
- 1045 0133 00       		.byte	0
- 1046 0134 00       		.byte	0
- 1047 0135 18       		.uleb128 0x18
- 1048 0136 0B       		.uleb128 0xb
- 1049 0137 01       		.byte	0x1
- 1050 0138 11       		.uleb128 0x11
- 1051 0139 01       		.uleb128 0x1
- 1052 013a 12       		.uleb128 0x12
- 1053 013b 06       		.uleb128 0x6
- 1054 013c 00       		.byte	0
- 1055 013d 00       		.byte	0
- 1056 013e 19       		.uleb128 0x19
- 1057 013f 0F       		.uleb128 0xf
- 1058 0140 00       		.byte	0
- 1059 0141 0B       		.uleb128 0xb
- 1060 0142 0B       		.uleb128 0xb
- 1061 0143 49       		.uleb128 0x49
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 26
+ 955 00e6 0B       		.uleb128 0xb
+ 956 00e7 3A       		.uleb128 0x3a
+ 957 00e8 0B       		.uleb128 0xb
+ 958 00e9 3B       		.uleb128 0x3b
+ 959 00ea 05       		.uleb128 0x5
+ 960 00eb 01       		.uleb128 0x1
+ 961 00ec 13       		.uleb128 0x13
+ 962 00ed 00       		.byte	0
+ 963 00ee 00       		.byte	0
+ 964 00ef 12       		.uleb128 0x12
+ 965 00f0 0D       		.uleb128 0xd
+ 966 00f1 00       		.byte	0
+ 967 00f2 03       		.uleb128 0x3
+ 968 00f3 0E       		.uleb128 0xe
+ 969 00f4 3A       		.uleb128 0x3a
+ 970 00f5 0B       		.uleb128 0xb
+ 971 00f6 3B       		.uleb128 0x3b
+ 972 00f7 05       		.uleb128 0x5
+ 973 00f8 49       		.uleb128 0x49
+ 974 00f9 13       		.uleb128 0x13
+ 975 00fa 38       		.uleb128 0x38
+ 976 00fb 0B       		.uleb128 0xb
+ 977 00fc 00       		.byte	0
+ 978 00fd 00       		.byte	0
+ 979 00fe 13       		.uleb128 0x13
+ 980 00ff 01       		.uleb128 0x1
+ 981 0100 01       		.byte	0x1
+ 982 0101 49       		.uleb128 0x49
+ 983 0102 13       		.uleb128 0x13
+ 984 0103 01       		.uleb128 0x1
+ 985 0104 13       		.uleb128 0x13
+ 986 0105 00       		.byte	0
+ 987 0106 00       		.byte	0
+ 988 0107 14       		.uleb128 0x14
+ 989 0108 21       		.uleb128 0x21
+ 990 0109 00       		.byte	0
+ 991 010a 49       		.uleb128 0x49
+ 992 010b 13       		.uleb128 0x13
+ 993 010c 2F       		.uleb128 0x2f
+ 994 010d 0B       		.uleb128 0xb
+ 995 010e 00       		.byte	0
+ 996 010f 00       		.byte	0
+ 997 0110 15       		.uleb128 0x15
+ 998 0111 26       		.uleb128 0x26
+ 999 0112 00       		.byte	0
+ 1000 0113 49       		.uleb128 0x49
+ 1001 0114 13       		.uleb128 0x13
+ 1002 0115 00       		.byte	0
+ 1003 0116 00       		.byte	0
+ 1004 0117 16       		.uleb128 0x16
+ 1005 0118 34       		.uleb128 0x34
+ 1006 0119 00       		.byte	0
+ 1007 011a 03       		.uleb128 0x3
+ 1008 011b 0E       		.uleb128 0xe
+ 1009 011c 3A       		.uleb128 0x3a
+ 1010 011d 0B       		.uleb128 0xb
+ 1011 011e 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 25
 
 
- 1062 0144 13       		.uleb128 0x13
- 1063 0145 00       		.byte	0
- 1064 0146 00       		.byte	0
- 1065 0147 1A       		.uleb128 0x1a
- 1066 0148 2E       		.uleb128 0x2e
- 1067 0149 00       		.byte	0
- 1068 014a 3F       		.uleb128 0x3f
- 1069 014b 19       		.uleb128 0x19
- 1070 014c 3C       		.uleb128 0x3c
- 1071 014d 19       		.uleb128 0x19
- 1072 014e 6E       		.uleb128 0x6e
- 1073 014f 0E       		.uleb128 0xe
- 1074 0150 03       		.uleb128 0x3
- 1075 0151 0E       		.uleb128 0xe
- 1076 0152 00       		.byte	0
- 1077 0153 00       		.byte	0
- 1078 0154 1B       		.uleb128 0x1b
- 1079 0155 2E       		.uleb128 0x2e
- 1080 0156 00       		.byte	0
- 1081 0157 3F       		.uleb128 0x3f
- 1082 0158 19       		.uleb128 0x19
- 1083 0159 3C       		.uleb128 0x3c
- 1084 015a 19       		.uleb128 0x19
- 1085 015b 6E       		.uleb128 0x6e
- 1086 015c 0E       		.uleb128 0xe
- 1087 015d 03       		.uleb128 0x3
- 1088 015e 0E       		.uleb128 0xe
- 1089 015f 3A       		.uleb128 0x3a
- 1090 0160 0B       		.uleb128 0xb
- 1091 0161 3B       		.uleb128 0x3b
- 1092 0162 0B       		.uleb128 0xb
- 1093 0163 00       		.byte	0
- 1094 0164 00       		.byte	0
- 1095 0165 00       		.byte	0
- 1096              		.section	.debug_loc,"",%progbits
- 1097              	.Ldebug_loc0:
- 1098              	.LLST0:
- 1099 0000 00000000 		.4byte	.LVL0
- 1100 0004 09000000 		.4byte	.LVL2-1
- 1101 0008 0100     		.2byte	0x1
- 1102 000a 50       		.byte	0x50
- 1103 000b 09000000 		.4byte	.LVL2-1
- 1104 000f 0C000000 		.4byte	.LFE1
- 1105 0013 0400     		.2byte	0x4
- 1106 0015 F3       		.byte	0xf3
- 1107 0016 01       		.uleb128 0x1
- 1108 0017 50       		.byte	0x50
- 1109 0018 9F       		.byte	0x9f
- 1110 0019 00000000 		.4byte	0
- 1111 001d 00000000 		.4byte	0
- 1112              	.LLST1:
- 1113 0021 00000000 		.4byte	.LVL0
- 1114 0025 06000000 		.4byte	.LVL1
- 1115 0029 0100     		.2byte	0x1
- 1116 002b 51       		.byte	0x51
- 1117 002c 06000000 		.4byte	.LVL1
- 1118 0030 09000000 		.4byte	.LVL2-1
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 27
+ 1012 011f 05       		.uleb128 0x5
+ 1013 0120 49       		.uleb128 0x49
+ 1014 0121 13       		.uleb128 0x13
+ 1015 0122 02       		.uleb128 0x2
+ 1016 0123 18       		.uleb128 0x18
+ 1017 0124 00       		.byte	0
+ 1018 0125 00       		.byte	0
+ 1019 0126 17       		.uleb128 0x17
+ 1020 0127 34       		.uleb128 0x34
+ 1021 0128 00       		.byte	0
+ 1022 0129 03       		.uleb128 0x3
+ 1023 012a 08       		.uleb128 0x8
+ 1024 012b 3A       		.uleb128 0x3a
+ 1025 012c 0B       		.uleb128 0xb
+ 1026 012d 3B       		.uleb128 0x3b
+ 1027 012e 05       		.uleb128 0x5
+ 1028 012f 49       		.uleb128 0x49
+ 1029 0130 13       		.uleb128 0x13
+ 1030 0131 02       		.uleb128 0x2
+ 1031 0132 17       		.uleb128 0x17
+ 1032 0133 00       		.byte	0
+ 1033 0134 00       		.byte	0
+ 1034 0135 18       		.uleb128 0x18
+ 1035 0136 0B       		.uleb128 0xb
+ 1036 0137 01       		.byte	0x1
+ 1037 0138 11       		.uleb128 0x11
+ 1038 0139 01       		.uleb128 0x1
+ 1039 013a 12       		.uleb128 0x12
+ 1040 013b 06       		.uleb128 0x6
+ 1041 013c 00       		.byte	0
+ 1042 013d 00       		.byte	0
+ 1043 013e 19       		.uleb128 0x19
+ 1044 013f 0F       		.uleb128 0xf
+ 1045 0140 00       		.byte	0
+ 1046 0141 0B       		.uleb128 0xb
+ 1047 0142 0B       		.uleb128 0xb
+ 1048 0143 49       		.uleb128 0x49
+ 1049 0144 13       		.uleb128 0x13
+ 1050 0145 00       		.byte	0
+ 1051 0146 00       		.byte	0
+ 1052 0147 1A       		.uleb128 0x1a
+ 1053 0148 2E       		.uleb128 0x2e
+ 1054 0149 00       		.byte	0
+ 1055 014a 3F       		.uleb128 0x3f
+ 1056 014b 19       		.uleb128 0x19
+ 1057 014c 3C       		.uleb128 0x3c
+ 1058 014d 19       		.uleb128 0x19
+ 1059 014e 6E       		.uleb128 0x6e
+ 1060 014f 0E       		.uleb128 0xe
+ 1061 0150 03       		.uleb128 0x3
+ 1062 0151 0E       		.uleb128 0xe
+ 1063 0152 00       		.byte	0
+ 1064 0153 00       		.byte	0
+ 1065 0154 1B       		.uleb128 0x1b
+ 1066 0155 2E       		.uleb128 0x2e
+ 1067 0156 00       		.byte	0
+ 1068 0157 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 26
 
 
- 1119 0034 0100     		.2byte	0x1
- 1120 0036 52       		.byte	0x52
- 1121 0037 09000000 		.4byte	.LVL2-1
- 1122 003b 0C000000 		.4byte	.LFE1
- 1123 003f 0400     		.2byte	0x4
- 1124 0041 F3       		.byte	0xf3
- 1125 0042 01       		.uleb128 0x1
- 1126 0043 51       		.byte	0x51
- 1127 0044 9F       		.byte	0x9f
- 1128 0045 00000000 		.4byte	0
- 1129 0049 00000000 		.4byte	0
- 1130              	.LLST2:
- 1131 004d A8000000 		.4byte	.LVL9
- 1132 0051 AC000000 		.4byte	.LVL10
- 1133 0055 0200     		.2byte	0x2
- 1134 0057 30       		.byte	0x30
- 1135 0058 9F       		.byte	0x9f
- 1136 0059 AC000000 		.4byte	.LVL10
- 1137 005d CA000000 		.4byte	.LVL12
- 1138 0061 0100     		.2byte	0x1
- 1139 0063 54       		.byte	0x54
- 1140 0064 CC000000 		.4byte	.LVL13
- 1141 0068 56010000 		.4byte	.LVL16
- 1142 006c 0100     		.2byte	0x1
- 1143 006e 54       		.byte	0x54
- 1144 006f 00000000 		.4byte	0
- 1145 0073 00000000 		.4byte	0
- 1146              	.LLST3:
- 1147 0077 AC000000 		.4byte	.LVL10
- 1148 007b CA000000 		.4byte	.LVL12
- 1149 007f 0B00     		.2byte	0xb
- 1150 0081 74       		.byte	0x74
- 1151 0082 00       		.sleb128 0
- 1152 0083 36       		.byte	0x36
- 1153 0084 1E       		.byte	0x1e
- 1154 0085 03       		.byte	0x3
- 1155 0086 00000000 		.4byte	cfg_memset_list.4948
- 1156 008a 22       		.byte	0x22
- 1157 008b 9F       		.byte	0x9f
- 1158 008c CA000000 		.4byte	.LVL12
- 1159 0090 CC000000 		.4byte	.LVL13
- 1160 0094 0B00     		.2byte	0xb
- 1161 0096 74       		.byte	0x74
- 1162 0097 7F       		.sleb128 -1
- 1163 0098 36       		.byte	0x36
- 1164 0099 1E       		.byte	0x1e
- 1165 009a 03       		.byte	0x3
- 1166 009b 00000000 		.4byte	cfg_memset_list.4948
- 1167 009f 22       		.byte	0x22
- 1168 00a0 9F       		.byte	0x9f
- 1169 00a1 00000000 		.4byte	0
- 1170 00a5 00000000 		.4byte	0
- 1171              		.section	.debug_aranges,"",%progbits
- 1172 0000 34000000 		.4byte	0x34
- 1173 0004 0200     		.2byte	0x2
- 1174 0006 00000000 		.4byte	.Ldebug_info0
- 1175 000a 04       		.byte	0x4
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 28
+ 1069 0158 19       		.uleb128 0x19
+ 1070 0159 3C       		.uleb128 0x3c
+ 1071 015a 19       		.uleb128 0x19
+ 1072 015b 6E       		.uleb128 0x6e
+ 1073 015c 0E       		.uleb128 0xe
+ 1074 015d 03       		.uleb128 0x3
+ 1075 015e 0E       		.uleb128 0xe
+ 1076 015f 3A       		.uleb128 0x3a
+ 1077 0160 0B       		.uleb128 0xb
+ 1078 0161 3B       		.uleb128 0x3b
+ 1079 0162 0B       		.uleb128 0xb
+ 1080 0163 00       		.byte	0
+ 1081 0164 00       		.byte	0
+ 1082 0165 00       		.byte	0
+ 1083              		.section	.debug_loc,"",%progbits
+ 1084              	.Ldebug_loc0:
+ 1085              	.LLST0:
+ 1086 0000 00000000 		.4byte	.LVL0
+ 1087 0004 09000000 		.4byte	.LVL2-1
+ 1088 0008 0100     		.2byte	0x1
+ 1089 000a 50       		.byte	0x50
+ 1090 000b 09000000 		.4byte	.LVL2-1
+ 1091 000f 0C000000 		.4byte	.LFE1
+ 1092 0013 0400     		.2byte	0x4
+ 1093 0015 F3       		.byte	0xf3
+ 1094 0016 01       		.uleb128 0x1
+ 1095 0017 50       		.byte	0x50
+ 1096 0018 9F       		.byte	0x9f
+ 1097 0019 00000000 		.4byte	0
+ 1098 001d 00000000 		.4byte	0
+ 1099              	.LLST1:
+ 1100 0021 00000000 		.4byte	.LVL0
+ 1101 0025 06000000 		.4byte	.LVL1
+ 1102 0029 0100     		.2byte	0x1
+ 1103 002b 51       		.byte	0x51
+ 1104 002c 06000000 		.4byte	.LVL1
+ 1105 0030 09000000 		.4byte	.LVL2-1
+ 1106 0034 0100     		.2byte	0x1
+ 1107 0036 52       		.byte	0x52
+ 1108 0037 09000000 		.4byte	.LVL2-1
+ 1109 003b 0C000000 		.4byte	.LFE1
+ 1110 003f 0400     		.2byte	0x4
+ 1111 0041 F3       		.byte	0xf3
+ 1112 0042 01       		.uleb128 0x1
+ 1113 0043 51       		.byte	0x51
+ 1114 0044 9F       		.byte	0x9f
+ 1115 0045 00000000 		.4byte	0
+ 1116 0049 00000000 		.4byte	0
+ 1117              	.LLST2:
+ 1118 004d A8000000 		.4byte	.LVL9
+ 1119 0051 AC000000 		.4byte	.LVL10
+ 1120 0055 0200     		.2byte	0x2
+ 1121 0057 30       		.byte	0x30
+ 1122 0058 9F       		.byte	0x9f
+ 1123 0059 AC000000 		.4byte	.LVL10
+ 1124 005d CA000000 		.4byte	.LVL12
+ 1125 0061 0100     		.2byte	0x1
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 27
 
 
- 1176 000b 00       		.byte	0
- 1177 000c 0000     		.2byte	0
- 1178 000e 0000     		.2byte	0
- 1179 0010 00000000 		.4byte	.LFB5
- 1180 0014 20000000 		.4byte	.LFE5-.LFB5
- 1181 0018 00000000 		.4byte	.LFB1
- 1182 001c 0C000000 		.4byte	.LFE1-.LFB1
- 1183 0020 00000000 		.4byte	.LFB4
- 1184 0024 A4000000 		.4byte	.LFE4-.LFB4
- 1185 0028 A4000000 		.4byte	.LFB6
- 1186 002c 14010000 		.4byte	.LFE6-.LFB6
- 1187 0030 00000000 		.4byte	0
- 1188 0034 00000000 		.4byte	0
- 1189              		.section	.debug_ranges,"",%progbits
- 1190              	.Ldebug_ranges0:
- 1191 0000 00000000 		.4byte	.LFB5
- 1192 0004 20000000 		.4byte	.LFE5
- 1193 0008 00000000 		.4byte	.LFB1
- 1194 000c 0C000000 		.4byte	.LFE1
- 1195 0010 00000000 		.4byte	.LFB4
- 1196 0014 A4000000 		.4byte	.LFE4
- 1197 0018 A4000000 		.4byte	.LFB6
- 1198 001c B8010000 		.4byte	.LFE6
- 1199 0020 00000000 		.4byte	0
- 1200 0024 00000000 		.4byte	0
- 1201              		.section	.debug_line,"",%progbits
- 1202              	.Ldebug_line0:
- 1203 0000 62010000 		.section	.debug_str,"MS",%progbits,1
- 1203      0200E300 
- 1203      00000201 
- 1203      FB0E0D00 
- 1203      01010101 
- 1204              	.LASF27:
- 1205 0000 43794465 		.ascii	"CyDelayCycles\000"
- 1205      6C617943 
- 1205      79636C65 
- 1205      7300
- 1206              	.LASF19:
- 1207 000e 72656733 		.ascii	"reg32\000"
- 1207      3200
- 1208              	.LASF12:
- 1209 0014 73697A65 		.ascii	"size_t\000"
- 1209      5F7400
- 1210              	.LASF35:
- 1211 001b 416E616C 		.ascii	"AnalogSetDefault\000"
- 1211      6F675365 
- 1211      74446566 
- 1211      61756C74 
- 1211      00
- 1212              	.LASF30:
- 1213 002c 4379496E 		.ascii	"CyIntSetVector\000"
- 1213      74536574 
- 1213      56656374 
- 1213      6F7200
- 1214              	.LASF25:
- 1215 003b 6366675F 		.ascii	"cfg_memset_list\000"
- 1215      6D656D73 
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 29
+ 1126 0063 54       		.byte	0x54
+ 1127 0064 CC000000 		.4byte	.LVL13
+ 1128 0068 4A010000 		.4byte	.LVL16
+ 1129 006c 0100     		.2byte	0x1
+ 1130 006e 54       		.byte	0x54
+ 1131 006f 00000000 		.4byte	0
+ 1132 0073 00000000 		.4byte	0
+ 1133              	.LLST3:
+ 1134 0077 AC000000 		.4byte	.LVL10
+ 1135 007b CA000000 		.4byte	.LVL12
+ 1136 007f 0B00     		.2byte	0xb
+ 1137 0081 74       		.byte	0x74
+ 1138 0082 00       		.sleb128 0
+ 1139 0083 36       		.byte	0x36
+ 1140 0084 1E       		.byte	0x1e
+ 1141 0085 03       		.byte	0x3
+ 1142 0086 00000000 		.4byte	cfg_memset_list.4948
+ 1143 008a 22       		.byte	0x22
+ 1144 008b 9F       		.byte	0x9f
+ 1145 008c CA000000 		.4byte	.LVL12
+ 1146 0090 CC000000 		.4byte	.LVL13
+ 1147 0094 0B00     		.2byte	0xb
+ 1148 0096 74       		.byte	0x74
+ 1149 0097 7F       		.sleb128 -1
+ 1150 0098 36       		.byte	0x36
+ 1151 0099 1E       		.byte	0x1e
+ 1152 009a 03       		.byte	0x3
+ 1153 009b 00000000 		.4byte	cfg_memset_list.4948
+ 1154 009f 22       		.byte	0x22
+ 1155 00a0 9F       		.byte	0x9f
+ 1156 00a1 00000000 		.4byte	0
+ 1157 00a5 00000000 		.4byte	0
+ 1158              		.section	.debug_aranges,"",%progbits
+ 1159 0000 34000000 		.4byte	0x34
+ 1160 0004 0200     		.2byte	0x2
+ 1161 0006 00000000 		.4byte	.Ldebug_info0
+ 1162 000a 04       		.byte	0x4
+ 1163 000b 00       		.byte	0
+ 1164 000c 0000     		.2byte	0
+ 1165 000e 0000     		.2byte	0
+ 1166 0010 00000000 		.4byte	.LFB5
+ 1167 0014 20000000 		.4byte	.LFE5-.LFB5
+ 1168 0018 00000000 		.4byte	.LFB1
+ 1169 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 1170 0020 00000000 		.4byte	.LFB4
+ 1171 0024 A4000000 		.4byte	.LFE4-.LFB4
+ 1172 0028 A4000000 		.4byte	.LFB6
+ 1173 002c F8000000 		.4byte	.LFE6-.LFB6
+ 1174 0030 00000000 		.4byte	0
+ 1175 0034 00000000 		.4byte	0
+ 1176              		.section	.debug_ranges,"",%progbits
+ 1177              	.Ldebug_ranges0:
+ 1178 0000 00000000 		.4byte	.LFB5
+ 1179 0004 20000000 		.4byte	.LFE5
+ 1180 0008 00000000 		.4byte	.LFB1
+ 1181 000c 0C000000 		.4byte	.LFE1
+ 1182 0010 00000000 		.4byte	.LFB4
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 28
 
 
- 1215      65745F6C 
- 1215      69737400 
- 1216              	.LASF21:
- 1217 004b 436C6F63 		.ascii	"ClockSetup\000"
- 1217      6B536574 
- 1217      757000
- 1218              	.LASF6:
- 1219 0056 73686F72 		.ascii	"short unsigned int\000"
- 1219      7420756E 
- 1219      7369676E 
- 1219      65642069 
- 1219      6E7400
- 1220              	.LASF16:
- 1221 0069 666C6F61 		.ascii	"float\000"
- 1221      7400
- 1222              	.LASF23:
- 1223 006f 73697A65 		.ascii	"size\000"
- 1223      00
- 1224              	.LASF18:
- 1225 0074 72656738 		.ascii	"reg8\000"
- 1225      00
- 1226              	.LASF8:
- 1227 0079 6C6F6E67 		.ascii	"long unsigned int\000"
- 1227      20756E73 
- 1227      69676E65 
- 1227      6420696E 
- 1227      7400
- 1228              	.LASF13:
- 1229 008b 75696E74 		.ascii	"uint8\000"
- 1229      3800
- 1230              	.LASF26:
- 1231 0091 43795379 		.ascii	"CySysClkWcoStart\000"
- 1231      73436C6B 
- 1231      57636F53 
- 1231      74617274 
- 1231      00
- 1232              	.LASF20:
- 1233 00a2 43594D45 		.ascii	"CYMEMZERO\000"
- 1233      4D5A4552 
- 1233      4F00
- 1234              	.LASF34:
- 1235 00ac 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\PSoC_Pro"
- 1235      73657273 
- 1235      5C646176 
- 1235      69735C44 
- 1235      6F63756D 
- 1236 00da 6A656374 		.ascii	"ject_Template\\PSoC Project Template.cydsn\000"
- 1236      5F54656D 
- 1236      706C6174 
- 1236      655C5053 
- 1236      6F432050 
- 1237              	.LASF4:
- 1238 0104 756E7369 		.ascii	"unsigned char\000"
- 1238      676E6564 
- 1238      20636861 
- 1238      7200
- 1239              	.LASF37:
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 30
+ 1183 0014 A4000000 		.4byte	.LFE4
+ 1184 0018 A4000000 		.4byte	.LFB6
+ 1185 001c 9C010000 		.4byte	.LFE6
+ 1186 0020 00000000 		.4byte	0
+ 1187 0024 00000000 		.4byte	0
+ 1188              		.section	.debug_line,"",%progbits
+ 1189              	.Ldebug_line0:
+ 1190 0000 5F010000 		.section	.debug_str,"MS",%progbits,1
+ 1190      0200E300 
+ 1190      00000201 
+ 1190      FB0E0D00 
+ 1190      01010101 
+ 1191              	.LASF27:
+ 1192 0000 43794465 		.ascii	"CyDelayCycles\000"
+ 1192      6C617943 
+ 1192      79636C65 
+ 1192      7300
+ 1193              	.LASF19:
+ 1194 000e 72656733 		.ascii	"reg32\000"
+ 1194      3200
+ 1195              	.LASF12:
+ 1196 0014 73697A65 		.ascii	"size_t\000"
+ 1196      5F7400
+ 1197              	.LASF35:
+ 1198 001b 416E616C 		.ascii	"AnalogSetDefault\000"
+ 1198      6F675365 
+ 1198      74446566 
+ 1198      61756C74 
+ 1198      00
+ 1199              	.LASF30:
+ 1200 002c 4379496E 		.ascii	"CyIntSetVector\000"
+ 1200      74536574 
+ 1200      56656374 
+ 1200      6F7200
+ 1201              	.LASF25:
+ 1202 003b 6366675F 		.ascii	"cfg_memset_list\000"
+ 1202      6D656D73 
+ 1202      65745F6C 
+ 1202      69737400 
+ 1203              	.LASF21:
+ 1204 004b 436C6F63 		.ascii	"ClockSetup\000"
+ 1204      6B536574 
+ 1204      757000
+ 1205              	.LASF6:
+ 1206 0056 73686F72 		.ascii	"short unsigned int\000"
+ 1206      7420756E 
+ 1206      7369676E 
+ 1206      65642069 
+ 1206      6E7400
+ 1207              	.LASF16:
+ 1208 0069 666C6F61 		.ascii	"float\000"
+ 1208      7400
+ 1209              	.LASF23:
+ 1210 006f 73697A65 		.ascii	"size\000"
+ 1210      00
+ 1211              	.LASF18:
+ 1212 0074 72656738 		.ascii	"reg8\000"
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 29
 
 
- 1240 0112 6D656D73 		.ascii	"memset\000"
- 1240      657400
- 1241              	.LASF17:
- 1242 0119 646F7562 		.ascii	"double\000"
- 1242      6C6500
- 1243              	.LASF31:
- 1244 0120 4379496E 		.ascii	"CyIntEnable\000"
- 1244      74456E61 
- 1244      626C6500 
- 1245              	.LASF14:
- 1246 012c 75696E74 		.ascii	"uint16\000"
- 1246      313600
- 1247              	.LASF15:
- 1248 0133 75696E74 		.ascii	"uint32\000"
- 1248      333200
- 1249              	.LASF0:
- 1250 013a 756E7369 		.ascii	"unsigned int\000"
- 1250      676E6564 
- 1250      20696E74 
- 1250      00
- 1251              	.LASF36:
- 1252 0147 63796669 		.ascii	"cyfitter_cfg\000"
- 1252      74746572 
- 1252      5F636667 
- 1252      00
- 1253              	.LASF22:
- 1254 0154 61646472 		.ascii	"address\000"
- 1254      65737300 
- 1255              	.LASF9:
- 1256 015c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1256      206C6F6E 
- 1256      6720756E 
- 1256      7369676E 
- 1256      65642069 
- 1257              	.LASF32:
- 1258 0173 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1258      43313120 
- 1258      352E342E 
- 1258      31203230 
- 1258      31363036 
- 1259 01a6 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1259      20726576 
- 1259      6973696F 
- 1259      6E203233 
- 1259      37373135 
- 1260 01d9 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1260      66756E63 
- 1260      74696F6E 
- 1260      2D736563 
- 1260      74696F6E 
- 1261              	.LASF24:
- 1262 0201 6366675F 		.ascii	"cfg_memset_t\000"
- 1262      6D656D73 
- 1262      65745F74 
- 1262      00
- 1263              	.LASF10:
- 1264 020e 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\davis\AppData\Local\Temp\cc3KuMA5.s 			page 31
+ 1212      00
+ 1213              	.LASF8:
+ 1214 0079 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1214      20756E73 
+ 1214      69676E65 
+ 1214      6420696E 
+ 1214      7400
+ 1215              	.LASF13:
+ 1216 008b 75696E74 		.ascii	"uint8\000"
+ 1216      3800
+ 1217              	.LASF26:
+ 1218 0091 43795379 		.ascii	"CySysClkWcoStart\000"
+ 1218      73436C6B 
+ 1218      57636F53 
+ 1218      74617274 
+ 1218      00
+ 1219              	.LASF20:
+ 1220 00a2 43594D45 		.ascii	"CYMEMZERO\000"
+ 1220      4D5A4552 
+ 1220      4F00
+ 1221              	.LASF34:
+ 1222 00ac 433A5C55 		.ascii	"C:\\Users\\davis\\Documents\\PSoC Creator\\PSoC_Pro"
+ 1222      73657273 
+ 1222      5C646176 
+ 1222      69735C44 
+ 1222      6F63756D 
+ 1223 00da 6A656374 		.ascii	"ject_Template\\PSoC Project Template.cydsn\000"
+ 1223      5F54656D 
+ 1223      706C6174 
+ 1223      655C5053 
+ 1223      6F432050 
+ 1224              	.LASF4:
+ 1225 0104 756E7369 		.ascii	"unsigned char\000"
+ 1225      676E6564 
+ 1225      20636861 
+ 1225      7200
+ 1226              	.LASF37:
+ 1227 0112 6D656D73 		.ascii	"memset\000"
+ 1227      657400
+ 1228              	.LASF17:
+ 1229 0119 646F7562 		.ascii	"double\000"
+ 1229      6C6500
+ 1230              	.LASF31:
+ 1231 0120 4379496E 		.ascii	"CyIntEnable\000"
+ 1231      74456E61 
+ 1231      626C6500 
+ 1232              	.LASF14:
+ 1233 012c 75696E74 		.ascii	"uint16\000"
+ 1233      313600
+ 1234              	.LASF15:
+ 1235 0133 75696E74 		.ascii	"uint32\000"
+ 1235      333200
+ 1236              	.LASF0:
+ 1237 013a 756E7369 		.ascii	"unsigned int\000"
+ 1237      676E6564 
+ 1237      20696E74 
+ 1237      00
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 30
 
 
- 1264      74797065 
- 1264      00
- 1265              	.LASF1:
- 1266 0217 6C6F6E67 		.ascii	"long long int\000"
- 1266      206C6F6E 
- 1266      6720696E 
- 1266      7400
- 1267              	.LASF11:
- 1268 0225 63686172 		.ascii	"char\000"
- 1268      00
- 1269              	.LASF5:
- 1270 022a 73686F72 		.ascii	"short int\000"
- 1270      7420696E 
- 1270      7400
- 1271              	.LASF28:
- 1272 0234 43795379 		.ascii	"CySysClkWriteImoFreq\000"
- 1272      73436C6B 
- 1272      57726974 
- 1272      65496D6F 
- 1272      46726571 
- 1273              	.LASF29:
- 1274 0249 43795379 		.ascii	"CySysClkImoEnableWcoLock\000"
- 1274      73436C6B 
- 1274      496D6F45 
- 1274      6E61626C 
- 1274      6557636F 
- 1275              	.LASF7:
- 1276 0262 6C6F6E67 		.ascii	"long int\000"
- 1276      20696E74 
- 1276      00
- 1277              	.LASF2:
- 1278 026b 6C6F6E67 		.ascii	"long double\000"
- 1278      20646F75 
- 1278      626C6500 
- 1279              	.LASF3:
- 1280 0277 7369676E 		.ascii	"signed char\000"
- 1280      65642063 
- 1280      68617200 
- 1281              	.LASF33:
- 1282 0283 47656E65 		.ascii	"Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
- 1282      72617465 
- 1282      645F536F 
- 1282      75726365 
- 1282      5C50536F 
- 1283              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1238              	.LASF36:
+ 1239 0147 63796669 		.ascii	"cyfitter_cfg\000"
+ 1239      74746572 
+ 1239      5F636667 
+ 1239      00
+ 1240              	.LASF22:
+ 1241 0154 61646472 		.ascii	"address\000"
+ 1241      65737300 
+ 1242              	.LASF9:
+ 1243 015c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1243      206C6F6E 
+ 1243      6720756E 
+ 1243      7369676E 
+ 1243      65642069 
+ 1244              	.LASF32:
+ 1245 0173 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1245      43313120 
+ 1245      352E342E 
+ 1245      31203230 
+ 1245      31363036 
+ 1246 01a6 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1246      20726576 
+ 1246      6973696F 
+ 1246      6E203233 
+ 1246      37373135 
+ 1247 01d9 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1247      66756E63 
+ 1247      74696F6E 
+ 1247      2D736563 
+ 1247      74696F6E 
+ 1248              	.LASF24:
+ 1249 0201 6366675F 		.ascii	"cfg_memset_t\000"
+ 1249      6D656D73 
+ 1249      65745F74 
+ 1249      00
+ 1250              	.LASF10:
+ 1251 020e 73697A65 		.ascii	"sizetype\000"
+ 1251      74797065 
+ 1251      00
+ 1252              	.LASF1:
+ 1253 0217 6C6F6E67 		.ascii	"long long int\000"
+ 1253      206C6F6E 
+ 1253      6720696E 
+ 1253      7400
+ 1254              	.LASF11:
+ 1255 0225 63686172 		.ascii	"char\000"
+ 1255      00
+ 1256              	.LASF5:
+ 1257 022a 73686F72 		.ascii	"short int\000"
+ 1257      7420696E 
+ 1257      7400
+ 1258              	.LASF28:
+ 1259 0234 43795379 		.ascii	"CySysClkWriteImoFreq\000"
+ 1259      73436C6B 
+ 1259      57726974 
+ 1259      65496D6F 
+ 1259      46726571 
+ARM GAS  C:\Users\davis\AppData\Local\Temp\ccxVFeuC.s 			page 31
+
+
+ 1260              	.LASF29:
+ 1261 0249 43795379 		.ascii	"CySysClkImoEnableWcoLock\000"
+ 1261      73436C6B 
+ 1261      496D6F45 
+ 1261      6E61626C 
+ 1261      6557636F 
+ 1262              	.LASF7:
+ 1263 0262 6C6F6E67 		.ascii	"long int\000"
+ 1263      20696E74 
+ 1263      00
+ 1264              	.LASF2:
+ 1265 026b 6C6F6E67 		.ascii	"long double\000"
+ 1265      20646F75 
+ 1265      626C6500 
+ 1266              	.LASF3:
+ 1267 0277 7369676E 		.ascii	"signed char\000"
+ 1267      65642063 
+ 1267      68617200 
+ 1268              	.LASF33:
+ 1269 0283 47656E65 		.ascii	"Generated_Source\\PSoC4\\cyfitter_cfg.c\000"
+ 1269      72617465 
+ 1269      645F536F 
+ 1269      75726365 
+ 1269      5C50536F 
+ 1270              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

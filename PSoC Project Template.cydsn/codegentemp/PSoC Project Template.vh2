@@ -2,7 +2,7 @@
 --	Conversion of PSoC Project Template.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Dec 01 18:42:06 2022
+--	Sat Feb 04 13:21:12 2023
 --
 
 USE cypress.cypress.all;
@@ -101,29 +101,21 @@ SIGNAL tmpIO_0__DIP4_net_0 : bit;
 TERMINAL tmpSIOVREF__DIP4_net_0 : bit;
 TERMINAL Net_205 : bit;
 SIGNAL tmpINTERRUPT_0__DIP4_net_0 : bit;
-SIGNAL tmpOE__IMU_RST_net_0 : bit;
-SIGNAL tmpFB_0__IMU_RST_net_0 : bit;
-SIGNAL tmpIO_0__IMU_RST_net_0 : bit;
-TERMINAL tmpSIOVREF__IMU_RST_net_0 : bit;
-TERMINAL Net_200 : bit;
-SIGNAL tmpINTERRUPT_0__IMU_RST_net_0 : bit;
 SIGNAL tmpOE__ERR_net_0 : bit;
 SIGNAL tmpFB_0__ERR_net_0 : bit;
 SIGNAL tmpIO_0__ERR_net_0 : bit;
 TERMINAL tmpSIOVREF__ERR_net_0 : bit;
-TERMINAL Net_174 : bit;
 SIGNAL tmpINTERRUPT_0__ERR_net_0 : bit;
 SIGNAL tmpOE__DBG_net_0 : bit;
 SIGNAL tmpFB_0__DBG_net_0 : bit;
 SIGNAL tmpIO_0__DBG_net_0 : bit;
 TERMINAL tmpSIOVREF__DBG_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__DBG_net_0 : bit;
-SIGNAL tmpOE__BAT_STAT_net_0 : bit;
-SIGNAL tmpFB_0__BAT_STAT_net_0 : bit;
-SIGNAL tmpIO_0__BAT_STAT_net_0 : bit;
-TERMINAL tmpSIOVREF__BAT_STAT_net_0 : bit;
-TERMINAL Net_159 : bit;
-SIGNAL tmpINTERRUPT_0__BAT_STAT_net_0 : bit;
+SIGNAL tmpOE__CAN_LED_net_0 : bit;
+SIGNAL tmpFB_0__CAN_LED_net_0 : bit;
+SIGNAL tmpIO_0__CAN_LED_net_0 : bit;
+TERMINAL tmpSIOVREF__CAN_LED_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__CAN_LED_net_0 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -741,76 +733,6 @@ DIP4:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__DIP4_net_0);
-IMU_RST:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"b84dbcf6-f26d-44a5-801d-09d588384840",
-		drive_mode=>"110",
-		ibuf_enabled=>"1",
-		init_dr_st=>"1",
-		input_sync=>"1",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"O",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"00000000",
-		sio_hyst=>"1",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		sio_vohsel=>"00000000",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"10",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"1",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1,
-		ovt_needed=>"0",
-		ovt_slew_control=>"00",
-		ovt_hyst_trim=>"0",
-		input_buffer_sel=>"00")
-	PORT MAP(oe=>(one),
-		y=>(zero),
-		fb=>(tmpFB_0__IMU_RST_net_0),
-		analog=>(open),
-		io=>(tmpIO_0__IMU_RST_net_0),
-		siovref=>(tmpSIOVREF__IMU_RST_net_0),
-		annotation=>Net_200,
-		in_clock=>zero,
-		in_clock_en=>one,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>one,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__IMU_RST_net_0);
 ERR:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
 		drive_mode=>"011",
@@ -856,7 +778,7 @@ ERR:cy_psoc3_pins_v1_10
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"1",
+		use_annotation=>"0",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -873,7 +795,7 @@ ERR:cy_psoc3_pins_v1_10
 		analog=>(open),
 		io=>(tmpIO_0__ERR_net_0),
 		siovref=>(tmpSIOVREF__ERR_net_0),
-		annotation=>Net_174,
+		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
 		in_reset=>zero,
@@ -951,7 +873,7 @@ DBG:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__DBG_net_0);
-BAT_STAT:cy_psoc3_pins_v1_10
+CAN_LED:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"55e4ee15-7eea-46a5-90dd-1e5fd00ff7de",
 		drive_mode=>"011",
 		ibuf_enabled=>"1",
@@ -996,7 +918,7 @@ BAT_STAT:cy_psoc3_pins_v1_10
 		width=>1,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"1",
+		use_annotation=>"0",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -1009,17 +931,17 @@ BAT_STAT:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__BAT_STAT_net_0),
+		fb=>(tmpFB_0__CAN_LED_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__BAT_STAT_net_0),
-		siovref=>(tmpSIOVREF__BAT_STAT_net_0),
-		annotation=>Net_159,
+		io=>(tmpIO_0__CAN_LED_net_0),
+		siovref=>(tmpSIOVREF__CAN_LED_net_0),
+		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
 		in_reset=>zero,
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__BAT_STAT_net_0);
+		interrupt=>tmpINTERRUPT_0__CAN_LED_net_0);
 
 END R_T_L;

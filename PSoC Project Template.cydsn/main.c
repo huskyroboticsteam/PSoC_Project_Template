@@ -8,7 +8,7 @@ Husky Robotics
 
 Template project adaptable to any PSoC Project
 
-CHANGE CLOCKS TO USE EXT_CLK BEFORE USING ON REAL BOARD
+CHANGE CLOCKS TO USE EXT_CLK BEFORE USING ON REAL BOARD (See Clocks documentation)
 */
 
 #include "main.h"

@@ -1,5 +1,5 @@
 -- Project:   C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cyprj
--- Generated: 12/01/2022 18:42:10
+-- Generated: 02/04/2023 13:21:16
 -- PSoC Creator  4.4
 
 ENTITY \PSoC Project Template\ IS
@@ -12,15 +12,15 @@ ENTITY \PSoC Project Template\ IS
         DIP2(0)_PAD : IN std_ulogic;
         DIP3(0)_PAD : IN std_ulogic;
         DIP4(0)_PAD : IN std_ulogic;
-        IMU_RST(0)_PAD : OUT std_ulogic;
         ERR(0)_PAD : OUT std_ulogic;
         DBG(0)_PAD : OUT std_ulogic;
-        BAT_STAT(0)_PAD : OUT std_ulogic);
+        CAN_LED(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VDDIO_A_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CTB OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
+    ATTRIBUTE voltage_VDDIO_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_2 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_3 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_4 OF __DEFAULT__ : ENTITY IS 3.3e0;
@@ -30,7 +30,7 @@ ENTITY \PSoC Project Template\ IS
 END \PSoC Project Template\;
 
 ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
-    SIGNAL BAT_STAT(0)__PA : bit;
+    SIGNAL CAN_LED(0)__PA : bit;
     SIGNAL ClockBlock_ECO : bit;
     SIGNAL ClockBlock_ExtClk : bit;
     SIGNAL ClockBlock_HFClk : bit;
@@ -49,7 +49,6 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     SIGNAL DIP3(0)__PA : bit;
     SIGNAL DIP4(0)__PA : bit;
     SIGNAL ERR(0)__PA : bit;
-    SIGNAL IMU_RST(0)__PA : bit;
     SIGNAL Net_11 : bit;
     SIGNAL Net_12 : bit;
     SIGNAL Net_59 : bit;
@@ -92,21 +91,19 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     ATTRIBUTE lib_model OF TXD(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF TXD(0) : LABEL IS "P0[1]";
     ATTRIBUTE lib_model OF DIP1(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF DIP1(0) : LABEL IS "P1[0]";
+    ATTRIBUTE Location OF DIP1(0) : LABEL IS "P1[2]";
     ATTRIBUTE lib_model OF DIP2(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF DIP2(0) : LABEL IS "P1[1]";
+    ATTRIBUTE Location OF DIP2(0) : LABEL IS "P1[3]";
     ATTRIBUTE lib_model OF DIP3(0) : LABEL IS "iocell7";
-    ATTRIBUTE Location OF DIP3(0) : LABEL IS "P1[2]";
+    ATTRIBUTE Location OF DIP3(0) : LABEL IS "P1[4]";
     ATTRIBUTE lib_model OF DIP4(0) : LABEL IS "iocell8";
-    ATTRIBUTE Location OF DIP4(0) : LABEL IS "P1[3]";
-    ATTRIBUTE lib_model OF IMU_RST(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF IMU_RST(0) : LABEL IS "P2[7]";
-    ATTRIBUTE lib_model OF ERR(0) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF ERR(0) : LABEL IS "P4[5]";
-    ATTRIBUTE lib_model OF DBG(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF DIP4(0) : LABEL IS "P1[5]";
+    ATTRIBUTE lib_model OF ERR(0) : LABEL IS "iocell9";
+    ATTRIBUTE Location OF ERR(0) : LABEL IS "P0[2]";
+    ATTRIBUTE lib_model OF DBG(0) : LABEL IS "iocell10";
     ATTRIBUTE Location OF DBG(0) : LABEL IS "P4[1]";
-    ATTRIBUTE lib_model OF BAT_STAT(0) : LABEL IS "iocell12";
-    ATTRIBUTE Location OF BAT_STAT(0) : LABEL IS "P4[3]";
+    ATTRIBUTE lib_model OF CAN_LED(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF CAN_LED(0) : LABEL IS "P4[3]";
     ATTRIBUTE Location OF \DBG_UART:SCB\ : LABEL IS "F(SCB,3)";
     ATTRIBUTE Location OF \CAN:isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(29)]";
     ATTRIBUTE Location OF \CAN:CanIP\ : LABEL IS "F(CAN,1)";
@@ -1047,96 +1044,6 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    IMU_RST:logicalport
-        GENERIC MAP(
-            drive_mode => "110",
-            ibuf_enabled => "1",
-            id => "b84dbcf6-f26d-44a5-801d-09d588384840",
-            init_dr_st => "1",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "O",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "1",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    IMU_RST(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "IMU_RST",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
-        PORT MAP(
-            pa_out => IMU_RST(0)__PA,
-            oe => open,
-            pad_in => IMU_RST(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
     ERR:logicalport
         GENERIC MAP(
             drive_mode => "011",
@@ -1191,7 +1098,7 @@ BEGIN
             slew_rate => "0",
             spanning => 0,
             sw_only => 0,
-            use_annotation => "1",
+            use_annotation => "0",
             vtrip => "10",
             width => 1,
             in_clk_inv => 0,
@@ -1317,7 +1224,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    BAT_STAT:logicalport
+    CAN_LED:logicalport
         GENERIC MAP(
             drive_mode => "011",
             ibuf_enabled => "1",
@@ -1371,7 +1278,7 @@ BEGIN
             slew_rate => "0",
             spanning => 0,
             sw_only => 0,
-            use_annotation => "1",
+            use_annotation => "0",
             vtrip => "10",
             width => 1,
             in_clk_inv => 0,
@@ -1388,18 +1295,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    BAT_STAT(0):iocell
+    CAN_LED(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "BAT_STAT",
+            logicalport => "CAN_LED",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => BAT_STAT(0)__PA,
+            pa_out => CAN_LED(0)__PA,
             oe => open,
-            pad_in => BAT_STAT(0)_PAD,
+            pad_in => CAN_LED(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',

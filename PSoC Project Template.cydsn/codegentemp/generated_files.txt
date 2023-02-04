@@ -55,10 +55,6 @@
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DIP4.h" value="HEADER;;;;;DIP4" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DIP4_aliases.h" value="HEADER;;;;;DIP4" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DIP4_PM.c" value="SOURCE_C;CortexM0;;;;DIP4" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\IMU_RST.c" value="SOURCE_C;CortexM0;;;;IMU_RST" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\IMU_RST.h" value="HEADER;;;;;IMU_RST" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\IMU_RST_aliases.h" value="HEADER;;;;;IMU_RST" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\IMU_RST_PM.c" value="SOURCE_C;CortexM0;;;;IMU_RST" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\ERR.c" value="SOURCE_C;CortexM0;;;;ERR" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\ERR.h" value="HEADER;;;;;ERR" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\ERR_aliases.h" value="HEADER;;;;;ERR" />
@@ -67,10 +63,10 @@
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DBG.h" value="HEADER;;;;;DBG" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DBG_aliases.h" value="HEADER;;;;;DBG" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DBG_PM.c" value="SOURCE_C;CortexM0;;;;DBG" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\BAT_STAT.c" value="SOURCE_C;CortexM0;;;;BAT_STAT" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\BAT_STAT.h" value="HEADER;;;;;BAT_STAT" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\BAT_STAT_aliases.h" value="HEADER;;;;;BAT_STAT" />
-  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\BAT_STAT_PM.c" value="SOURCE_C;CortexM0;;;;BAT_STAT" />
+  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\CAN_LED.c" value="SOURCE_C;CortexM0;;;;CAN_LED" />
+  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\CAN_LED.h" value="HEADER;;;;;CAN_LED" />
+  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\CAN_LED_aliases.h" value="HEADER;;;;;CAN_LED" />
+  <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\CAN_LED_PM.c" value="SOURCE_C;CortexM0;;;;CAN_LED" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DBG_UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;DBG_UART_SCBCLK" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DBG_UART_SCBCLK.h" value="HEADER;;;;;DBG_UART_SCBCLK" />
   <file name="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\DBG_UART_tx.c" value="SOURCE_C;CortexM0;;;;DBG_UART_tx" />

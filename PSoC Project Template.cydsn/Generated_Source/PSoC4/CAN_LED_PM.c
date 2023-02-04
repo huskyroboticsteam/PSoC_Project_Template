@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: BAT_STAT.c  
+* File Name: CAN_LED.c  
 * Version 2.20
 *
 * Description:
@@ -15,13 +15,13 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "BAT_STAT.h"
+#include "CAN_LED.h"
 
-static BAT_STAT_BACKUP_STRUCT  BAT_STAT_backup = {0u, 0u, 0u};
+static CAN_LED_BACKUP_STRUCT  CAN_LED_backup = {0u, 0u, 0u};
 
 
 /*******************************************************************************
-* Function Name: BAT_STAT_Sleep
+* Function Name: CAN_LED_Sleep
 ****************************************************************************//**
 *
 * \brief Stores the pin configuration and prepares the pin for entering chip 
@@ -39,30 +39,30 @@ static BAT_STAT_BACKUP_STRUCT  BAT_STAT_backup = {0u, 0u, 0u};
 *  deep-sleep/hibernate modes.
 *
 * \funcusage
-*  \snippet BAT_STAT_SUT.c usage_BAT_STAT_Sleep_Wakeup
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_Sleep_Wakeup
 *******************************************************************************/
-void BAT_STAT_Sleep(void)
+void CAN_LED_Sleep(void)
 {
-    #if defined(BAT_STAT__PC)
-        BAT_STAT_backup.pcState = BAT_STAT_PC;
+    #if defined(CAN_LED__PC)
+        CAN_LED_backup.pcState = CAN_LED_PC;
     #else
         #if (CY_PSOC4_4200L)
             /* Save the regulator state and put the PHY into suspend mode */
-            BAT_STAT_backup.usbState = BAT_STAT_CR1_REG;
-            BAT_STAT_USB_POWER_REG |= BAT_STAT_USBIO_ENTER_SLEEP;
-            BAT_STAT_CR1_REG &= BAT_STAT_USBIO_CR1_OFF;
+            CAN_LED_backup.usbState = CAN_LED_CR1_REG;
+            CAN_LED_USB_POWER_REG |= CAN_LED_USBIO_ENTER_SLEEP;
+            CAN_LED_CR1_REG &= CAN_LED_USBIO_CR1_OFF;
         #endif
     #endif
-    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(BAT_STAT__SIO)
-        BAT_STAT_backup.sioState = BAT_STAT_SIO_REG;
+    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(CAN_LED__SIO)
+        CAN_LED_backup.sioState = CAN_LED_SIO_REG;
         /* SIO requires unregulated output buffer and single ended input buffer */
-        BAT_STAT_SIO_REG &= (uint32)(~BAT_STAT_SIO_LPM_MASK);
+        CAN_LED_SIO_REG &= (uint32)(~CAN_LED_SIO_LPM_MASK);
     #endif  
 }
 
 
 /*******************************************************************************
-* Function Name: BAT_STAT_Wakeup
+* Function Name: CAN_LED_Wakeup
 ****************************************************************************//**
 *
 * \brief Restores the pin configuration that was saved during Pin_Sleep(). This 
@@ -77,22 +77,22 @@ void BAT_STAT_Sleep(void)
 *  None
 *  
 * \funcusage
-*  Refer to BAT_STAT_Sleep() for an example usage.
+*  Refer to CAN_LED_Sleep() for an example usage.
 *******************************************************************************/
-void BAT_STAT_Wakeup(void)
+void CAN_LED_Wakeup(void)
 {
-    #if defined(BAT_STAT__PC)
-        BAT_STAT_PC = BAT_STAT_backup.pcState;
+    #if defined(CAN_LED__PC)
+        CAN_LED_PC = CAN_LED_backup.pcState;
     #else
         #if (CY_PSOC4_4200L)
             /* Restore the regulator state and come out of suspend mode */
-            BAT_STAT_USB_POWER_REG &= BAT_STAT_USBIO_EXIT_SLEEP_PH1;
-            BAT_STAT_CR1_REG = BAT_STAT_backup.usbState;
-            BAT_STAT_USB_POWER_REG &= BAT_STAT_USBIO_EXIT_SLEEP_PH2;
+            CAN_LED_USB_POWER_REG &= CAN_LED_USBIO_EXIT_SLEEP_PH1;
+            CAN_LED_CR1_REG = CAN_LED_backup.usbState;
+            CAN_LED_USB_POWER_REG &= CAN_LED_USBIO_EXIT_SLEEP_PH2;
         #endif
     #endif
-    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(BAT_STAT__SIO)
-        BAT_STAT_SIO_REG = BAT_STAT_backup.sioState;
+    #if defined(CYIPBLOCK_m0s8ioss_VERSION) && defined(CAN_LED__SIO)
+        CAN_LED_SIO_REG = CAN_LED_backup.sioState;
     #endif
 }
 

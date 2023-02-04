@@ -1,6 +1,6 @@
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f2d37479-58b6-4c62-9e37-b94081941184
-C:\Users\davis\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|7b4fcb2d-19f1-4a2f-9078-1d925f14fc12
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|608623c1-97ac-4c09-b76c-9cae9352698c
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|86cfc769-d175-4fec-95c5-b755494f9802
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d1099fae-933d-4f28-b730-8a22c5f48b68
-C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cyprj|d01ef4fd-7e53-4caa-a241-c0c4555b26e3
+C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cyprj|9a9a7e25-aa56-43fa-b176-e6dc0fe91ab9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0a25b87c-0dd3-4c9b-bb93-73de1f99e333
+C:\Users\davis\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|200bbf9b-2b2a-4cf5-9d50-b94b96c27718
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|fdc47d69-7379-4302-a524-30ef3f96cb65
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|eee62678-59d1-4847-9647-42cff78ac11d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|79d6d82a-083d-4268-8eac-4c0624f11cb9

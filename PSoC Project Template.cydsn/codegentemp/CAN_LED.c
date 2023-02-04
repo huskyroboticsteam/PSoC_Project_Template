@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: BAT_STAT.c  
+* File Name: CAN_LED.c  
 * Version 2.20
 *
 * Description:
@@ -13,35 +13,35 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "BAT_STAT.h"
+#include "CAN_LED.h"
 
 
-#if defined(BAT_STAT__PC)
-    #define BAT_STAT_SetP4PinDriveMode(shift, mode)  \
+#if defined(CAN_LED__PC)
+    #define CAN_LED_SetP4PinDriveMode(shift, mode)  \
     do { \
-        BAT_STAT_PC =   (BAT_STAT_PC & \
-                                (uint32)(~(uint32)(BAT_STAT_DRIVE_MODE_IND_MASK << \
-                                (BAT_STAT_DRIVE_MODE_BITS * (shift))))) | \
+        CAN_LED_PC =   (CAN_LED_PC & \
+                                (uint32)(~(uint32)(CAN_LED_DRIVE_MODE_IND_MASK << \
+                                (CAN_LED_DRIVE_MODE_BITS * (shift))))) | \
                                 (uint32)((uint32)(mode) << \
-                                (BAT_STAT_DRIVE_MODE_BITS * (shift))); \
+                                (CAN_LED_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 #else
     #if (CY_PSOC4_4200L)
-        #define BAT_STAT_SetP4PinDriveMode(shift, mode)  \
+        #define CAN_LED_SetP4PinDriveMode(shift, mode)  \
         do { \
-            BAT_STAT_USBIO_CTRL_REG = (BAT_STAT_USBIO_CTRL_REG & \
-                                    (uint32)(~(uint32)(BAT_STAT_DRIVE_MODE_IND_MASK << \
-                                    (BAT_STAT_DRIVE_MODE_BITS * (shift))))) | \
+            CAN_LED_USBIO_CTRL_REG = (CAN_LED_USBIO_CTRL_REG & \
+                                    (uint32)(~(uint32)(CAN_LED_DRIVE_MODE_IND_MASK << \
+                                    (CAN_LED_DRIVE_MODE_BITS * (shift))))) | \
                                     (uint32)((uint32)(mode) << \
-                                    (BAT_STAT_DRIVE_MODE_BITS * (shift))); \
+                                    (CAN_LED_DRIVE_MODE_BITS * (shift))); \
         } while (0)
     #endif
 #endif
   
 
-#if defined(BAT_STAT__PC) || (CY_PSOC4_4200L) 
+#if defined(CAN_LED__PC) || (CY_PSOC4_4200L) 
     /*******************************************************************************
-    * Function Name: BAT_STAT_SetDriveMode
+    * Function Name: CAN_LED_SetDriveMode
     ****************************************************************************//**
     *
     * \brief Sets the drive mode for each of the Pins component's pins.
@@ -67,17 +67,17 @@
     *  APIs (primary method) or disable interrupts around this function.
     *
     * \funcusage
-    *  \snippet BAT_STAT_SUT.c usage_BAT_STAT_SetDriveMode
+    *  \snippet CAN_LED_SUT.c usage_CAN_LED_SetDriveMode
     *******************************************************************************/
-    void BAT_STAT_SetDriveMode(uint8 mode)
+    void CAN_LED_SetDriveMode(uint8 mode)
     {
-		BAT_STAT_SetP4PinDriveMode(BAT_STAT__0__SHIFT, mode);
+		CAN_LED_SetP4PinDriveMode(CAN_LED__0__SHIFT, mode);
     }
 #endif
 
 
 /*******************************************************************************
-* Function Name: BAT_STAT_Write
+* Function Name: CAN_LED_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -106,18 +106,18 @@
 *  this function.
 *
 * \funcusage
-*  \snippet BAT_STAT_SUT.c usage_BAT_STAT_Write
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_Write
 *******************************************************************************/
-void BAT_STAT_Write(uint8 value)
+void CAN_LED_Write(uint8 value)
 {
-    uint8 drVal = (uint8)(BAT_STAT_DR & (uint8)(~BAT_STAT_MASK));
-    drVal = (drVal | ((uint8)(value << BAT_STAT_SHIFT) & BAT_STAT_MASK));
-    BAT_STAT_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(CAN_LED_DR & (uint8)(~CAN_LED_MASK));
+    drVal = (drVal | ((uint8)(value << CAN_LED_SHIFT) & CAN_LED_MASK));
+    CAN_LED_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: BAT_STAT_Read
+* Function Name: CAN_LED_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -131,16 +131,16 @@ void BAT_STAT_Write(uint8 value)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet BAT_STAT_SUT.c usage_BAT_STAT_Read  
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_Read  
 *******************************************************************************/
-uint8 BAT_STAT_Read(void)
+uint8 CAN_LED_Read(void)
 {
-    return (uint8)((BAT_STAT_PS & BAT_STAT_MASK) >> BAT_STAT_SHIFT);
+    return (uint8)((CAN_LED_PS & CAN_LED_MASK) >> CAN_LED_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: BAT_STAT_ReadDataReg
+* Function Name: CAN_LED_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -149,8 +149,8 @@ uint8 BAT_STAT_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred BAT_STAT_Read() API because the 
-* BAT_STAT_ReadDataReg() reads the data register instead of the status 
+* preferred CAN_LED_Read() API because the 
+* CAN_LED_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -159,16 +159,16 @@ uint8 BAT_STAT_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet BAT_STAT_SUT.c usage_BAT_STAT_ReadDataReg 
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_ReadDataReg 
 *******************************************************************************/
-uint8 BAT_STAT_ReadDataReg(void)
+uint8 CAN_LED_ReadDataReg(void)
 {
-    return (uint8)((BAT_STAT_DR & BAT_STAT_MASK) >> BAT_STAT_SHIFT);
+    return (uint8)((CAN_LED_DR & CAN_LED_MASK) >> CAN_LED_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: BAT_STAT_SetInterruptMode
+* Function Name: CAN_LED_SetInterruptMode
 ****************************************************************************//**
 *
 * \brief Configures the interrupt mode for each of the Pins component's
@@ -181,12 +181,12 @@ uint8 BAT_STAT_ReadDataReg(void)
 * \param position
 *  The pin position as listed in the Pins component. You may OR these to be 
 *  able to configure the interrupt mode of multiple pins within a Pins 
-*  component. Or you may use BAT_STAT_INTR_ALL to configure the
+*  component. Or you may use CAN_LED_INTR_ALL to configure the
 *  interrupt mode of all the pins in the Pins component.       
-*  - BAT_STAT_0_INTR       (First pin in the list)
-*  - BAT_STAT_1_INTR       (Second pin in the list)
+*  - CAN_LED_0_INTR       (First pin in the list)
+*  - CAN_LED_1_INTR       (Second pin in the list)
 *  - ...
-*  - BAT_STAT_INTR_ALL     (All pins in Pins component)
+*  - CAN_LED_INTR_ALL     (All pins in Pins component)
 *
 * \param mode
 *  Interrupt mode for the selected pins. Valid options are documented in
@@ -202,19 +202,19 @@ uint8 BAT_STAT_ReadDataReg(void)
 *  port.
 *
 * \funcusage
-*  \snippet BAT_STAT_SUT.c usage_BAT_STAT_SetInterruptMode
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_SetInterruptMode
 *******************************************************************************/
-void BAT_STAT_SetInterruptMode(uint16 position, uint16 mode)
+void CAN_LED_SetInterruptMode(uint16 position, uint16 mode)
 {
     uint32 intrCfg;
     
-    intrCfg =  BAT_STAT_INTCFG & (uint32)(~(uint32)position);
-    BAT_STAT_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
+    intrCfg =  CAN_LED_INTCFG & (uint32)(~(uint32)position);
+    CAN_LED_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
 }
 
 
 /*******************************************************************************
-* Function Name: BAT_STAT_ClearInterrupt
+* Function Name: CAN_LED_ClearInterrupt
 ****************************************************************************//**
 *
 * \brief Clears any active interrupts attached with the component and returns 
@@ -231,13 +231,13 @@ void BAT_STAT_SetInterruptMode(uint16 position, uint16 mode)
 *  those associated with the Pins component.
 *
 * \funcusage
-*  \snippet BAT_STAT_SUT.c usage_BAT_STAT_ClearInterrupt
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_ClearInterrupt
 *******************************************************************************/
-uint8 BAT_STAT_ClearInterrupt(void)
+uint8 CAN_LED_ClearInterrupt(void)
 {
-	uint8 maskedStatus = (uint8)(BAT_STAT_INTSTAT & BAT_STAT_MASK);
-	BAT_STAT_INTSTAT = maskedStatus;
-    return maskedStatus >> BAT_STAT_SHIFT;
+	uint8 maskedStatus = (uint8)(CAN_LED_INTSTAT & CAN_LED_MASK);
+	CAN_LED_INTSTAT = maskedStatus;
+    return maskedStatus >> CAN_LED_SHIFT;
 }
 
 

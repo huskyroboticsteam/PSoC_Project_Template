@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Project Template\PSoC Project Template">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Project Template\PSoC Project Template\Source Files\HindSightCAN\CANCommon.h">
 <ExpandedNodeIds>
 <v>PSoC Project Template</v>
 <v>PSoC Project Template\PSoC Project Template</v>
@@ -81,10 +81,10 @@
 <v>PSoC Project Template\PSoC Project Template\Source Files\main.c</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4</v>
-<v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\BAT_STAT</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\CAN</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\CAN_HFCLK</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\CAN_isr</v>
+<v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\CAN_LED</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\cy_boot</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\cy_dmac</v>
 <v>PSoC Project Template\PSoC Project Template\Generated_Source\PSoC4\cy_lfclk</v>
@@ -112,12 +112,12 @@
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\BAT_STAT.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\BAT_STAT_PM.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
+<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED.lst</v>
+<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_LED_PM.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CANCommon.lst</v>
@@ -159,8 +159,6 @@
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DIP4_PM.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\ERR.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\ERR_PM.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\IMU_RST.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\IMU_RST_PM.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\Port.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\RXD.lst</v>
@@ -177,43 +175,6 @@
 <VisibleNodeIds>
 <v>PSoC Project Template</v>
 <v>PSoC Project Template\PSoC Project Template</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\BAT_STAT.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\BAT_STAT_PM.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_HFCLK.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_INT.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_isr.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_PM.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CAN_TX_RX_func.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CANCommon.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CANGPIO.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CANLocalization.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CANPacket.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_PM.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART_BOOT.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART_PM.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART_rx.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART_rx_PM.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART_SCBCLK.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART_SPI_UART.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\DBG_UART_SPI_UART_INT.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -228,7 +189,7 @@
 <v>PSoC Project Template\PSoC Project Template\PSoC 4 Architecture TRM</v>
 <v>PSoC Project Template\PSoC Project Template\PSoC 4200L Family Datasheet</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides</v>
-<v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_boot_v6_0</v>
+<v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_boot_v6_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_dmac_v1_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_lfclk_v1_20</v>
 <v>PSoC Project Template\PSoC Project Template\CAN_v3_0.pdf</v>
@@ -242,7 +203,7 @@
 <v>PSoC Project Template\PSoC Project Template\PSoC 4 Architecture TRM</v>
 <v>PSoC Project Template\PSoC Project Template\PSoC 4200L Family Datasheet</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides</v>
-<v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_boot_v6_0</v>
+<v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_boot_v6_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_dmac_v1_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_lfclk_v1_20</v>
 <v>PSoC Project Template\PSoC Project Template\CAN_v3_0.pdf</v>
@@ -258,6 +219,13 @@
 <CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
 <indicators />
 </CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="6c335137-fa19-46ce-bc2d-2fbeb6d5f2a2">
+<CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2 type_name="CyDesigner.Common.ProjMgmt.GUI.CyDependenciesCustomData" version="1">
+<dictName v=".\PSoC Project Template.cydsn\PSoC Project Template.cyprj">
+<listName />
+</dictName>
+</CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2>
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
@@ -275,7 +243,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1547, 757" SelectedTabbedMdiWindow="758f4720-0d37-4cf2-84c2-f26637259450"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="601d7438-0df5-4c65-973b-eaad6f0e5381" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\Port.c" Guid="15e30e19-2dad-4a88-81db-6aee1f51c29f" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\main.c" Guid="ef7351e8-b194-4e24-84d1-2f23ed4d6301" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\main.h" Guid="e020ec87-22f5-4b03-ad7a-bc505bb24a84" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\TopDesign\TopDesign.cysch" Guid="758f4720-0d37-4cf2-84c2-f26637259450" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cydwr" Guid="0c503602-5151-40a9-a21f-77e6e7898b30" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1565, 757" SelectedTabbedMdiWindow="ef7351e8-b194-4e24-84d1-2f23ed4d6301"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="601d7438-0df5-4c65-973b-eaad6f0e5381" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\Port.c" Guid="15e30e19-2dad-4a88-81db-6aee1f51c29f" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\main.c" Guid="ef7351e8-b194-4e24-84d1-2f23ed4d6301" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\main.h" Guid="e020ec87-22f5-4b03-ad7a-bc505bb24a84" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\TopDesign\TopDesign.cysch" Guid="758f4720-0d37-4cf2-84c2-f26637259450" /><DocumentWindow Key="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cydwr" Guid="7bb07425-bd1c-4ce5-a9f9-83ca5d6d98fb" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

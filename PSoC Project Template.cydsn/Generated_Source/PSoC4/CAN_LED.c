@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: IMU_RST.c  
+* File Name: CAN_LED.c  
 * Version 2.20
 *
 * Description:
@@ -13,35 +13,35 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "IMU_RST.h"
+#include "CAN_LED.h"
 
 
-#if defined(IMU_RST__PC)
-    #define IMU_RST_SetP4PinDriveMode(shift, mode)  \
+#if defined(CAN_LED__PC)
+    #define CAN_LED_SetP4PinDriveMode(shift, mode)  \
     do { \
-        IMU_RST_PC =   (IMU_RST_PC & \
-                                (uint32)(~(uint32)(IMU_RST_DRIVE_MODE_IND_MASK << \
-                                (IMU_RST_DRIVE_MODE_BITS * (shift))))) | \
+        CAN_LED_PC =   (CAN_LED_PC & \
+                                (uint32)(~(uint32)(CAN_LED_DRIVE_MODE_IND_MASK << \
+                                (CAN_LED_DRIVE_MODE_BITS * (shift))))) | \
                                 (uint32)((uint32)(mode) << \
-                                (IMU_RST_DRIVE_MODE_BITS * (shift))); \
+                                (CAN_LED_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 #else
     #if (CY_PSOC4_4200L)
-        #define IMU_RST_SetP4PinDriveMode(shift, mode)  \
+        #define CAN_LED_SetP4PinDriveMode(shift, mode)  \
         do { \
-            IMU_RST_USBIO_CTRL_REG = (IMU_RST_USBIO_CTRL_REG & \
-                                    (uint32)(~(uint32)(IMU_RST_DRIVE_MODE_IND_MASK << \
-                                    (IMU_RST_DRIVE_MODE_BITS * (shift))))) | \
+            CAN_LED_USBIO_CTRL_REG = (CAN_LED_USBIO_CTRL_REG & \
+                                    (uint32)(~(uint32)(CAN_LED_DRIVE_MODE_IND_MASK << \
+                                    (CAN_LED_DRIVE_MODE_BITS * (shift))))) | \
                                     (uint32)((uint32)(mode) << \
-                                    (IMU_RST_DRIVE_MODE_BITS * (shift))); \
+                                    (CAN_LED_DRIVE_MODE_BITS * (shift))); \
         } while (0)
     #endif
 #endif
   
 
-#if defined(IMU_RST__PC) || (CY_PSOC4_4200L) 
+#if defined(CAN_LED__PC) || (CY_PSOC4_4200L) 
     /*******************************************************************************
-    * Function Name: IMU_RST_SetDriveMode
+    * Function Name: CAN_LED_SetDriveMode
     ****************************************************************************//**
     *
     * \brief Sets the drive mode for each of the Pins component's pins.
@@ -67,17 +67,17 @@
     *  APIs (primary method) or disable interrupts around this function.
     *
     * \funcusage
-    *  \snippet IMU_RST_SUT.c usage_IMU_RST_SetDriveMode
+    *  \snippet CAN_LED_SUT.c usage_CAN_LED_SetDriveMode
     *******************************************************************************/
-    void IMU_RST_SetDriveMode(uint8 mode)
+    void CAN_LED_SetDriveMode(uint8 mode)
     {
-		IMU_RST_SetP4PinDriveMode(IMU_RST__0__SHIFT, mode);
+		CAN_LED_SetP4PinDriveMode(CAN_LED__0__SHIFT, mode);
     }
 #endif
 
 
 /*******************************************************************************
-* Function Name: IMU_RST_Write
+* Function Name: CAN_LED_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -106,18 +106,18 @@
 *  this function.
 *
 * \funcusage
-*  \snippet IMU_RST_SUT.c usage_IMU_RST_Write
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_Write
 *******************************************************************************/
-void IMU_RST_Write(uint8 value)
+void CAN_LED_Write(uint8 value)
 {
-    uint8 drVal = (uint8)(IMU_RST_DR & (uint8)(~IMU_RST_MASK));
-    drVal = (drVal | ((uint8)(value << IMU_RST_SHIFT) & IMU_RST_MASK));
-    IMU_RST_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(CAN_LED_DR & (uint8)(~CAN_LED_MASK));
+    drVal = (drVal | ((uint8)(value << CAN_LED_SHIFT) & CAN_LED_MASK));
+    CAN_LED_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: IMU_RST_Read
+* Function Name: CAN_LED_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -131,16 +131,16 @@ void IMU_RST_Write(uint8 value)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet IMU_RST_SUT.c usage_IMU_RST_Read  
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_Read  
 *******************************************************************************/
-uint8 IMU_RST_Read(void)
+uint8 CAN_LED_Read(void)
 {
-    return (uint8)((IMU_RST_PS & IMU_RST_MASK) >> IMU_RST_SHIFT);
+    return (uint8)((CAN_LED_PS & CAN_LED_MASK) >> CAN_LED_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: IMU_RST_ReadDataReg
+* Function Name: CAN_LED_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -149,8 +149,8 @@ uint8 IMU_RST_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred IMU_RST_Read() API because the 
-* IMU_RST_ReadDataReg() reads the data register instead of the status 
+* preferred CAN_LED_Read() API because the 
+* CAN_LED_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -159,16 +159,16 @@ uint8 IMU_RST_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet IMU_RST_SUT.c usage_IMU_RST_ReadDataReg 
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_ReadDataReg 
 *******************************************************************************/
-uint8 IMU_RST_ReadDataReg(void)
+uint8 CAN_LED_ReadDataReg(void)
 {
-    return (uint8)((IMU_RST_DR & IMU_RST_MASK) >> IMU_RST_SHIFT);
+    return (uint8)((CAN_LED_DR & CAN_LED_MASK) >> CAN_LED_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: IMU_RST_SetInterruptMode
+* Function Name: CAN_LED_SetInterruptMode
 ****************************************************************************//**
 *
 * \brief Configures the interrupt mode for each of the Pins component's
@@ -181,12 +181,12 @@ uint8 IMU_RST_ReadDataReg(void)
 * \param position
 *  The pin position as listed in the Pins component. You may OR these to be 
 *  able to configure the interrupt mode of multiple pins within a Pins 
-*  component. Or you may use IMU_RST_INTR_ALL to configure the
+*  component. Or you may use CAN_LED_INTR_ALL to configure the
 *  interrupt mode of all the pins in the Pins component.       
-*  - IMU_RST_0_INTR       (First pin in the list)
-*  - IMU_RST_1_INTR       (Second pin in the list)
+*  - CAN_LED_0_INTR       (First pin in the list)
+*  - CAN_LED_1_INTR       (Second pin in the list)
 *  - ...
-*  - IMU_RST_INTR_ALL     (All pins in Pins component)
+*  - CAN_LED_INTR_ALL     (All pins in Pins component)
 *
 * \param mode
 *  Interrupt mode for the selected pins. Valid options are documented in
@@ -202,19 +202,19 @@ uint8 IMU_RST_ReadDataReg(void)
 *  port.
 *
 * \funcusage
-*  \snippet IMU_RST_SUT.c usage_IMU_RST_SetInterruptMode
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_SetInterruptMode
 *******************************************************************************/
-void IMU_RST_SetInterruptMode(uint16 position, uint16 mode)
+void CAN_LED_SetInterruptMode(uint16 position, uint16 mode)
 {
     uint32 intrCfg;
     
-    intrCfg =  IMU_RST_INTCFG & (uint32)(~(uint32)position);
-    IMU_RST_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
+    intrCfg =  CAN_LED_INTCFG & (uint32)(~(uint32)position);
+    CAN_LED_INTCFG = intrCfg | ((uint32)position & (uint32)mode);
 }
 
 
 /*******************************************************************************
-* Function Name: IMU_RST_ClearInterrupt
+* Function Name: CAN_LED_ClearInterrupt
 ****************************************************************************//**
 *
 * \brief Clears any active interrupts attached with the component and returns 
@@ -231,13 +231,13 @@ void IMU_RST_SetInterruptMode(uint16 position, uint16 mode)
 *  those associated with the Pins component.
 *
 * \funcusage
-*  \snippet IMU_RST_SUT.c usage_IMU_RST_ClearInterrupt
+*  \snippet CAN_LED_SUT.c usage_CAN_LED_ClearInterrupt
 *******************************************************************************/
-uint8 IMU_RST_ClearInterrupt(void)
+uint8 CAN_LED_ClearInterrupt(void)
 {
-	uint8 maskedStatus = (uint8)(IMU_RST_INTSTAT & IMU_RST_MASK);
-	IMU_RST_INTSTAT = maskedStatus;
-    return maskedStatus >> IMU_RST_SHIFT;
+	uint8 maskedStatus = (uint8)(CAN_LED_INTSTAT & CAN_LED_MASK);
+	CAN_LED_INTSTAT = maskedStatus;
+    return maskedStatus >> CAN_LED_SHIFT;
 }
 
 
