@@ -6,7 +6,7 @@
     <Toolchain Name="ARM GCC Generic" Selected="True">
       <Tool Name="prebuild" Command="" Options="" />
       <Tool Name="assembler" Command="arm-none-eabi-as.exe" Options="-mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=${OutputDir}/${CompileFile}.lst -g -W" />
-      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -I.\HindsightCAN -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og" />
+      <Tool Name="compiler" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -I.\HindsightCAN -I. -IGenerated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -D CHIP_TYPE=CHIP_TYPE_PSOC_CY8C4248AZI_L485" />
       <Tool Name="linker" Command="arm-none-eabi-gcc.exe" Options="-mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,${OutputDir}/${ProjectShortName}.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects" />
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="PSoC Project Template" Path="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" Version="6.10" Type="Normal">
+  <Project Name="PSoC Project Template" Path="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" Version="6.10" Type="Normal">
     <CMSIS_SVD_File>PSoC Project Template.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,31 +34,20 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn">
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
-          <File BuildType="BUILD" Toolchain="">Port.c</File>
+          <File BuildType="BUILD" Toolchain="">Temp_CAN.c</File>
+          <File BuildType="BUILD" Toolchain="">Temp_FSM.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">main.h</File>
+          <File BuildType="BUILD" Toolchain="">Temp_CAN.h</File>
+          <File BuildType="BUILD" Toolchain="">Temp_FSM.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn">
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANCommon.c</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANCommon.h</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANGPIO.c</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANGPIO.h</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLibrary.h</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLocalization.c</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLocalization.h</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPacket.c</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPacket.h</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANSerialNumbers.h</File>
-          <File BuildType="BUILD" Toolchain="">HindsightCAN\Port.h</File>
-        </Files>
-      </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -113,6 +102,14 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_isr.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_HFCLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_HFCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_RX.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_RX.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_RX_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_RX_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_TX.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_TX.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_TX_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_TX_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP1_aliases.h</File>
@@ -129,14 +126,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP4.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP4_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DIP4_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERR.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERR.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERR_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ERR_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_UART.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_UART.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_UART_SPI_UART.h</File>
@@ -160,49 +149,75 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_UART_rx.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_UART_rx_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\DBG_UART_rx_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\RXD.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\RXD.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\RXD_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\RXD_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TXD.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TXD.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TXD_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TXD_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CAN_LED_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_ERR.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_ERR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_ERR_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_ERR_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_DBG_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_DBG_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_DBG_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_DBG_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_CAN.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_CAN.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_CAN_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_CAN_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Period_Reset.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Period_Reset.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Timer_Period_Reset_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Period_Reset.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Period_Reset.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Button_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Button_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\isr_Button_1.h</File>
+        </Files>
+      </Folder>
+      <Folder BuildType="STRICT" Path="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn">
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn">
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANCommon.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANCommon.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANGPIO.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANGPIO.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLibrary.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLocalization.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANLocalization.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPacket.c</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANPacket.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\CANSerialNumbers.h</File>
+          <File BuildType="BUILD" Toolchain="">HindsightCAN\Port.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\davis\Documents\PSoC Creator\PSoC_Project_Template\PSoC Project Template.cydsn" />
+        <Files Root="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn" />
       </Folder>
     </Folders>
   </Project>

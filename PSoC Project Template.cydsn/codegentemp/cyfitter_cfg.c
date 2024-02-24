@@ -220,7 +220,6 @@ static void ClockSetup(void)
 
 	/* Setup and trim IMO based on desired frequency. */
 	CySysClkWriteImoFreq(48u);
-	CySysClkImoEnableWcoLock();
 	/* CYDEV_CLK_ILO_CONFIG Starting address: CYDEV_CLK_ILO_CONFIG */
 	CY_SET_REG32((void *)(CYREG_CLK_ILO_CONFIG), 0x80000006u);
 
@@ -231,14 +230,14 @@ static void ClockSetup(void)
 	/* Setup phase aligned clocks */
 	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL0, 0x00000000u);
 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF40u);
-	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL1, 0x00002200u);
+	CY_SET_REG32((void *)CYREG_PERI_DIV_16_CTL1, 0x00001C00u);
 	CY_SET_REG32((void *)CYREG_PERI_DIV_CMD, 0x8000FF41u);
 
 	/* CYDEV_CLK_IMO_CONFIG Starting address: CYDEV_CLK_IMO_CONFIG */
 	CY_SET_REG32((void *)(CYREG_CLK_IMO_CONFIG), 0x80000000u);
 
 	/* CYDEV_CLK_SELECT Starting address: CYDEV_CLK_SELECT */
-	CY_SET_REG32((void *)(CYREG_CLK_SELECT), 0x00040000u);
+	CY_SET_REG32((void *)(CYREG_CLK_SELECT), 0x00040249u);
 
 	/* CYDEV_PERI_PCLK_CTL5 Starting address: CYDEV_PERI_PCLK_CTL5 */
 	CY_SET_REG32((void *)(CYREG_PERI_PCLK_CTL5), 0x00000041u);
@@ -457,7 +456,7 @@ void cyfitter_cfg(void)
 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
 
 		/* HSIOM Starting address: CYDEV_HSIOM_BASE */
-		CY_SET_REG32((void *)(CYDEV_HSIOM_BASE), 0x000000AAu);
+		CY_SET_REG32((void *)(CYDEV_HSIOM_BASE), 0x080000AAu);
 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL3), 0x0000EE00u);
 		CY_SET_REG32((void *)(CYREG_HSIOM_PORT_SEL7), 0x00000099u);
 
@@ -487,7 +486,7 @@ void cyfitter_cfg(void)
 	/* Perform second pass device configuration. These items must be configured in specific order after the regular configuration is done. */
 	/* IOPINS0_0 Starting address: CYDEV_GPIO_PRT0_BASE */
 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT0_BASE), 0x00000006u);
-	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x000002F1u);
+	CY_SET_REG32((void *)(CYREG_GPIO_PRT0_PC), 0x000402F1u);
 
 	/* IOPINS0_1 Starting address: CYDEV_GPIO_PRT1_BASE */
 	CY_SET_REG32((void *)(CYDEV_GPIO_PRT1_BASE), 0x0000003Cu);

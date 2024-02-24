@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Feb 24 2024 10:19:10
+#File Generated:     Feb 24 2024 11:44:08
 
 #Purpose:            
 
@@ -76,13 +76,14 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
-Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  48.0 MHz
+Number of clocks: 10
+Clock: CyExtClk             | Frequency: N/A       | Target:  40.0 MHz
+Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  40.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
-Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
@@ -97,13 +98,14 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
-Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  48.0 MHz
+Number of clocks: 10
+Clock: CyExtClk             | Frequency: N/A       | Target:  40.0 MHz
+Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  40.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
-Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
@@ -141,13 +143,14 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
-Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  48.0 MHz
+Number of clocks: 10
+Clock: CyExtClk             | Frequency: N/A       | Target:  40.0 MHz
+Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  43.5 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
-Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
@@ -169,13 +172,14 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
-Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  48.0 MHz
+Number of clocks: 10
+Clock: CyExtClk             | Frequency: N/A       | Target:  40.0 MHz
+Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  43.5 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
-Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
@@ -190,13 +194,14 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
-Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  48.0 MHz
+Number of clocks: 10
+Clock: CyExtClk             | Frequency: N/A       | Target:  40.0 MHz
+Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  43.5 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
-Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
@@ -234,13 +239,14 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 9
-Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  48.0 MHz
+Number of clocks: 10
+Clock: CyExtClk             | Frequency: N/A       | Target:  40.0 MHz
+Clock: CyHFClk              | Frequency:  41.7 MHz | Target:  43.5 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
-Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
-Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
+Clock: CyRouted1            | Frequency: N/A       | Target:  40.0 MHz
+Clock: CySysClk             | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyWCO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
@@ -254,5 +260,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 0.4 sec.
 

@@ -598,7 +598,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="133532723566586257" />
+<deps_time v="133532774560363300" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 <pdl_path v="" />
@@ -611,6 +611,218 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM0\ARM_GCC_541\Debug\Temp_CAN.o">
+<dep name=".\Generated_Source\PSoC4\Button_1.h" />
+<dep name=".\Generated_Source\PSoC4\Button_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_RX.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_RX_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_TX.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_TX_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_isr.h" />
+<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_BOOT.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_PINS.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_SCBCLK.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_rx.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_rx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_tx.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_tx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP1.h" />
+<dep name=".\Generated_Source\PSoC4\DIP1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP2.h" />
+<dep name=".\Generated_Source\PSoC4\DIP2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP3.h" />
+<dep name=".\Generated_Source\PSoC4\DIP3_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP4.h" />
+<dep name=".\Generated_Source\PSoC4\DIP4_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\LED_CAN.h" />
+<dep name=".\Generated_Source\PSoC4\LED_CAN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\LED_DBG_1.h" />
+<dep name=".\Generated_Source\PSoC4\LED_DBG_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\LED_ERR.h" />
+<dep name=".\Generated_Source\PSoC4\LED_ERR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Period_Reset.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Button_1.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Period_Reset.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\HindsightCAN\CANLibrary.h" />
+<dep name=".\Temp_CAN.c" />
+<dep name=".\Temp_CAN.h" />
+<dep name=".\Temp_FSM.h" />
+<dep name=".\cyapicallbacks.h" />
+<dep name=".\main.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANCommon.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANGPIO.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANLocalization.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANMotorUnit.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPacket.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPower.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANSerialNumbers.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\Port.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Button_1.h" />
+<file name=".\Generated_Source\PSoC4\Button_1_aliases.h" />
+<file name=".\Generated_Source\PSoC4\CAN.h" />
+<file name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
+<file name=".\Generated_Source\PSoC4\CAN_RX.h" />
+<file name=".\Generated_Source\PSoC4\CAN_RX_aliases.h" />
+<file name=".\Generated_Source\PSoC4\CAN_TX.h" />
+<file name=".\Generated_Source\PSoC4\CAN_TX_aliases.h" />
+<file name=".\Generated_Source\PSoC4\CAN_isr.h" />
+<file name=".\Generated_Source\PSoC4\CyDMA.h" />
+<file name=".\Generated_Source\PSoC4\CyFlash.h" />
+<file name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<file name=".\Generated_Source\PSoC4\CyLib.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_BOOT.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_PINS.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_SCBCLK.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART_PVT.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_rx.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_rx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_tx.h" />
+<file name=".\Generated_Source\PSoC4\DBG_UART_tx_aliases.h" />
+<file name=".\Generated_Source\PSoC4\DIP1.h" />
+<file name=".\Generated_Source\PSoC4\DIP1_aliases.h" />
+<file name=".\Generated_Source\PSoC4\DIP2.h" />
+<file name=".\Generated_Source\PSoC4\DIP2_aliases.h" />
+<file name=".\Generated_Source\PSoC4\DIP3.h" />
+<file name=".\Generated_Source\PSoC4\DIP3_aliases.h" />
+<file name=".\Generated_Source\PSoC4\DIP4.h" />
+<file name=".\Generated_Source\PSoC4\DIP4_aliases.h" />
+<file name=".\Generated_Source\PSoC4\LED_CAN.h" />
+<file name=".\Generated_Source\PSoC4\LED_CAN_aliases.h" />
+<file name=".\Generated_Source\PSoC4\LED_DBG_1.h" />
+<file name=".\Generated_Source\PSoC4\LED_DBG_1_aliases.h" />
+<file name=".\Generated_Source\PSoC4\LED_ERR.h" />
+<file name=".\Generated_Source\PSoC4\LED_ERR_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Timer_Period_Reset.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<file name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0.h" />
+<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<file name=".\Generated_Source\PSoC4\cyPm.h" />
+<file name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<file name=".\Generated_Source\PSoC4\cypins.h" />
+<file name=".\Generated_Source\PSoC4\cytypes.h" />
+<file name=".\Generated_Source\PSoC4\isr_Button_1.h" />
+<file name=".\Generated_Source\PSoC4\isr_Period_Reset.h" />
+<file name=".\Generated_Source\PSoC4\project.h" />
+<file name=".\HindsightCAN\CANLibrary.h" />
+<file name=".\Temp_CAN.c" />
+<file name=".\Temp_CAN.h" />
+<file name=".\Temp_FSM.h" />
+<file name=".\cyapicallbacks.h" />
+<file name=".\main.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANCommon.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANGPIO.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANLocalization.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANMotorUnit.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPacket.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPower.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANSerialNumbers.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\Port.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\main.o">
+<dep name=".\Generated_Source\PSoC4\Button_1.h" />
+<dep name=".\Generated_Source\PSoC4\Button_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_RX.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_RX_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_TX.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_TX_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\CAN_isr.h" />
+<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
+<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_BOOT.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_PINS.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_SCBCLK.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART_PVT.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_rx.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_rx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_tx.h" />
+<dep name=".\Generated_Source\PSoC4\DBG_UART_tx_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP1.h" />
+<dep name=".\Generated_Source\PSoC4\DIP1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP2.h" />
+<dep name=".\Generated_Source\PSoC4\DIP2_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP3.h" />
+<dep name=".\Generated_Source\PSoC4\DIP3_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\DIP4.h" />
+<dep name=".\Generated_Source\PSoC4\DIP4_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\LED_CAN.h" />
+<dep name=".\Generated_Source\PSoC4\LED_CAN_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\LED_DBG_1.h" />
+<dep name=".\Generated_Source\PSoC4\LED_DBG_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\LED_ERR.h" />
+<dep name=".\Generated_Source\PSoC4\LED_ERR_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Timer_Period_Reset.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
+<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
+<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
+<dep name=".\Generated_Source\PSoC4\cyPm.h" />
+<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC4\cypins.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Button_1.h" />
+<dep name=".\Generated_Source\PSoC4\isr_Period_Reset.h" />
+<dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\HindsightCAN\CANLibrary.h" />
+<dep name=".\Temp_CAN.h" />
+<dep name=".\Temp_FSM.h" />
+<dep name=".\cyapicallbacks.h" />
+<dep name=".\main.c" />
+<dep name=".\main.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANCommon.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANGPIO.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANLocalization.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANMotorUnit.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPacket.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPower.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANSerialNumbers.h" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\Port.h" />
+</file>
+<file name=".\main.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Button_1.o">
 <dep name=".\Generated_Source\PSoC4\Button_1.c" />
 <dep name=".\Generated_Source\PSoC4\Button_1.h" />
@@ -621,12 +833,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Button_1.c" />
-<file name=".\Generated_Source\PSoC4\Button_1.h" />
-<file name=".\Generated_Source\PSoC4\Button_1_aliases.h" />
-<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<file name=".\Generated_Source\PSoC4\cyfitter.h" />
-<file name=".\Generated_Source\PSoC4\cypins.h" />
-<file name=".\Generated_Source\PSoC4\cytypes.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Button_1_PM.o">
 <dep name=".\Generated_Source\PSoC4\Button_1.h" />
 <dep name=".\Generated_Source\PSoC4\Button_1_PM.c" />
@@ -648,10 +854,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CAN.c" />
-<file name=".\Generated_Source\PSoC4\CAN.h" />
-<file name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<file name=".\Generated_Source\PSoC4\CyLib.h" />
-<file name=".\cyapicallbacks.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CAN_HFCLK.o">
 <dep name=".\Generated_Source\PSoC4\CAN_HFCLK.c" />
 <dep name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
@@ -660,7 +862,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CAN_HFCLK.c" />
-<file name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CAN_INT.o">
 <dep name=".\Generated_Source\PSoC4\CAN.h" />
 <dep name=".\Generated_Source\PSoC4\CAN_INT.c" />
@@ -693,8 +894,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CAN_RX.c" />
-<file name=".\Generated_Source\PSoC4\CAN_RX.h" />
-<file name=".\Generated_Source\PSoC4\CAN_RX_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CAN_RX_PM.o">
 <dep name=".\Generated_Source\PSoC4\CAN_RX.h" />
 <dep name=".\Generated_Source\PSoC4\CAN_RX_PM.c" />
@@ -715,8 +914,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CAN_TX.c" />
-<file name=".\Generated_Source\PSoC4\CAN_TX.h" />
-<file name=".\Generated_Source\PSoC4\CAN_TX_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CAN_TX_PM.o">
 <dep name=".\Generated_Source\PSoC4\CAN_TX.h" />
 <dep name=".\Generated_Source\PSoC4\CAN_TX_PM.c" />
@@ -749,7 +946,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CAN_isr.c" />
-<file name=".\Generated_Source\PSoC4\CAN_isr.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Cm0Start.o">
 <dep name=".\Generated_Source\PSoC4\Cm0Start.c" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -761,7 +957,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Cm0Start.c" />
-<file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyDMA.o">
 <dep name=".\Generated_Source\PSoC4\CyDMA.c" />
 <dep name=".\Generated_Source\PSoC4\CyDMA.h" />
@@ -772,7 +967,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CyDMA.c" />
-<file name=".\Generated_Source\PSoC4\CyDMA.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyFlash.o">
 <dep name=".\Generated_Source\PSoC4\CyFlash.c" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -783,7 +977,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\CyFlash.c" />
-<file name=".\Generated_Source\PSoC4\CyFlash.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyLFClk.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.c" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -823,16 +1016,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\DBG_UART.c" />
-<file name=".\Generated_Source\PSoC4\DBG_UART.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_PINS.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_SCBCLK.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART_PVT.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_rx.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_rx_aliases.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_tx.h" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_tx_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_BOOT.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -853,7 +1036,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\DBG_UART_BOOT.c" />
-<file name=".\Generated_Source\PSoC4\DBG_UART_BOOT.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -1014,8 +1196,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\DIP1.c" />
-<file name=".\Generated_Source\PSoC4\DIP1.h" />
-<file name=".\Generated_Source\PSoC4\DIP1_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\DIP1_PM.o">
 <dep name=".\Generated_Source\PSoC4\DIP1.h" />
 <dep name=".\Generated_Source\PSoC4\DIP1_PM.c" />
@@ -1036,8 +1216,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\DIP2.c" />
-<file name=".\Generated_Source\PSoC4\DIP2.h" />
-<file name=".\Generated_Source\PSoC4\DIP2_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\DIP2_PM.o">
 <dep name=".\Generated_Source\PSoC4\DIP2.h" />
 <dep name=".\Generated_Source\PSoC4\DIP2_PM.c" />
@@ -1058,8 +1236,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\DIP3.c" />
-<file name=".\Generated_Source\PSoC4\DIP3.h" />
-<file name=".\Generated_Source\PSoC4\DIP3_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\DIP3_PM.o">
 <dep name=".\Generated_Source\PSoC4\DIP3.h" />
 <dep name=".\Generated_Source\PSoC4\DIP3_PM.c" />
@@ -1080,8 +1256,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\DIP4.c" />
-<file name=".\Generated_Source\PSoC4\DIP4.h" />
-<file name=".\Generated_Source\PSoC4\DIP4_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\DIP4_PM.o">
 <dep name=".\Generated_Source\PSoC4\DIP4.h" />
 <dep name=".\Generated_Source\PSoC4\DIP4_PM.c" />
@@ -1102,8 +1276,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\LED_CAN.c" />
-<file name=".\Generated_Source\PSoC4\LED_CAN.h" />
-<file name=".\Generated_Source\PSoC4\LED_CAN_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\LED_CAN_PM.o">
 <dep name=".\Generated_Source\PSoC4\LED_CAN.h" />
 <dep name=".\Generated_Source\PSoC4\LED_CAN_PM.c" />
@@ -1124,8 +1296,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\LED_DBG_1.c" />
-<file name=".\Generated_Source\PSoC4\LED_DBG_1.h" />
-<file name=".\Generated_Source\PSoC4\LED_DBG_1_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\LED_DBG_1_PM.o">
 <dep name=".\Generated_Source\PSoC4\LED_DBG_1.h" />
 <dep name=".\Generated_Source\PSoC4\LED_DBG_1_PM.c" />
@@ -1146,8 +1316,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\LED_ERR.c" />
-<file name=".\Generated_Source\PSoC4\LED_ERR.h" />
-<file name=".\Generated_Source\PSoC4\LED_ERR_aliases.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\LED_ERR_PM.o">
 <dep name=".\Generated_Source\PSoC4\LED_ERR.h" />
 <dep name=".\Generated_Source\PSoC4\LED_ERR_PM.c" />
@@ -1168,7 +1336,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Timer_Period_Reset.c" />
-<file name=".\Generated_Source\PSoC4\Timer_Period_Reset.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Timer_Period_Reset_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -1191,7 +1358,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyPm.c" />
-<file name=".\Generated_Source\PSoC4\cyPm.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o">
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
@@ -1203,7 +1369,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\cy_em_eeprom.c" />
-<file name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -1215,10 +1380,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyfitter_cfg.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o">
-<dep name=".\Generated_Source\PSoC4\cymetadata.c" />
-</file>
-<file name=".\Generated_Source\PSoC4\cymetadata.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cyutils.o">
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
@@ -1237,7 +1398,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\isr_Button_1.c" />
-<file name=".\Generated_Source\PSoC4\isr_Button_1.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\isr_Period_Reset.o">
 <dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -1249,40 +1409,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\isr_Period_Reset.c" />
-<file name=".\Generated_Source\PSoC4\isr_Period_Reset.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\CANCommon.o">
-<dep name=".\HindsightCAN\CANCommon.c" />
-<dep name=".\HindsightCAN\CANCommon.h" />
-<dep name=".\HindsightCAN\CANPacket.h" />
-<dep name=".\HindsightCAN\CANSerialNumbers.h" />
-<dep name=".\HindsightCAN\Port.h" />
-</file>
-<file name=".\HindsightCAN\CANCommon.c" />
-<file name=".\HindsightCAN\CANCommon.h" />
-<file name=".\HindsightCAN\CANPacket.h" />
-<file name=".\HindsightCAN\CANSerialNumbers.h" />
-<file name=".\HindsightCAN\Port.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\CANGPIO.o">
-<dep name=".\HindsightCAN\CANGPIO.c" />
-<dep name=".\HindsightCAN\CANGPIO.h" />
-<dep name=".\HindsightCAN\CANPacket.h" />
-<dep name=".\HindsightCAN\CANSerialNumbers.h" />
-</file>
-<file name=".\HindsightCAN\CANGPIO.c" />
-<file name=".\HindsightCAN\CANGPIO.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\CANLocalization.o">
-<dep name=".\HindsightCAN\CANLocalization.c" />
-<dep name=".\HindsightCAN\CANPacket.h" />
-<dep name=".\HindsightCAN\CANSerialNumbers.h" />
-</file>
-<file name=".\HindsightCAN\CANLocalization.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\CANPacket.o">
-<dep name=".\HindsightCAN\CANPacket.c" />
-<dep name=".\HindsightCAN\CANPacket.h" />
-<dep name=".\HindsightCAN\CANSerialNumbers.h" />
-<dep name=".\HindsightCAN\Port.h" />
-</file>
-<file name=".\HindsightCAN\CANPacket.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o">
 <dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
 <dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
@@ -1291,6 +1417,8 @@
 <dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
 <dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
 <dep name=".\Generated_Source\PSoC4\project.h" />
+<dep name=".\HindsightCAN\CANPacket.h" />
+<dep name=".\HindsightCAN\CANSerialNumbers.h" />
 <dep name=".\Generated_Source\PSoC4\Button_1.h" />
 <dep name=".\Generated_Source\PSoC4\Button_1_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\CAN.h" />
@@ -1339,99 +1467,15 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 <dep name=".\Generated_Source\PSoC4\isr_Button_1.h" />
 <dep name=".\Generated_Source\PSoC4\isr_Period_Reset.h" />
-<dep name=".\HindsightCAN\CANPacket.h" />
-<dep name=".\HindsightCAN\CANSerialNumbers.h" />
 <dep name=".\HindsightCAN\Port.h" />
 <dep name=".\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
 <dep name=".\cyapicallbacks.h" />
 </file>
-<file name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<file name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<file name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0.h" />
-<file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<file name=".\Generated_Source\PSoC4\project.h" />
+<file name=".\HindsightCAN\CANPacket.h" />
+<file name=".\HindsightCAN\CANSerialNumbers.h" />
+<file name=".\HindsightCAN\Port.h" />
 <file name=".\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Temp_CAN.o">
-<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC4\project.h" />
-<dep name=".\Generated_Source\PSoC4\Button_1.h" />
-<dep name=".\Generated_Source\PSoC4\Button_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CAN.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_RX.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_RX_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_TX.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_TX_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_isr.h" />
-<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
-<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_BOOT.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_PINS.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_SCBCLK.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_rx.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_rx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_tx.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_tx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP1.h" />
-<dep name=".\Generated_Source\PSoC4\DIP1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP2.h" />
-<dep name=".\Generated_Source\PSoC4\DIP2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP3.h" />
-<dep name=".\Generated_Source\PSoC4\DIP3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP4.h" />
-<dep name=".\Generated_Source\PSoC4\DIP4_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\LED_CAN.h" />
-<dep name=".\Generated_Source\PSoC4\LED_CAN_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\LED_DBG_1.h" />
-<dep name=".\Generated_Source\PSoC4\LED_DBG_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\LED_ERR.h" />
-<dep name=".\Generated_Source\PSoC4\LED_ERR_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_Period_Reset.h" />
-<dep name=".\Generated_Source\PSoC4\cyPm.h" />
-<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Button_1.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Period_Reset.h" />
-<dep name=".\HindsightCAN\CANCommon.h" />
-<dep name=".\HindsightCAN\CANGPIO.h" />
-<dep name=".\HindsightCAN\CANLibrary.h" />
-<dep name=".\HindsightCAN\CANPacket.h" />
-<dep name=".\HindsightCAN\CANSerialNumbers.h" />
-<dep name=".\HindsightCAN\Port.h" />
-<dep name=".\Temp_CAN.c" />
-<dep name=".\Temp_CAN.h" />
-<dep name=".\Temp_FSM.h" />
-<dep name=".\cyapicallbacks.h" />
-<dep name=".\main.h" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANLocalization.h" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPower.h" />
-</file>
-<file name=".\HindsightCAN\CANLibrary.h" />
-<file name=".\Temp_CAN.c" />
-<file name=".\Temp_CAN.h" />
-<file name=".\Temp_FSM.h" />
-<file name=".\main.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANLocalization.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANMotorUnit.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPower.h" />
+<file name=".\HindsightCAN\CANMotorUnit.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Temp_FSM.o">
 <dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
 <dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
@@ -1493,78 +1537,6 @@
 <dep name=".\cyapicallbacks.h" />
 </file>
 <file name=".\Temp_FSM.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\main.o">
-<dep name=".\Generated_Source\PSoC4\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_compiler.h" />
-<dep name=".\Generated_Source\PSoC4\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0.h" />
-<dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
-<dep name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC4\project.h" />
-<dep name=".\Generated_Source\PSoC4\Button_1.h" />
-<dep name=".\Generated_Source\PSoC4\Button_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CAN.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_HFCLK.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_RX.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_RX_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_TX.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_TX_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\CAN_isr.h" />
-<dep name=".\Generated_Source\PSoC4\CyDMA.h" />
-<dep name=".\Generated_Source\PSoC4\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC4\CyLFClk.h" />
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_BOOT.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_PINS.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_SCBCLK.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_SPI_UART_PVT.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_rx.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_rx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_tx.h" />
-<dep name=".\Generated_Source\PSoC4\DBG_UART_tx_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP1.h" />
-<dep name=".\Generated_Source\PSoC4\DIP1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP2.h" />
-<dep name=".\Generated_Source\PSoC4\DIP2_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP3.h" />
-<dep name=".\Generated_Source\PSoC4\DIP3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\DIP4.h" />
-<dep name=".\Generated_Source\PSoC4\DIP4_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\LED_CAN.h" />
-<dep name=".\Generated_Source\PSoC4\LED_CAN_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\LED_DBG_1.h" />
-<dep name=".\Generated_Source\PSoC4\LED_DBG_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\LED_ERR.h" />
-<dep name=".\Generated_Source\PSoC4\LED_ERR_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\Timer_Period_Reset.h" />
-<dep name=".\Generated_Source\PSoC4\cyPm.h" />
-<dep name=".\Generated_Source\PSoC4\cy_em_eeprom.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC4\cypins.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Button_1.h" />
-<dep name=".\Generated_Source\PSoC4\isr_Period_Reset.h" />
-<dep name=".\HindsightCAN\CANCommon.h" />
-<dep name=".\HindsightCAN\CANGPIO.h" />
-<dep name=".\HindsightCAN\CANLibrary.h" />
-<dep name=".\HindsightCAN\CANPacket.h" />
-<dep name=".\HindsightCAN\CANSerialNumbers.h" />
-<dep name=".\HindsightCAN\Port.h" />
-<dep name=".\Temp_CAN.h" />
-<dep name=".\Temp_FSM.h" />
-<dep name=".\cyapicallbacks.h" />
-<dep name=".\main.c" />
-<dep name=".\main.h" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANLocalization.h" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANMotorUnit.h" />
-<dep name=".\CortexM0\ARM_GCC_541\Debug\HindsightCAN\CANPower.h" />
-</file>
-<file name=".\main.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <dep name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
@@ -1573,6 +1545,40 @@
 <file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <file name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o">
+<dep name=".\Generated_Source\PSoC4\cymetadata.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\cymetadata.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\CANCommon.o">
+<dep name=".\HindsightCAN\CANCommon.c" />
+<dep name=".\HindsightCAN\CANCommon.h" />
+<dep name=".\HindsightCAN\CANPacket.h" />
+<dep name=".\HindsightCAN\CANSerialNumbers.h" />
+<dep name=".\HindsightCAN\Port.h" />
+</file>
+<file name=".\HindsightCAN\CANCommon.c" />
+<file name=".\HindsightCAN\CANCommon.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\CANGPIO.o">
+<dep name=".\HindsightCAN\CANGPIO.c" />
+<dep name=".\HindsightCAN\CANGPIO.h" />
+<dep name=".\HindsightCAN\CANPacket.h" />
+<dep name=".\HindsightCAN\CANSerialNumbers.h" />
+</file>
+<file name=".\HindsightCAN\CANGPIO.c" />
+<file name=".\HindsightCAN\CANGPIO.h" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\CANLocalization.o">
+<dep name=".\HindsightCAN\CANLocalization.c" />
+<dep name=".\HindsightCAN\CANPacket.h" />
+<dep name=".\HindsightCAN\CANSerialNumbers.h" />
+</file>
+<file name=".\HindsightCAN\CANLocalization.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\CANPacket.o">
+<dep name=".\HindsightCAN\CANPacket.c" />
+<dep name=".\HindsightCAN\CANPacket.h" />
+<dep name=".\HindsightCAN\CANSerialNumbers.h" />
+<dep name=".\HindsightCAN\Port.h" />
+</file>
+<file name=".\HindsightCAN\CANPacket.c" />
 </CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
 </dependency_info>
 </CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
@@ -1580,7 +1586,72 @@
 <name v="link_deps">
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
-<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1" />
+<CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
+<file name=".\CortexM0\ARM_GCC_541\Debug\PSoC Project Template.hex">
+<dep name=".\CortexM0\ARM_GCC_541\Debug\main.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Temp_CAN.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Temp_FSM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CANCommon.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CANGPIO.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CANLocalization.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CANPacket.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\PortPSOC_CY8C4248AZI_L485.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Cm0Start.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CyFlash.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CyLib.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\cyPm.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\cyutils.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CyDMA.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CyLFClk.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_INT.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_TX_RX_func.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_isr.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_HFCLK.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_RX.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_RX_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_TX.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\CAN_TX_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP1.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP1_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP2.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP2_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP3.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP3_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP4.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DIP4_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_SPI_UART.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_SPI_UART_INT.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_UART.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_BOOT.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_UART_BOOT.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_SCBCLK.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_tx.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_tx_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_rx.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\DBG_UART_rx_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\LED_ERR.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\LED_ERR_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\LED_DBG_1.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\LED_DBG_1_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\LED_CAN.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\LED_CAN_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Period_Reset.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Timer_Period_Reset_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\isr_Period_Reset.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Button_1.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Button_1_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\isr_Button_1.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\PSoC Project Template.a" />
+</file>
+</CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021>
 </dependency_info>
 </CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256>
 </name>
@@ -1660,7 +1731,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="133532729706724476" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="133532778940753120" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

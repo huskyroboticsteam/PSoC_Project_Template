@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> PSoC Project Template</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 02/24/24 10:19:12</td></tr>
+<td class="proptext"> 02/24/24 11:44:11</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C4247LTI-L485</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -583,28 +583,7 @@ function getElementsByClass(rootNode, elemName, className)
 <span class="sec_head"><span style="font-family: monospace;">+</span>
 Timing Violation Section</span>
 </a>
-</div><div class="vio_sta_secbody"><div class="sta_sec_desc"></div>
-<table class="sta_tpd">
- <thead> 
-<tr> 
-<th>Violation</th>
-<th>Source Clock</th>
-<th>Destination Clock</th>
-<th>Slack(ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td colspan="4" class = "text_info">Setup</td>
-</tr>
-<tr class="sta_tv tv1">
- <td class = "text_info"> </td>
- <td class = "text_info">CyHFClk</td>
- <td class = "text_info">CyHFClk</td>
- <td class = "number">-2.134</td>
-</tr>
-</tbody>
- </table> 
+</div><div class="vio_sta_secbody"><div class="sta_sec_desc">No Timing Violations</div>
 </div>
 </div>
 <div class="sta_sec" id="clock_summary">
@@ -626,18 +605,26 @@ Clock Summary Section</span>
 </thead> 
 <tbody>
 <tr> 
+ <td class = "text_info">CyExtClk</td>
+ <td class = "text_info">CyExtClk</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number"> N/A </td>
+ <td class = "text_info"> </td>
+</tr>
+<tr> 
  <td class = "text_info">CyHFClk</td>
  <td class = "text_info">CyHFClk</td>
- <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
  <td class = "number">43.541&nbsp;MHz</td>
- <td class = "text_info violation_color">Frequency</td>
+ <td class = "text_info"></td>
 </tr>
 <tr> 
  <td class = "text_info">DBG_UART_SCBCLK</td>
  <td class = "text_info">CyHFClk</td>
- <td class = "number">1.371&nbsp;MHz</td>
- <td class = "number">1.371&nbsp;MHz</td>
+ <td class = "number">1.379&nbsp;MHz</td>
+ <td class = "number">1.379&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -668,16 +655,16 @@ Clock Summary Section</span>
 <tr> 
  <td class = "text_info">CyRouted1</td>
  <td class = "text_info">CyRouted1</td>
- <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
 <tr> 
  <td class = "text_info">CySysClk</td>
  <td class = "text_info">CySysClk</td>
- <td class = "number">48.000&nbsp;MHz</td>
- <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">40.000&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -692,8 +679,8 @@ Clock Summary Section</span>
 <tr> 
  <td class = "text_info">DBG_UART_SCBCLK(FFB)</td>
  <td class = "text_info">DBG_UART_SCBCLK(FFB)</td>
- <td class = "number">1.371&nbsp;MHz</td>
- <td class = "number">1.371&nbsp;MHz</td>
+ <td class = "number">1.379&nbsp;MHz</td>
+ <td class = "number">1.379&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -717,15 +704,15 @@ Setup Subsection</span>
 <div>
 <a href="#" style="text-decoration: none; color: inherit;">
 <span class="sec_head"><span style="font-family: monospace;">+</span>
-Source Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</span>
+Source Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</span>
 </a>
 </div><div class="sta_secbody"><div class="sta_sec" >
 <div>
 <a href="#" style="text-decoration: none; color: inherit;">
 <span class="sec_head"><span style="font-family: monospace;">+</span>
-Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</span>
+Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</span>
 </a>
-</div><div class="sta_secbody"><div class="sta_sec_desc">Path Delay Requirement : 20.8333ns(48&nbsp;MHz)</div>
+</div><div class="sta_secbody"><div class="sta_sec_desc">Path Delay Requirement : 25ns(40&nbsp;MHz)</div>
 <table class="sta_tscs">
  <thead> 
 <tr> 
@@ -743,10 +730,10 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/ci</td>
  <td class = "number">43.541&nbsp;MHz</td>
  <td class = "number">22.967</td>
- <td class = "number violation_color">-2.134</td>
- <td class = "text_info violation_color">SETUP</td>
+ <td class = "number">2.033</td>
+ <td class = "text_info"></td>
 </tr>
-<tr class="sta_path tv1">
+<tr class="sta_path">
 <td class="sta_path"  colspan="6">
 <table class="sta_path">
  <thead> 
@@ -842,8 +829,8 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/ci</td>
  <td class = "number">46.432&nbsp;MHz</td>
  <td class = "number">21.537</td>
- <td class = "number violation_color">-0.704</td>
- <td class = "text_info violation_color">SETUP</td>
+ <td class = "number">3.463</td>
+ <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="6">
@@ -923,7 +910,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/ci</td>
  <td class = "number">49.310&nbsp;MHz</td>
  <td class = "number">20.280</td>
- <td class = "number">0.553</td>
+ <td class = "number">4.720</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1004,7 +991,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
  <td class = "number">50.795&nbsp;MHz</td>
  <td class = "number">19.687</td>
- <td class = "number">1.146</td>
+ <td class = "number">5.313</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1085,7 +1072,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
  <td class = "number">50.803&nbsp;MHz</td>
  <td class = "number">19.684</td>
- <td class = "number">1.149</td>
+ <td class = "number">5.316</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1166,7 +1153,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
  <td class = "number">54.774&nbsp;MHz</td>
  <td class = "number">18.257</td>
- <td class = "number">2.576</td>
+ <td class = "number">6.743</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1229,7 +1216,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
  <td class = "number">54.783&nbsp;MHz</td>
  <td class = "number">18.254</td>
- <td class = "number">2.579</td>
+ <td class = "number">6.746</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1292,7 +1279,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
  <td class = "number">58.813&nbsp;MHz</td>
  <td class = "number">17.003</td>
- <td class = "number">3.830</td>
+ <td class = "number">7.997</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1355,7 +1342,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
  <td class = "number">58.824&nbsp;MHz</td>
  <td class = "number">17.000</td>
- <td class = "number">3.833</td>
+ <td class = "number">8.000</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1418,7 +1405,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/status_0</td>
  <td class = "number">64.872&nbsp;MHz</td>
  <td class = "number">15.415</td>
- <td class = "number">5.418</td>
+ <td class = "number">9.585</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">

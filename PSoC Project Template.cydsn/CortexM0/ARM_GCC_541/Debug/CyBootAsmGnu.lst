@@ -15237,15 +15237,15 @@ ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1106              	.set Timer_Period_Reset_TimerUDB_sT16_timerdp_u1__F1_REG, CYREG_UDB_W8_F15
  1107              	
  1108              	/* Miscellaneous */
- 1109              	.set CYDEV_BCLK__HFCLK__HZ, 48000000
+ 1109              	.set CYDEV_BCLK__HFCLK__HZ, 40000000
 ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 255
 
 
- 1110              	.set CYDEV_BCLK__HFCLK__KHZ, 48000
- 1111              	.set CYDEV_BCLK__HFCLK__MHZ, 48
- 1112              	.set CYDEV_BCLK__SYSCLK__HZ, 48000000
- 1113              	.set CYDEV_BCLK__SYSCLK__KHZ, 48000
- 1114              	.set CYDEV_BCLK__SYSCLK__MHZ, 48
+ 1110              	.set CYDEV_BCLK__HFCLK__KHZ, 40000
+ 1111              	.set CYDEV_BCLK__HFCLK__MHZ, 40
+ 1112              	.set CYDEV_BCLK__SYSCLK__HZ, 40000000
+ 1113              	.set CYDEV_BCLK__SYSCLK__KHZ, 40000
+ 1114              	.set CYDEV_BCLK__SYSCLK__MHZ, 40
  1115              	.set CYDEV_CHIP_DIE_LEOPARD, 1
  1116              	.set CYDEV_CHIP_DIE_PSOC4A, 26
  1117              	.set CYDEV_CHIP_DIE_PSOC5LP, 2
@@ -15401,7 +15401,7 @@ ARM GAS  Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1261              	.set CYDEV_DMA_CHANNELS_AVAILABLE, 32
  1262              	.set CYDEV_HEAP_SIZE, 0x80
  1263              	.set CYDEV_IMO_TRIMMED_BY_USB, 0
- 1264              	.set CYDEV_IMO_TRIMMED_BY_WCO, 1
+ 1264              	.set CYDEV_IMO_TRIMMED_BY_WCO, 0
  1265              	.set CYDEV_INTR_NUMBER_DMA, 14
  1266              	.set CYDEV_IS_EXPORTING_CODE, 0
  1267              	.set CYDEV_IS_IMPORTING_CODE, 0

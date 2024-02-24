@@ -1,10 +1,12 @@
 # PSoC Project Template
-# 2024-02-24 18:19:10Z
+# 2024-02-24 19:44:08Z
 
 # IO_4@[IOP=(0)][IoId=(4)] is reserved: KhzXtalEnabled
 dont_use_io iocell 0 4
 # IO_5@[IOP=(0)][IoId=(5)] is reserved: KhzXtalEnabled
 dont_use_io iocell 0 5
+# IO_6@[IOP=(0)][IoId=(6)] is reserved: ExtClkEnabled
+dont_use_io iocell 0 6
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
 # IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled

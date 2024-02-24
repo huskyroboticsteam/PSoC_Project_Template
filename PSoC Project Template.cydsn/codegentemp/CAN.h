@@ -83,9 +83,9 @@ extern uint8 CAN_initVar;
 #define CAN_TX5_FUNC_ENABLE            (0u)
 #define CAN_TX6_FUNC_ENABLE            (0u)
 #define CAN_TX7_FUNC_ENABLE            (0u)
-#define CAN_RX0_FUNC_ENABLE            (0u)
-#define CAN_RX1_FUNC_ENABLE            (0u)
-#define CAN_RX2_FUNC_ENABLE            (0u)
+#define CAN_RX0_FUNC_ENABLE            (1u)
+#define CAN_RX1_FUNC_ENABLE            (1u)
+#define CAN_RX2_FUNC_ENABLE            (1u)
 #define CAN_RX3_FUNC_ENABLE            (0u)
 #define CAN_RX4_FUNC_ENABLE            (0u)
 #define CAN_RX5_FUNC_ENABLE            (0u)
@@ -99,7 +99,7 @@ extern uint8 CAN_initVar;
 #define CAN_RX13_FUNC_ENABLE           (0u)
 #define CAN_RX14_FUNC_ENABLE           (0u)
 #define CAN_RX15_FUNC_ENABLE           (0u)
-#define CAN_RX_MAILBOX_TYPE            (0x0u)
+#define CAN_RX_MAILBOX_TYPE            (0x7u)
 #define CAN_TX_MAILBOX_TYPE            (0x0u)
 
 
@@ -444,13 +444,13 @@ void  CAN_ReceiveMsg(uint8 rxMailbox) ;
 ***************************************/
 
 /* General */
-#define CAN_BITRATE                   (23u)
-#define CAN_CFG_REG_TSEG1             (13u - 1u)
-#define CAN_CFG_REG_TSEG2             (2u - 1u)
-#define CAN_CFG_REG_SJW               (2u - 1u)
+#define CAN_BITRATE                   (31u)
+#define CAN_CFG_REG_TSEG1             (5u - 1u)
+#define CAN_CFG_REG_TSEG2             (4u - 1u)
+#define CAN_CFG_REG_SJW               (3u - 1u)
 #define CAN_SAMPLING_MODE             (0u)
 #define CAN_ARBITER                   (0u)
-#define CAN_RESET_TYPE                (0u)
+#define CAN_RESET_TYPE                (1u)
 #define CAN_SYNC_EDGE                 (0u)
 
 #if (!(CY_PSOC3 || CY_PSOC5))

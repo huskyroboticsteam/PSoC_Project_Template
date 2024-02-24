@@ -10,10 +10,11 @@
  * ========================================
 */
 
+#include <stdio.h>
 #include "main.h"
 #include "Temp_CAN.h"
 #include "Temp_FSM.h"
-#include <stdio.h>
+#include "HindsightCAN/CANLibrary.h"
 
 CANPacket can_recieve;
 CANPacket can_send;
@@ -28,10 +29,12 @@ int CheckCAN() {
     uint8_t sender_DG = GetSenderDeviceGroupCode(&can_recieve);
     uint8_t sender_SN = GetSenderDeviceSerialNumber(&can_recieve);
     uint8_t mode;
+    int32_t data = 0;
+    int err;
     
     switch(packageID){
         case(ID_MOTOR_UNIT_MODE_SEL):
-            mode = GetModeFromPacket(&can_recieve);
+            mode = can_recieve.data[1];
             
             if(mode == MODE1) {
                 SetModeTo(MODE1);
@@ -50,8 +53,21 @@ int CheckCAN() {
             GotoUninitState();
             break;
         
-        case(ID_TELEMETRY_PULL):
-            sendRequestedData(DecodeTelemetryType(&can_recieve));
+        case(ID_TELEMETRY_PULL):            
+            switch(DecodeTelemetryType(&can_recieve))
+            {
+                // USE CONSTANTS FOR CASES
+                case(0):
+                    data = 1;
+                default:
+                    Print("Cannot Send That Data Type!\n\r");
+            }   
+            
+            // Assemble and send packet
+            AssembleTelemetryReportPacket(&can_send, sender_DG, sender_SN, DecodeTelemetryType(&can_recieve), data);
+            if (SendCANPacket(&can_send)) {
+                DisplayErrorCode(0);
+            }
             SetStateTo(CHECK_CAN);
             break;
             
@@ -79,22 +95,5 @@ void PrintCanPacket(CANPacket packet){
     Print(txData);
 }
 
-int sendRequestedData(int TTC) {
-    int32_t data = 0;
-
-    switch(TTC)
-    {
-        // USE CONSTANTS FOR CASES
-        case(0):
-            // ADD CODE HERE
-        default:
-            Print("Cannot Send That Data Type!\n\r");
-    }   
-
-    // Assemble and send packet
-    AssembleTelemetryReportPacket(&can_send, DEVICE_GROUP_JETSON, DEVICE_SERIAL_JETSON, TTC, data);
-    int check = SendCANPacket(&can_send);
-    return check;
-}
 
 /* [] END OF FILE */

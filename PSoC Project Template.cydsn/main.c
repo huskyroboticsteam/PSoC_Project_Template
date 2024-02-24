@@ -73,7 +73,7 @@ int main(void)
 void Initialize(void) {
     CyGlobalIntEnable; /* Enable global interrupts. LED arrays need this first */
     
-    address = Can_addr_Read();
+    address = getSerialAddress();
     
     DBG_UART_Start();
     sprintf(txData, "Dip Addr: %x \r\n", address);
@@ -102,6 +102,20 @@ void DebugPrint(char input) {
             break;
     }
     Print(txData);
+}
+
+int getSerialAddress() {
+    int address = 0;
+    
+    if (DIP1_Read()==0) address += 1;
+    if (DIP2_Read()==0) address += 2;
+    if (DIP3_Read()==0) address += 4;
+    if (DIP4_Read()==0) address += 8;
+
+    if (address == 0)
+        address = DEVICE_SERIAL_TELEM_LOCALIZATION;
+
+    return address;
 }
 
 /*

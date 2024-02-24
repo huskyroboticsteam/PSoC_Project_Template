@@ -1,5 +1,6 @@
 dont_use_io iocell 0 4
 dont_use_io iocell 0 5
+dont_use_io iocell 0 6
 dont_use_io iocell 3 2
 dont_use_io iocell 3 3
 set_location "\Timer_Period_Reset:TimerUDB:rstSts:stsreg\" statusicell 1 1 4 

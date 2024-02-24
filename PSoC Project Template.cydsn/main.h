@@ -30,9 +30,8 @@
 #define PrintIntBin(integer) DBG_UART_UartPutString(itoa(integer, txData, 2))
 
 void Initialize(void);
-
+int getSerialAddress();
 uint16_t ReadCAN(CANPacket *receivedPacket);
-
 void DebugPrint(char input);
 void DisplayErrorCode(uint8_t code);
 
