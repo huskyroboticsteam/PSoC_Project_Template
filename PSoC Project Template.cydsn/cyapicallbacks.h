@@ -10,7 +10,7 @@
  * ========================================
 */
 #ifndef CYAPICALLBACKS_H
-#define CYAPICALLBACKS_H
+    #define CYAPICALLBACKS_H
     
 
     /*Define your macro callbacks here */
