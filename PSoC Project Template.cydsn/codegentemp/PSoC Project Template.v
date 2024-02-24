@@ -1,6 +1,6 @@
 // ======================================================================
 // PSoC Project Template.v generated from TopDesign.cysch
-// 02/04/2023 at 13:21
+// 02/24/2024 at 10:19
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -522,9 +522,97 @@ module CAN_v3_0_1 (
 
 endmodule
 
+// Component: B_Timer_v2_80
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v"
+`endif
+
+// Timer_v2_80(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=false, CaptureMode=0, CONTROL3=0, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC4, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=true, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=1, NumberOfCaptures=1, param45=1, Period=1637, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=true, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=true, UsesHWEnable=0, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_80, CY_CONFIG_TITLE=Timer_Period_Reset, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer_Period_Reset, CY_INSTANCE_SHORT_NAME=Timer_Period_Reset, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=80, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Timer_Period_Reset, )
+module Timer_v2_80_2 (
+    capture,
+    capture_out,
+    clock,
+    enable,
+    interrupt,
+    reset,
+    tc,
+    trigger);
+    input       capture;
+    output      capture_out;
+    input       clock;
+    input       enable;
+    output      interrupt;
+    input       reset;
+    output      tc;
+    input       trigger;
+
+    parameter CaptureCount = 2;
+    parameter CaptureCounterEnabled = 0;
+    parameter DeviceFamily = "PSoC4";
+    parameter InterruptOnCapture = 0;
+    parameter InterruptOnTC = 1;
+    parameter Resolution = 16;
+    parameter SiliconRevision = "0";
+
+
+    B_Timer_v2_80 TimerUDB (
+        .capture_in(capture),
+        .capture_out(capture_out),
+        .clock(clock),
+        .enable(enable),
+        .interrupt(interrupt),
+        .reset(reset),
+        .tc(tc),
+        .trigger(trigger));
+    defparam TimerUDB.Capture_Count = 2;
+    defparam TimerUDB.CaptureCounterEnabled = 0;
+    defparam TimerUDB.CaptureMode = 0;
+    defparam TimerUDB.EnableMode = 0;
+    defparam TimerUDB.InterruptOnCapture = 0;
+    defparam TimerUDB.Resolution = 16;
+    defparam TimerUDB.RunMode = 0;
+    defparam TimerUDB.TriggerMode = 0;
+
+
+
+endmodule
+
+// Component: cy_constant_v1_0
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
+`endif
+
 // top
 module top ;
 
+          wire  Net_324;
+          wire  Net_317;
+          wire  Net_316;
+          wire  Net_321;
+          wire  Net_309;
+          wire  Net_308;
+          wire  Net_307;
+          wire  Net_306;
+          wire  Net_305;
+          wire  Net_320;
+          wire  Net_303;
+          wire  Net_302;
     electrical  Net_205;
     electrical  Net_206;
     electrical  Net_207;
@@ -580,10 +668,10 @@ module top ;
         .tx_dma_out(Net_77),
         .tx_out(Net_78));
 
-	wire [0:0] tmpOE__RXD_net;
-	wire [0:0] tmpIO_0__RXD_net;
-	wire [0:0] tmpINTERRUPT_0__RXD_net;
-	electrical [0:0] tmpSIOVREF__RXD_net;
+	wire [0:0] tmpOE__CAN_RX_net;
+	wire [0:0] tmpIO_0__CAN_RX_net;
+	wire [0:0] tmpINTERRUPT_0__CAN_RX_net;
+	electrical [0:0] tmpSIOVREF__CAN_RX_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("1425177d-0d0e-4468-8bcc-e638e5509a9b"),
@@ -638,13 +726,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		RXD
-		 (.oe(tmpOE__RXD_net),
+		CAN_RX
+		 (.oe(tmpOE__CAN_RX_net),
 		  .y({1'b0}),
 		  .fb({Net_11}),
-		  .io({tmpIO_0__RXD_net[0:0]}),
-		  .siovref(tmpSIOVREF__RXD_net),
-		  .interrupt({tmpINTERRUPT_0__RXD_net[0:0]}),
+		  .io({tmpIO_0__CAN_RX_net[0:0]}),
+		  .siovref(tmpSIOVREF__CAN_RX_net),
+		  .interrupt({tmpINTERRUPT_0__CAN_RX_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -652,13 +740,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__RXD_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__CAN_RX_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__TXD_net;
-	wire [0:0] tmpFB_0__TXD_net;
-	wire [0:0] tmpIO_0__TXD_net;
-	wire [0:0] tmpINTERRUPT_0__TXD_net;
-	electrical [0:0] tmpSIOVREF__TXD_net;
+	wire [0:0] tmpOE__CAN_TX_net;
+	wire [0:0] tmpFB_0__CAN_TX_net;
+	wire [0:0] tmpIO_0__CAN_TX_net;
+	wire [0:0] tmpINTERRUPT_0__CAN_TX_net;
+	electrical [0:0] tmpSIOVREF__CAN_TX_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("ed092b9b-d398-4703-be89-cebf998501f6"),
@@ -713,13 +801,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		TXD
-		 (.oe(tmpOE__TXD_net),
+		CAN_TX
+		 (.oe(tmpOE__CAN_TX_net),
 		  .y({Net_12}),
-		  .fb({tmpFB_0__TXD_net[0:0]}),
-		  .io({tmpIO_0__TXD_net[0:0]}),
-		  .siovref(tmpSIOVREF__TXD_net),
-		  .interrupt({tmpINTERRUPT_0__TXD_net[0:0]}),
+		  .fb({tmpFB_0__CAN_TX_net[0:0]}),
+		  .io({tmpIO_0__CAN_TX_net[0:0]}),
+		  .siovref(tmpSIOVREF__CAN_TX_net),
+		  .interrupt({tmpINTERRUPT_0__CAN_TX_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -727,7 +815,7 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__TXD_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__CAN_TX_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
     CAN_v3_0_1 CAN (
         .interrupt(Net_81),
@@ -1039,11 +1127,11 @@ module top ;
 
 	assign tmpOE__DIP4_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__ERR_net;
-	wire [0:0] tmpFB_0__ERR_net;
-	wire [0:0] tmpIO_0__ERR_net;
-	wire [0:0] tmpINTERRUPT_0__ERR_net;
-	electrical [0:0] tmpSIOVREF__ERR_net;
+	wire [0:0] tmpOE__LED_ERR_net;
+	wire [0:0] tmpFB_0__LED_ERR_net;
+	wire [0:0] tmpIO_0__LED_ERR_net;
+	wire [0:0] tmpINTERRUPT_0__LED_ERR_net;
+	electrical [0:0] tmpSIOVREF__LED_ERR_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("e851a3b9-efb8-48be-bbb8-b303b216c393"),
@@ -1098,13 +1186,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		ERR
-		 (.oe(tmpOE__ERR_net),
+		LED_ERR
+		 (.oe(tmpOE__LED_ERR_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__ERR_net[0:0]}),
-		  .io({tmpIO_0__ERR_net[0:0]}),
-		  .siovref(tmpSIOVREF__ERR_net),
-		  .interrupt({tmpINTERRUPT_0__ERR_net[0:0]}),
+		  .fb({tmpFB_0__LED_ERR_net[0:0]}),
+		  .io({tmpIO_0__LED_ERR_net[0:0]}),
+		  .siovref(tmpSIOVREF__LED_ERR_net),
+		  .interrupt({tmpINTERRUPT_0__LED_ERR_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1112,13 +1200,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__ERR_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__LED_ERR_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__DBG_net;
-	wire [0:0] tmpFB_0__DBG_net;
-	wire [0:0] tmpIO_0__DBG_net;
-	wire [0:0] tmpINTERRUPT_0__DBG_net;
-	electrical [0:0] tmpSIOVREF__DBG_net;
+	wire [0:0] tmpOE__LED_DBG_1_net;
+	wire [0:0] tmpFB_0__LED_DBG_1_net;
+	wire [0:0] tmpIO_0__LED_DBG_1_net;
+	wire [0:0] tmpINTERRUPT_0__LED_DBG_1_net;
+	electrical [0:0] tmpSIOVREF__LED_DBG_1_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("cda343a7-a70d-4278-90ef-7776c8b47560"),
@@ -1173,13 +1261,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		DBG
-		 (.oe(tmpOE__DBG_net),
+		LED_DBG_1
+		 (.oe(tmpOE__LED_DBG_1_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__DBG_net[0:0]}),
-		  .io({tmpIO_0__DBG_net[0:0]}),
-		  .siovref(tmpSIOVREF__DBG_net),
-		  .interrupt({tmpINTERRUPT_0__DBG_net[0:0]}),
+		  .fb({tmpFB_0__LED_DBG_1_net[0:0]}),
+		  .io({tmpIO_0__LED_DBG_1_net[0:0]}),
+		  .siovref(tmpSIOVREF__LED_DBG_1_net),
+		  .interrupt({tmpINTERRUPT_0__LED_DBG_1_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1187,13 +1275,13 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__DBG_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__LED_DBG_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__CAN_LED_net;
-	wire [0:0] tmpFB_0__CAN_LED_net;
-	wire [0:0] tmpIO_0__CAN_LED_net;
-	wire [0:0] tmpINTERRUPT_0__CAN_LED_net;
-	electrical [0:0] tmpSIOVREF__CAN_LED_net;
+	wire [0:0] tmpOE__LED_CAN_net;
+	wire [0:0] tmpFB_0__LED_CAN_net;
+	wire [0:0] tmpIO_0__LED_CAN_net;
+	wire [0:0] tmpINTERRUPT_0__LED_CAN_net;
+	electrical [0:0] tmpSIOVREF__LED_CAN_net;
 
 	cy_psoc3_pins_v1_10
 		#(.id("55e4ee15-7eea-46a5-90dd-1e5fd00ff7de"),
@@ -1248,13 +1336,13 @@ module top ;
 		  .ovt_needed(1'b0),
 		  .ovt_slew_control(2'b00),
 		  .input_buffer_sel(2'b00))
-		CAN_LED
-		 (.oe(tmpOE__CAN_LED_net),
+		LED_CAN
+		 (.oe(tmpOE__LED_CAN_net),
 		  .y({1'b0}),
-		  .fb({tmpFB_0__CAN_LED_net[0:0]}),
-		  .io({tmpIO_0__CAN_LED_net[0:0]}),
-		  .siovref(tmpSIOVREF__CAN_LED_net),
-		  .interrupt({tmpINTERRUPT_0__CAN_LED_net[0:0]}),
+		  .fb({tmpFB_0__LED_CAN_net[0:0]}),
+		  .io({tmpIO_0__LED_CAN_net[0:0]}),
+		  .siovref(tmpSIOVREF__LED_CAN_net),
+		  .interrupt({tmpINTERRUPT_0__LED_CAN_net[0:0]}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -1262,7 +1350,138 @@ module top ;
 		  .out_clock_en({1'b1}),
 		  .out_reset({1'b0}));
 
-	assign tmpOE__CAN_LED_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+	assign tmpOE__LED_CAN_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+    Timer_v2_80_2 Timer_Period_Reset (
+        .capture(1'b0),
+        .capture_out(Net_303),
+        .clock(Net_320),
+        .enable(1'b1),
+        .interrupt(Net_306),
+        .reset(Net_307),
+        .tc(Net_308),
+        .trigger(1'b1));
+    defparam Timer_Period_Reset.CaptureCount = 2;
+    defparam Timer_Period_Reset.CaptureCounterEnabled = 0;
+    defparam Timer_Period_Reset.DeviceFamily = "PSoC4";
+    defparam Timer_Period_Reset.InterruptOnCapture = 0;
+    defparam Timer_Period_Reset.InterruptOnTC = 1;
+    defparam Timer_Period_Reset.Resolution = 16;
+    defparam Timer_Period_Reset.SiliconRevision = "0";
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		isr_Period_Reset
+		 (.int_signal(Net_308));
+
+
+
+	cy_clock_v1_0
+		#(.id("2f726f74-6174-4c41-b263-e3315f1677a0"),
+		  .source_clock_id("9A908CA6-5BB3-4db0-B098-959E5D90882B"),
+		  .divisor(0),
+		  .period("0"),
+		  .is_direct(1),
+		  .is_digital(0))
+		Clock_100
+		 (.clock_out(Net_320));
+
+
+
+	cy_clock_v1_0
+		#(.id("a75f9d05-828b-49f5-b615-b0e6c48bb53a"),
+		  .source_clock_id("413DE2EF-D9F2-4233-A808-DFAF137FD877"),
+		  .divisor(0),
+		  .period("0"),
+		  .is_direct(1),
+		  .is_digital(0))
+		Clock_1
+		 (.clock_out(Net_316));
+
+
+    assign Net_307 = 1'h0;
+
+	wire [0:0] tmpOE__Button_1_net;
+	wire [0:0] tmpIO_0__Button_1_net;
+	wire [0:0] tmpINTERRUPT_0__Button_1_net;
+	electrical [0:0] tmpSIOVREF__Button_1_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("aa58a004-c402-40e0-9ff5-87b032aba07d"),
+		  .drive_mode(3'b001),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b0),
+		  .input_clk_en(0),
+		  .input_sync(1'b0),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		Button_1
+		 (.oe(tmpOE__Button_1_net),
+		  .y({1'b0}),
+		  .fb({Net_324}),
+		  .io({tmpIO_0__Button_1_net[0:0]}),
+		  .siovref(tmpSIOVREF__Button_1_net),
+		  .interrupt({tmpINTERRUPT_0__Button_1_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__Button_1_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		isr_Button_1
+		 (.int_signal(Net_324));
+
 
 
 

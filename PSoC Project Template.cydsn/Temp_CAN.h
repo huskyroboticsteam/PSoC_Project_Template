@@ -10,14 +10,16 @@
  * ========================================
 */
 
-/* [] END OF FILE */
+#pragma once
 
-#ifndef MOTOR_CAN_H
-#define MOTOR_CAN_H
-    #include <project.h>
-    #include "../CANLib/CANLibrary.h"
-    void NextStateFromCAN(CANPacket *receivedPacket, CANPacket *packetToSend);
-    void SendEncoderData(CANPacket *packetToSend);
-    #define NO_NEW_CAN_PACKET 0xFFFF
-#endif
+#include <project.h>
+#include "HindsightCAN/CANLibrary.h"
+
+#define NO_NEW_CAN_PACKET 0xFFFF
+
+int CheckCAN();
+int sendRequestedData(int TTC);
+void PrintCanPacket(CANPacket packet);
+
+/* [] END OF FILE */
     

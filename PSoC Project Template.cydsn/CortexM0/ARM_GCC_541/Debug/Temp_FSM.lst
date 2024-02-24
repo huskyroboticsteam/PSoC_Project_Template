@@ -1,0 +1,736 @@
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Temp_FSM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.GotoUninitState,"ax",%progbits
+  20              		.align	2
+  21              		.global	GotoUninitState
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	GotoUninitState, %function
+  25              	GotoUninitState:
+  26              	.LFB34:
+  27              		.file 1 "Temp_FSM.c"
+   1:Temp_FSM.c    **** /* ========================================
+   2:Temp_FSM.c    ****  *
+   3:Temp_FSM.c    ****  * Copyright YOUR COMPANY, THE YEAR
+   4:Temp_FSM.c    ****  * All Rights Reserved
+   5:Temp_FSM.c    ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:Temp_FSM.c    ****  *
+   7:Temp_FSM.c    ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:Temp_FSM.c    ****  * WHICH IS THE PROPERTY OF your company.
+   9:Temp_FSM.c    ****  *
+  10:Temp_FSM.c    ****  * ========================================
+  11:Temp_FSM.c    **** */
+  12:Temp_FSM.c    **** 
+  13:Temp_FSM.c    **** #include "Temp_FSM.h"
+  14:Temp_FSM.c    **** #include "project.h"
+  15:Temp_FSM.c    **** 
+  16:Temp_FSM.c    **** uint8_t currentState  = UNINIT;
+  17:Temp_FSM.c    **** uint8_t currentMode   = 0xFF;
+  18:Temp_FSM.c    **** 
+  19:Temp_FSM.c    **** void GotoUninitState() {
+  28              		.loc 1 19 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  20:Temp_FSM.c    ****     currentState = UNINIT;
+  33              		.loc 1 20 0
+  34 0000 FF22     		movs	r2, #255
+  35 0002 014B     		ldr	r3, .L2
+  36 0004 1A70     		strb	r2, [r3]
+  21:Temp_FSM.c    **** }
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 2
+
+
+  37              		.loc 1 21 0
+  38              		@ sp needed
+  39 0006 7047     		bx	lr
+  40              	.L3:
+  41              		.align	2
+  42              	.L2:
+  43 0008 00000000 		.word	.LANCHOR0
+  44              		.cfi_endproc
+  45              	.LFE34:
+  46              		.size	GotoUninitState, .-GotoUninitState
+  47              		.section	.text.SetStateTo,"ax",%progbits
+  48              		.align	2
+  49              		.global	SetStateTo
+  50              		.code	16
+  51              		.thumb_func
+  52              		.type	SetStateTo, %function
+  53              	SetStateTo:
+  54              	.LFB35:
+  22:Temp_FSM.c    **** void SetStateTo(uint8_t state) {
+  55              		.loc 1 22 0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  60              	.LVL0:
+  23:Temp_FSM.c    ****     currentState = state;
+  61              		.loc 1 23 0
+  62 0000 014B     		ldr	r3, .L5
+  63 0002 1870     		strb	r0, [r3]
+  24:Temp_FSM.c    **** }
+  64              		.loc 1 24 0
+  65              		@ sp needed
+  66 0004 7047     		bx	lr
+  67              	.L6:
+  68 0006 C046     		.align	2
+  69              	.L5:
+  70 0008 00000000 		.word	.LANCHOR0
+  71              		.cfi_endproc
+  72              	.LFE35:
+  73              		.size	SetStateTo, .-SetStateTo
+  74              		.section	.text.SetModeTo,"ax",%progbits
+  75              		.align	2
+  76              		.global	SetModeTo
+  77              		.code	16
+  78              		.thumb_func
+  79              		.type	SetModeTo, %function
+  80              	SetModeTo:
+  81              	.LFB36:
+  25:Temp_FSM.c    **** void SetModeTo(uint8_t mode) {
+  82              		.loc 1 25 0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+  87              	.LVL1:
+  26:Temp_FSM.c    ****     currentMode = mode;
+  88              		.loc 1 26 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 3
+
+
+  89 0000 014B     		ldr	r3, .L8
+  90 0002 5870     		strb	r0, [r3, #1]
+  27:Temp_FSM.c    **** }
+  91              		.loc 1 27 0
+  92              		@ sp needed
+  93 0004 7047     		bx	lr
+  94              	.L9:
+  95 0006 C046     		.align	2
+  96              	.L8:
+  97 0008 00000000 		.word	.LANCHOR0
+  98              		.cfi_endproc
+  99              	.LFE36:
+ 100              		.size	SetModeTo, .-SetModeTo
+ 101              		.section	.text.GetState,"ax",%progbits
+ 102              		.align	2
+ 103              		.global	GetState
+ 104              		.code	16
+ 105              		.thumb_func
+ 106              		.type	GetState, %function
+ 107              	GetState:
+ 108              	.LFB37:
+  28:Temp_FSM.c    **** uint8_t GetState(){
+ 109              		.loc 1 28 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              		@ link register save eliminated.
+  29:Temp_FSM.c    ****     return currentState;
+ 114              		.loc 1 29 0
+ 115 0000 014B     		ldr	r3, .L11
+ 116 0002 1878     		ldrb	r0, [r3]
+  30:Temp_FSM.c    **** }
+ 117              		.loc 1 30 0
+ 118              		@ sp needed
+ 119 0004 7047     		bx	lr
+ 120              	.L12:
+ 121 0006 C046     		.align	2
+ 122              	.L11:
+ 123 0008 00000000 		.word	.LANCHOR0
+ 124              		.cfi_endproc
+ 125              	.LFE37:
+ 126              		.size	GetState, .-GetState
+ 127              		.section	.text.GetMode,"ax",%progbits
+ 128              		.align	2
+ 129              		.global	GetMode
+ 130              		.code	16
+ 131              		.thumb_func
+ 132              		.type	GetMode, %function
+ 133              	GetMode:
+ 134              	.LFB38:
+  31:Temp_FSM.c    **** uint8_t GetMode(){
+ 135              		.loc 1 31 0
+ 136              		.cfi_startproc
+ 137              		@ args = 0, pretend = 0, frame = 0
+ 138              		@ frame_needed = 0, uses_anonymous_args = 0
+ 139              		@ link register save eliminated.
+  32:Temp_FSM.c    ****     return currentMode;
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 4
+
+
+ 140              		.loc 1 32 0
+ 141 0000 014B     		ldr	r3, .L14
+ 142 0002 5878     		ldrb	r0, [r3, #1]
+  33:Temp_FSM.c    **** }
+ 143              		.loc 1 33 0
+ 144              		@ sp needed
+ 145 0004 7047     		bx	lr
+ 146              	.L15:
+ 147 0006 C046     		.align	2
+ 148              	.L14:
+ 149 0008 00000000 		.word	.LANCHOR0
+ 150              		.cfi_endproc
+ 151              	.LFE38:
+ 152              		.size	GetMode, .-GetMode
+ 153              		.global	currentMode
+ 154              		.global	currentState
+ 155              		.data
+ 156              		.set	.LANCHOR0,. + 0
+ 157              		.type	currentState, %object
+ 158              		.size	currentState, 1
+ 159              	currentState:
+ 160 0000 FF       		.byte	-1
+ 161              		.type	currentMode, %object
+ 162              		.size	currentMode, 1
+ 163              	currentMode:
+ 164 0001 FF       		.byte	-1
+ 165              		.text
+ 166              	.Letext0:
+ 167              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 168              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 169              		.section	.debug_info,"",%progbits
+ 170              	.Ldebug_info0:
+ 171 0000 44010000 		.4byte	0x144
+ 172 0004 0400     		.2byte	0x4
+ 173 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 174 000a 04       		.byte	0x4
+ 175 000b 01       		.uleb128 0x1
+ 176 000c 2B010000 		.4byte	.LASF24
+ 177 0010 0C       		.byte	0xc
+ 178 0011 CC010000 		.4byte	.LASF25
+ 179 0015 18000000 		.4byte	.LASF26
+ 180 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 181 001d 00000000 		.4byte	0
+ 182 0021 00000000 		.4byte	.Ldebug_line0
+ 183 0025 02       		.uleb128 0x2
+ 184 0026 01       		.byte	0x1
+ 185 0027 06       		.byte	0x6
+ 186 0028 75000000 		.4byte	.LASF0
+ 187 002c 03       		.uleb128 0x3
+ 188 002d F2000000 		.4byte	.LASF9
+ 189 0031 02       		.byte	0x2
+ 190 0032 1D       		.byte	0x1d
+ 191 0033 37000000 		.4byte	0x37
+ 192 0037 02       		.uleb128 0x2
+ 193 0038 01       		.byte	0x1
+ 194 0039 08       		.byte	0x8
+ 195 003a E4000000 		.4byte	.LASF1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 5
+
+
+ 196 003e 02       		.uleb128 0x2
+ 197 003f 02       		.byte	0x2
+ 198 0040 05       		.byte	0x5
+ 199 0041 F5010000 		.4byte	.LASF2
+ 200 0045 02       		.uleb128 0x2
+ 201 0046 02       		.byte	0x2
+ 202 0047 07       		.byte	0x7
+ 203 0048 B9010000 		.4byte	.LASF3
+ 204 004c 02       		.uleb128 0x2
+ 205 004d 04       		.byte	0x4
+ 206 004e 05       		.byte	0x5
+ 207 004f 01010000 		.4byte	.LASF4
+ 208 0053 02       		.uleb128 0x2
+ 209 0054 04       		.byte	0x4
+ 210 0055 07       		.byte	0x7
+ 211 0056 8E000000 		.4byte	.LASF5
+ 212 005a 02       		.uleb128 0x2
+ 213 005b 08       		.byte	0x8
+ 214 005c 05       		.byte	0x5
+ 215 005d 11010000 		.4byte	.LASF6
+ 216 0061 02       		.uleb128 0x2
+ 217 0062 08       		.byte	0x8
+ 218 0063 07       		.byte	0x7
+ 219 0064 A0000000 		.4byte	.LASF7
+ 220 0068 04       		.uleb128 0x4
+ 221 0069 04       		.byte	0x4
+ 222 006a 05       		.byte	0x5
+ 223 006b 696E7400 		.ascii	"int\000"
+ 224 006f 02       		.uleb128 0x2
+ 225 0070 04       		.byte	0x4
+ 226 0071 07       		.byte	0x7
+ 227 0072 0B000000 		.4byte	.LASF8
+ 228 0076 03       		.uleb128 0x3
+ 229 0077 B7000000 		.4byte	.LASF10
+ 230 007b 03       		.byte	0x3
+ 231 007c 18       		.byte	0x18
+ 232 007d 2C000000 		.4byte	0x2c
+ 233 0081 02       		.uleb128 0x2
+ 234 0082 04       		.byte	0x4
+ 235 0083 04       		.byte	0x4
+ 236 0084 EF010000 		.4byte	.LASF11
+ 237 0088 02       		.uleb128 0x2
+ 238 0089 08       		.byte	0x8
+ 239 008a 04       		.byte	0x4
+ 240 008b 0A010000 		.4byte	.LASF12
+ 241 008f 02       		.uleb128 0x2
+ 242 0090 01       		.byte	0x1
+ 243 0091 08       		.byte	0x8
+ 244 0092 FC000000 		.4byte	.LASF13
+ 245 0096 02       		.uleb128 0x2
+ 246 0097 08       		.byte	0x8
+ 247 0098 04       		.byte	0x4
+ 248 0099 1F010000 		.4byte	.LASF14
+ 249 009d 02       		.uleb128 0x2
+ 250 009e 04       		.byte	0x4
+ 251 009f 07       		.byte	0x7
+ 252 00a0 FF010000 		.4byte	.LASF15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 6
+
+
+ 253 00a4 05       		.uleb128 0x5
+ 254 00a5 D4000000 		.4byte	.LASF27
+ 255 00a9 01       		.byte	0x1
+ 256 00aa 13       		.byte	0x13
+ 257 00ab 00000000 		.4byte	.LFB34
+ 258 00af 0C000000 		.4byte	.LFE34-.LFB34
+ 259 00b3 01       		.uleb128 0x1
+ 260 00b4 9C       		.byte	0x9c
+ 261 00b5 06       		.uleb128 0x6
+ 262 00b6 00000000 		.4byte	.LASF16
+ 263 00ba 01       		.byte	0x1
+ 264 00bb 16       		.byte	0x16
+ 265 00bc 00000000 		.4byte	.LFB35
+ 266 00c0 0C000000 		.4byte	.LFE35-.LFB35
+ 267 00c4 01       		.uleb128 0x1
+ 268 00c5 9C       		.byte	0x9c
+ 269 00c6 D8000000 		.4byte	0xd8
+ 270 00ca 07       		.uleb128 0x7
+ 271 00cb E1010000 		.4byte	.LASF18
+ 272 00cf 01       		.byte	0x1
+ 273 00d0 16       		.byte	0x16
+ 274 00d1 76000000 		.4byte	0x76
+ 275 00d5 01       		.uleb128 0x1
+ 276 00d6 50       		.byte	0x50
+ 277 00d7 00       		.byte	0
+ 278 00d8 06       		.uleb128 0x6
+ 279 00d9 D7010000 		.4byte	.LASF17
+ 280 00dd 01       		.byte	0x1
+ 281 00de 19       		.byte	0x19
+ 282 00df 00000000 		.4byte	.LFB36
+ 283 00e3 0C000000 		.4byte	.LFE36-.LFB36
+ 284 00e7 01       		.uleb128 0x1
+ 285 00e8 9C       		.byte	0x9c
+ 286 00e9 FB000000 		.4byte	0xfb
+ 287 00ed 07       		.uleb128 0x7
+ 288 00ee 70000000 		.4byte	.LASF19
+ 289 00f2 01       		.byte	0x1
+ 290 00f3 19       		.byte	0x19
+ 291 00f4 76000000 		.4byte	0x76
+ 292 00f8 01       		.uleb128 0x1
+ 293 00f9 50       		.byte	0x50
+ 294 00fa 00       		.byte	0
+ 295 00fb 08       		.uleb128 0x8
+ 296 00fc CB000000 		.4byte	.LASF20
+ 297 0100 01       		.byte	0x1
+ 298 0101 1C       		.byte	0x1c
+ 299 0102 76000000 		.4byte	0x76
+ 300 0106 00000000 		.4byte	.LFB37
+ 301 010a 0C000000 		.4byte	.LFE37-.LFB37
+ 302 010e 01       		.uleb128 0x1
+ 303 010f 9C       		.byte	0x9c
+ 304 0110 08       		.uleb128 0x8
+ 305 0111 E7010000 		.4byte	.LASF21
+ 306 0115 01       		.byte	0x1
+ 307 0116 1F       		.byte	0x1f
+ 308 0117 76000000 		.4byte	0x76
+ 309 011b 00000000 		.4byte	.LFB38
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 7
+
+
+ 310 011f 0C000000 		.4byte	.LFE38-.LFB38
+ 311 0123 01       		.uleb128 0x1
+ 312 0124 9C       		.byte	0x9c
+ 313 0125 09       		.uleb128 0x9
+ 314 0126 81000000 		.4byte	.LASF22
+ 315 012a 01       		.byte	0x1
+ 316 012b 10       		.byte	0x10
+ 317 012c 76000000 		.4byte	0x76
+ 318 0130 05       		.uleb128 0x5
+ 319 0131 03       		.byte	0x3
+ 320 0132 00000000 		.4byte	currentState
+ 321 0136 09       		.uleb128 0x9
+ 322 0137 BF000000 		.4byte	.LASF23
+ 323 013b 01       		.byte	0x1
+ 324 013c 11       		.byte	0x11
+ 325 013d 76000000 		.4byte	0x76
+ 326 0141 05       		.uleb128 0x5
+ 327 0142 03       		.byte	0x3
+ 328 0143 00000000 		.4byte	currentMode
+ 329 0147 00       		.byte	0
+ 330              		.section	.debug_abbrev,"",%progbits
+ 331              	.Ldebug_abbrev0:
+ 332 0000 01       		.uleb128 0x1
+ 333 0001 11       		.uleb128 0x11
+ 334 0002 01       		.byte	0x1
+ 335 0003 25       		.uleb128 0x25
+ 336 0004 0E       		.uleb128 0xe
+ 337 0005 13       		.uleb128 0x13
+ 338 0006 0B       		.uleb128 0xb
+ 339 0007 03       		.uleb128 0x3
+ 340 0008 0E       		.uleb128 0xe
+ 341 0009 1B       		.uleb128 0x1b
+ 342 000a 0E       		.uleb128 0xe
+ 343 000b 55       		.uleb128 0x55
+ 344 000c 17       		.uleb128 0x17
+ 345 000d 11       		.uleb128 0x11
+ 346 000e 01       		.uleb128 0x1
+ 347 000f 10       		.uleb128 0x10
+ 348 0010 17       		.uleb128 0x17
+ 349 0011 00       		.byte	0
+ 350 0012 00       		.byte	0
+ 351 0013 02       		.uleb128 0x2
+ 352 0014 24       		.uleb128 0x24
+ 353 0015 00       		.byte	0
+ 354 0016 0B       		.uleb128 0xb
+ 355 0017 0B       		.uleb128 0xb
+ 356 0018 3E       		.uleb128 0x3e
+ 357 0019 0B       		.uleb128 0xb
+ 358 001a 03       		.uleb128 0x3
+ 359 001b 0E       		.uleb128 0xe
+ 360 001c 00       		.byte	0
+ 361 001d 00       		.byte	0
+ 362 001e 03       		.uleb128 0x3
+ 363 001f 16       		.uleb128 0x16
+ 364 0020 00       		.byte	0
+ 365 0021 03       		.uleb128 0x3
+ 366 0022 0E       		.uleb128 0xe
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 8
+
+
+ 367 0023 3A       		.uleb128 0x3a
+ 368 0024 0B       		.uleb128 0xb
+ 369 0025 3B       		.uleb128 0x3b
+ 370 0026 0B       		.uleb128 0xb
+ 371 0027 49       		.uleb128 0x49
+ 372 0028 13       		.uleb128 0x13
+ 373 0029 00       		.byte	0
+ 374 002a 00       		.byte	0
+ 375 002b 04       		.uleb128 0x4
+ 376 002c 24       		.uleb128 0x24
+ 377 002d 00       		.byte	0
+ 378 002e 0B       		.uleb128 0xb
+ 379 002f 0B       		.uleb128 0xb
+ 380 0030 3E       		.uleb128 0x3e
+ 381 0031 0B       		.uleb128 0xb
+ 382 0032 03       		.uleb128 0x3
+ 383 0033 08       		.uleb128 0x8
+ 384 0034 00       		.byte	0
+ 385 0035 00       		.byte	0
+ 386 0036 05       		.uleb128 0x5
+ 387 0037 2E       		.uleb128 0x2e
+ 388 0038 00       		.byte	0
+ 389 0039 3F       		.uleb128 0x3f
+ 390 003a 19       		.uleb128 0x19
+ 391 003b 03       		.uleb128 0x3
+ 392 003c 0E       		.uleb128 0xe
+ 393 003d 3A       		.uleb128 0x3a
+ 394 003e 0B       		.uleb128 0xb
+ 395 003f 3B       		.uleb128 0x3b
+ 396 0040 0B       		.uleb128 0xb
+ 397 0041 11       		.uleb128 0x11
+ 398 0042 01       		.uleb128 0x1
+ 399 0043 12       		.uleb128 0x12
+ 400 0044 06       		.uleb128 0x6
+ 401 0045 40       		.uleb128 0x40
+ 402 0046 18       		.uleb128 0x18
+ 403 0047 9742     		.uleb128 0x2117
+ 404 0049 19       		.uleb128 0x19
+ 405 004a 00       		.byte	0
+ 406 004b 00       		.byte	0
+ 407 004c 06       		.uleb128 0x6
+ 408 004d 2E       		.uleb128 0x2e
+ 409 004e 01       		.byte	0x1
+ 410 004f 3F       		.uleb128 0x3f
+ 411 0050 19       		.uleb128 0x19
+ 412 0051 03       		.uleb128 0x3
+ 413 0052 0E       		.uleb128 0xe
+ 414 0053 3A       		.uleb128 0x3a
+ 415 0054 0B       		.uleb128 0xb
+ 416 0055 3B       		.uleb128 0x3b
+ 417 0056 0B       		.uleb128 0xb
+ 418 0057 27       		.uleb128 0x27
+ 419 0058 19       		.uleb128 0x19
+ 420 0059 11       		.uleb128 0x11
+ 421 005a 01       		.uleb128 0x1
+ 422 005b 12       		.uleb128 0x12
+ 423 005c 06       		.uleb128 0x6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 9
+
+
+ 424 005d 40       		.uleb128 0x40
+ 425 005e 18       		.uleb128 0x18
+ 426 005f 9742     		.uleb128 0x2117
+ 427 0061 19       		.uleb128 0x19
+ 428 0062 01       		.uleb128 0x1
+ 429 0063 13       		.uleb128 0x13
+ 430 0064 00       		.byte	0
+ 431 0065 00       		.byte	0
+ 432 0066 07       		.uleb128 0x7
+ 433 0067 05       		.uleb128 0x5
+ 434 0068 00       		.byte	0
+ 435 0069 03       		.uleb128 0x3
+ 436 006a 0E       		.uleb128 0xe
+ 437 006b 3A       		.uleb128 0x3a
+ 438 006c 0B       		.uleb128 0xb
+ 439 006d 3B       		.uleb128 0x3b
+ 440 006e 0B       		.uleb128 0xb
+ 441 006f 49       		.uleb128 0x49
+ 442 0070 13       		.uleb128 0x13
+ 443 0071 02       		.uleb128 0x2
+ 444 0072 18       		.uleb128 0x18
+ 445 0073 00       		.byte	0
+ 446 0074 00       		.byte	0
+ 447 0075 08       		.uleb128 0x8
+ 448 0076 2E       		.uleb128 0x2e
+ 449 0077 00       		.byte	0
+ 450 0078 3F       		.uleb128 0x3f
+ 451 0079 19       		.uleb128 0x19
+ 452 007a 03       		.uleb128 0x3
+ 453 007b 0E       		.uleb128 0xe
+ 454 007c 3A       		.uleb128 0x3a
+ 455 007d 0B       		.uleb128 0xb
+ 456 007e 3B       		.uleb128 0x3b
+ 457 007f 0B       		.uleb128 0xb
+ 458 0080 49       		.uleb128 0x49
+ 459 0081 13       		.uleb128 0x13
+ 460 0082 11       		.uleb128 0x11
+ 461 0083 01       		.uleb128 0x1
+ 462 0084 12       		.uleb128 0x12
+ 463 0085 06       		.uleb128 0x6
+ 464 0086 40       		.uleb128 0x40
+ 465 0087 18       		.uleb128 0x18
+ 466 0088 9742     		.uleb128 0x2117
+ 467 008a 19       		.uleb128 0x19
+ 468 008b 00       		.byte	0
+ 469 008c 00       		.byte	0
+ 470 008d 09       		.uleb128 0x9
+ 471 008e 34       		.uleb128 0x34
+ 472 008f 00       		.byte	0
+ 473 0090 03       		.uleb128 0x3
+ 474 0091 0E       		.uleb128 0xe
+ 475 0092 3A       		.uleb128 0x3a
+ 476 0093 0B       		.uleb128 0xb
+ 477 0094 3B       		.uleb128 0x3b
+ 478 0095 0B       		.uleb128 0xb
+ 479 0096 49       		.uleb128 0x49
+ 480 0097 13       		.uleb128 0x13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 10
+
+
+ 481 0098 3F       		.uleb128 0x3f
+ 482 0099 19       		.uleb128 0x19
+ 483 009a 02       		.uleb128 0x2
+ 484 009b 18       		.uleb128 0x18
+ 485 009c 00       		.byte	0
+ 486 009d 00       		.byte	0
+ 487 009e 00       		.byte	0
+ 488              		.section	.debug_aranges,"",%progbits
+ 489 0000 3C000000 		.4byte	0x3c
+ 490 0004 0200     		.2byte	0x2
+ 491 0006 00000000 		.4byte	.Ldebug_info0
+ 492 000a 04       		.byte	0x4
+ 493 000b 00       		.byte	0
+ 494 000c 0000     		.2byte	0
+ 495 000e 0000     		.2byte	0
+ 496 0010 00000000 		.4byte	.LFB34
+ 497 0014 0C000000 		.4byte	.LFE34-.LFB34
+ 498 0018 00000000 		.4byte	.LFB35
+ 499 001c 0C000000 		.4byte	.LFE35-.LFB35
+ 500 0020 00000000 		.4byte	.LFB36
+ 501 0024 0C000000 		.4byte	.LFE36-.LFB36
+ 502 0028 00000000 		.4byte	.LFB37
+ 503 002c 0C000000 		.4byte	.LFE37-.LFB37
+ 504 0030 00000000 		.4byte	.LFB38
+ 505 0034 0C000000 		.4byte	.LFE38-.LFB38
+ 506 0038 00000000 		.4byte	0
+ 507 003c 00000000 		.4byte	0
+ 508              		.section	.debug_ranges,"",%progbits
+ 509              	.Ldebug_ranges0:
+ 510 0000 00000000 		.4byte	.LFB34
+ 511 0004 0C000000 		.4byte	.LFE34
+ 512 0008 00000000 		.4byte	.LFB35
+ 513 000c 0C000000 		.4byte	.LFE35
+ 514 0010 00000000 		.4byte	.LFB36
+ 515 0014 0C000000 		.4byte	.LFE36
+ 516 0018 00000000 		.4byte	.LFB37
+ 517 001c 0C000000 		.4byte	.LFE37
+ 518 0020 00000000 		.4byte	.LFB38
+ 519 0024 0C000000 		.4byte	.LFE38
+ 520 0028 00000000 		.4byte	0
+ 521 002c 00000000 		.4byte	0
+ 522              		.section	.debug_line,"",%progbits
+ 523              	.Ldebug_line0:
+ 524 0000 79010000 		.section	.debug_str,"MS",%progbits,1
+ 524      02001E01 
+ 524      00000201 
+ 524      FB0E0D00 
+ 524      01010101 
+ 525              	.LASF16:
+ 526 0000 53657453 		.ascii	"SetStateTo\000"
+ 526      74617465 
+ 526      546F00
+ 527              	.LASF8:
+ 528 000b 756E7369 		.ascii	"unsigned int\000"
+ 528      676E6564 
+ 528      20696E74 
+ 528      00
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 11
+
+
+ 529              	.LASF26:
+ 530 0018 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\PSoC_Pro"
+ 530      73657273 
+ 530      5C636173 
+ 530      65795C44 
+ 530      65736B74 
+ 531 0046 6A656374 		.ascii	"ject_Template\\PSoC Project Template.cydsn\000"
+ 531      5F54656D 
+ 531      706C6174 
+ 531      655C5053 
+ 531      6F432050 
+ 532              	.LASF19:
+ 533 0070 6D6F6465 		.ascii	"mode\000"
+ 533      00
+ 534              	.LASF0:
+ 535 0075 7369676E 		.ascii	"signed char\000"
+ 535      65642063 
+ 535      68617200 
+ 536              	.LASF22:
+ 537 0081 63757272 		.ascii	"currentState\000"
+ 537      656E7453 
+ 537      74617465 
+ 537      00
+ 538              	.LASF5:
+ 539 008e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 539      20756E73 
+ 539      69676E65 
+ 539      6420696E 
+ 539      7400
+ 540              	.LASF7:
+ 541 00a0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 541      206C6F6E 
+ 541      6720756E 
+ 541      7369676E 
+ 541      65642069 
+ 542              	.LASF10:
+ 543 00b7 75696E74 		.ascii	"uint8_t\000"
+ 543      385F7400 
+ 544              	.LASF23:
+ 545 00bf 63757272 		.ascii	"currentMode\000"
+ 545      656E744D 
+ 545      6F646500 
+ 546              	.LASF20:
+ 547 00cb 47657453 		.ascii	"GetState\000"
+ 547      74617465 
+ 547      00
+ 548              	.LASF27:
+ 549 00d4 476F746F 		.ascii	"GotoUninitState\000"
+ 549      556E696E 
+ 549      69745374 
+ 549      61746500 
+ 550              	.LASF1:
+ 551 00e4 756E7369 		.ascii	"unsigned char\000"
+ 551      676E6564 
+ 551      20636861 
+ 551      7200
+ 552              	.LASF9:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 12
+
+
+ 553 00f2 5F5F7569 		.ascii	"__uint8_t\000"
+ 553      6E74385F 
+ 553      7400
+ 554              	.LASF13:
+ 555 00fc 63686172 		.ascii	"char\000"
+ 555      00
+ 556              	.LASF4:
+ 557 0101 6C6F6E67 		.ascii	"long int\000"
+ 557      20696E74 
+ 557      00
+ 558              	.LASF12:
+ 559 010a 646F7562 		.ascii	"double\000"
+ 559      6C6500
+ 560              	.LASF6:
+ 561 0111 6C6F6E67 		.ascii	"long long int\000"
+ 561      206C6F6E 
+ 561      6720696E 
+ 561      7400
+ 562              	.LASF14:
+ 563 011f 6C6F6E67 		.ascii	"long double\000"
+ 563      20646F75 
+ 563      626C6500 
+ 564              	.LASF24:
+ 565 012b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 565      43313120 
+ 565      352E342E 
+ 565      31203230 
+ 565      31363036 
+ 566 015e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 566      20726576 
+ 566      6973696F 
+ 566      6E203233 
+ 566      37373135 
+ 567 0191 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 567      66756E63 
+ 567      74696F6E 
+ 567      2D736563 
+ 567      74696F6E 
+ 568              	.LASF3:
+ 569 01b9 73686F72 		.ascii	"short unsigned int\000"
+ 569      7420756E 
+ 569      7369676E 
+ 569      65642069 
+ 569      6E7400
+ 570              	.LASF25:
+ 571 01cc 54656D70 		.ascii	"Temp_FSM.c\000"
+ 571      5F46534D 
+ 571      2E6300
+ 572              	.LASF17:
+ 573 01d7 5365744D 		.ascii	"SetModeTo\000"
+ 573      6F646554 
+ 573      6F00
+ 574              	.LASF18:
+ 575 01e1 73746174 		.ascii	"state\000"
+ 575      6500
+ 576              	.LASF21:
+ 577 01e7 4765744D 		.ascii	"GetMode\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccCEsYmb.s 			page 13
+
+
+ 577      6F646500 
+ 578              	.LASF11:
+ 579 01ef 666C6F61 		.ascii	"float\000"
+ 579      7400
+ 580              	.LASF2:
+ 581 01f5 73686F72 		.ascii	"short int\000"
+ 581      7420696E 
+ 581      7400
+ 582              	.LASF15:
+ 583 01ff 73697A65 		.ascii	"sizetype\000"
+ 583      74797065 
+ 583      00
+ 584              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

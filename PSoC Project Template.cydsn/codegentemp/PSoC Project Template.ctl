@@ -1,6 +1,6 @@
 -- ======================================================================
 -- PSoC Project Template.ctl generated from PSoC Project Template
--- 02/04/2023 at 13:21
+-- 02/24/2024 at 10:19
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 
