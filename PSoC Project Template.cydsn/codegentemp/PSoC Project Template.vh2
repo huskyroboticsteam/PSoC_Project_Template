@@ -2,7 +2,7 @@
 --	Conversion of PSoC Project Template.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Feb 24 11:44:07 2024
+--	Sun Feb 25 17:25:24 2024
 --
 
 USE cypress.cypress.all;
@@ -62,7 +62,7 @@ SIGNAL Net_70 : bit;
 SIGNAL Net_71 : bit;
 SIGNAL Net_78 : bit;
 SIGNAL tmpOE__CAN_RX_net_0 : bit;
-SIGNAL Net_11 : bit;
+SIGNAL Net_325 : bit;
 SIGNAL tmpIO_0__CAN_RX_net_0 : bit;
 TERMINAL tmpSIOVREF__CAN_RX_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__CAN_RX_net_0 : bit;
@@ -550,7 +550,7 @@ CAN_RX:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>Net_11,
+		fb=>Net_325,
 		analog=>(open),
 		io=>(tmpIO_0__CAN_RX_net_0),
 		siovref=>(tmpSIOVREF__CAN_RX_net_0),
@@ -648,7 +648,7 @@ CAN_TX:cy_psoc3_pins_v1_10
 		dig_domain_out=>open);
 \CAN:CanIP\:cy_m0s8_can_v1_0
 	GENERIC MAP(cy_registers=>"")
-	PORT MAP(can_rx=>Net_11,
+	PORT MAP(can_rx=>Net_325,
 		can_tx=>Net_12,
 		can_tx_en=>Net_82,
 		interrupt=>Net_81);

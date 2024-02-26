@@ -1,5 +1,5 @@
 -- Project:   C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cyprj
--- Generated: 02/24/2024 11:44:11
+-- Generated: 02/25/2024 17:25:27
 -- PSoC Creator  4.4
 
 ENTITY \PSoC Project Template\ IS
@@ -56,11 +56,11 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     SIGNAL LED_CAN(0)__PA : bit;
     SIGNAL LED_DBG_1(0)__PA : bit;
     SIGNAL LED_ERR(0)__PA : bit;
-    SIGNAL Net_11 : bit;
     SIGNAL Net_12 : bit;
     SIGNAL Net_308 : bit;
     ATTRIBUTE placement_force OF Net_308 : SIGNAL IS "U(1,1,A)1";
     SIGNAL Net_324 : bit;
+    SIGNAL Net_325 : bit;
     SIGNAL Net_59 : bit;
     SIGNAL Net_68 : bit;
     SIGNAL Net_77 : bit;
@@ -125,27 +125,27 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     ATTRIBUTE lib_model OF CAN_TX(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF CAN_TX(0) : LABEL IS "P0[1]";
     ATTRIBUTE lib_model OF DIP1(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF DIP1(0) : LABEL IS "P1[2]";
+    ATTRIBUTE Location OF DIP1(0) : LABEL IS "P4[3]";
     ATTRIBUTE lib_model OF DIP2(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF DIP2(0) : LABEL IS "P1[3]";
+    ATTRIBUTE Location OF DIP2(0) : LABEL IS "P4[2]";
     ATTRIBUTE lib_model OF DIP3(0) : LABEL IS "iocell7";
-    ATTRIBUTE Location OF DIP3(0) : LABEL IS "P1[4]";
+    ATTRIBUTE Location OF DIP3(0) : LABEL IS "P4[1]";
     ATTRIBUTE lib_model OF DIP4(0) : LABEL IS "iocell8";
-    ATTRIBUTE Location OF DIP4(0) : LABEL IS "P1[5]";
+    ATTRIBUTE Location OF DIP4(0) : LABEL IS "P4[0]";
     ATTRIBUTE lib_model OF LED_ERR(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF LED_ERR(0) : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF LED_ERR(0) : LABEL IS "P1[1]";
     ATTRIBUTE lib_model OF LED_DBG_1(0) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF LED_DBG_1(0) : LABEL IS "P4[1]";
+    ATTRIBUTE Location OF LED_DBG_1(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF LED_CAN(0) : LABEL IS "iocell11";
-    ATTRIBUTE Location OF LED_CAN(0) : LABEL IS "P4[3]";
+    ATTRIBUTE Location OF LED_CAN(0) : LABEL IS "P1[3]";
     ATTRIBUTE lib_model OF Button_1(0) : LABEL IS "iocell12";
-    ATTRIBUTE Location OF Button_1(0) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF Button_1(0) : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "macrocell1";
     ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "U(1,1)";
-    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC : LABEL IS "U(0,0)";
     ATTRIBUTE Location OF \DBG_UART:SCB\ : LABEL IS "F(SCB,3)";
     ATTRIBUTE Location OF \CAN:isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(29)]";
-    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC_1 : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC_1 : LABEL IS "U(0,0)";
     ATTRIBUTE Location OF \CAN:CanIP\ : LABEL IS "F(CAN,1)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(0,1)";
@@ -815,7 +815,7 @@ BEGIN
         PORT MAP(
             pa_out => CAN_RX(0)__PA,
             oe => open,
-            fb => Net_11,
+            fb => Net_325,
             pad_in => CAN_RX(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -1704,7 +1704,7 @@ BEGIN
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            can_rx => Net_11,
+            can_rx => Net_325,
             can_tx => Net_12,
             can_tx_en => Net_82,
             interrupt => Net_81);

@@ -15,10 +15,13 @@
 #include <project.h>
 #include "HindsightCAN/CANLibrary.h"
 
-#define NO_NEW_CAN_PACKET 0xFFFF
+// CAN Errors (0x10-0x1F)
+#define ERROR_NO_NEW_PACKET 0xFFFF
+#define ERROR_WRONG_MODE      0x10
+#define ERROR_INVALID_MODE    0x11
 
-int CheckCAN();
-int sendRequestedData(int TTC);
+int ReadCAN(CANPacket *receivedPacket);
+int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend);
 void PrintCanPacket(CANPacket packet);
 
 /* [] END OF FILE */

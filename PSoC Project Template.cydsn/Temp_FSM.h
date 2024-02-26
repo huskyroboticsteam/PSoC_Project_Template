@@ -14,11 +14,16 @@
 #include <stdint.h>
 
 //States in FSM
-#define UNINIT          0xFF
-#define MODE1           0x0
-#define MODE2           0x1
-#define CHECK_CAN       0x2
-#define QUEUE_ERROR     0x3
+#define UNINIT          0x0
+#define CHECK_CAN       0x1
+#define DO_MODE1        0x2
+
+//Operation modes
+#define MODE1           0x2
+
+// FSM Errors (0x20-0x2F)
+#define ERROR_ESTOP         0x20
+#define ERROR_INVALID_STATE 0x21
 
 void GotoUninitState();
 void SetStateTo(uint8_t state);

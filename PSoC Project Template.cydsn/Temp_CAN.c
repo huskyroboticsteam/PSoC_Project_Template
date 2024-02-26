@@ -16,45 +16,40 @@
 #include "Temp_FSM.h"
 #include "HindsightCAN/CANLibrary.h"
 
-CANPacket can_recieve;
-CANPacket can_send;
-
 extern char txData[TX_DATA_SIZE];
 extern uint8 address;
 
 //Reads from CAN FIFO and changes the state and mode accordingly
-int CheckCAN() {
-    uint16_t packageID = ReadCAN(&can_recieve);
-    uint8_t serial = GetDeviceSerialNumber(&can_recieve);
-    uint8_t sender_DG = GetSenderDeviceGroupCode(&can_recieve);
-    uint8_t sender_SN = GetSenderDeviceSerialNumber(&can_recieve);
-    uint8_t mode;
+int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
+    uint16_t packageID = GetPacketID(receivedPacket);
+    uint8_t sender_DG = GetSenderDeviceGroupCode(receivedPacket);
+    uint8_t sender_SN = GetSenderDeviceSerialNumber(receivedPacket);
     int32_t data = 0;
-    int err;
+    int err = 0;
     
     switch(packageID){
+        // Board-specific packets
         case(ID_MOTOR_UNIT_MODE_SEL):
-            mode = can_recieve.data[1];
+            data = GetModeFromPacket(receivedPacket);
             
-            if(mode == MODE1) {
+            if(data == MODE1) {
                 SetModeTo(MODE1);
-                SetStateTo(CHECK_CAN);
-            } else if (mode == MODE2) {
-                SetModeTo(MODE2);
-                SetStateTo(CHECK_CAN);
+                // initialize MODE1
             } else {
-                GotoUninitState();
+                err = ERROR_INVALID_MODE;
             }
             break;
             
-        // Common Packets 
+        // Common Packets
         case(ID_ESTOP):
-            Print("\r\n\r\n\r\nSTOP\r\n\r\n\r\n");
+            Print("\r\n\r\nSTOP\r\n\r\n");
+            // stop all movement
             GotoUninitState();
+            err = ERROR_ESTOP;
             break;
         
         case(ID_TELEMETRY_PULL):            
-            switch(DecodeTelemetryType(&can_recieve))
+            switch(DecodeTelemetryType(receivedPacket))
             {
                 // USE CONSTANTS FOR CASES
                 case(0):
@@ -64,24 +59,18 @@ int CheckCAN() {
             }   
             
             // Assemble and send packet
-            AssembleTelemetryReportPacket(&can_send, sender_DG, sender_SN, DecodeTelemetryType(&can_recieve), data);
-            if (SendCANPacket(&can_send)) {
-                DisplayErrorCode(0);
-            }
-            SetStateTo(CHECK_CAN);
-            break;
-            
-        default://for 0xFF/no packets or Non recognized Packets
-            
-            //recieved Packet with Non Valid ID
-            if(packageID != NO_NEW_CAN_PACKET) {
-                DisplayErrorCode(ERROR_INVALID_PACKET);
-                return 1;
+            AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, receivedPacket->data[3], data);
+            if (SendCANPacket(packetToSend)) {
+                err = ERROR_GENERIC_ERROR;
             }
             break;
+            
+        default: //recieved Packet with non-valid ID
+            // could be due to corruption, don't uninit
+            return ERROR_INVALID_PACKET;
     }
     
-    return 0;
+    return err;
 }
 
 void PrintCanPacket(CANPacket packet){

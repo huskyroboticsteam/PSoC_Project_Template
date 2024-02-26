@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> PSoC Project Template</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 02/24/24 11:44:11</td></tr>
+<td class="proptext"> 02/25/24 17:25:27</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C4247LTI-L485</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -1538,7 +1538,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">ClockBlock_LFClk__SYNC_1/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clk_en</td>
- <td class = "number">2.886</td>
+ <td class = "number">2.854</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1558,7 +1558,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC_1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC_1/clock</td>
@@ -1572,7 +1572,7 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">ClockBlock_LFClk__SYNC_OUT_1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC_1/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clk_en</td>
- <td class = "number">2.886</td>
+ <td class = "number">2.854</td>
 </tr>
 <tr> 
  <td class = "text_info">controlcell1</td>
@@ -1599,7 +1599,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clk_en</td>
- <td class = "number">3.210</td>
+ <td class = "number">3.142</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1619,7 +1619,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,2)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
@@ -1633,13 +1633,196 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clk_en</td>
- <td class = "number">3.210</td>
+ <td class = "number">3.142</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
  <td class = "text_info">U(0,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en</td>
+ <td class = "number">3.155</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">synccell</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en</td>
+ <td class = "number">3.155</td>
+</tr>
+<tr> 
+ <td class = "text_info">statusicell1</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en</td>
+ <td class = "number">3.155</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">synccell</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en</td>
+ <td class = "number">3.155</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "text_info">Net_308/clk_en</td>
+ <td class = "number">3.155</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">synccell</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
+ <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
+ <td class = "text_info">Net_308/clk_en</td>
+ <td class = "number">3.155</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell2</td>
+ <td class = "text_info">U(1,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_308</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -1701,189 +1884,6 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en</td>
- <td class = "number">3.223</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en</td>
- <td class = "number">3.223</td>
-</tr>
-<tr> 
- <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en</td>
- <td class = "number">3.223</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en</td>
- <td class = "number">3.223</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "text_info">Net_308/clk_en</td>
- <td class = "number">3.223</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,2)</td>
- <td class = "number">1</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
- <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
- <td class = "text_info">Net_308/clk_en</td>
- <td class = "number">3.223</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_308</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>

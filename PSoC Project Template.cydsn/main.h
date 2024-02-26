@@ -10,8 +10,7 @@
  * ========================================
 */
 #pragma once
-    
-#include "HindsightCAN/CANLibrary.h"
+   
 #include "cyapicallbacks.h"
 #include <stdint.h>
         
@@ -20,10 +19,6 @@
 
 #define TX_DATA_SIZE            (100u)
 
-#define ERROR_INVALID_PACKET  0x0
-#define ERROR_WRONG_MODE      0x1
-#define ERROR_INVALID_STATE   0x2
-
 #define Print(message) DBG_UART_UartPutString(message)
 #define PrintChar(character) DBG_UART_UartPutChar(character)
 #define PrintInt(integer) DBG_UART_UartPutString(itoa(integer, txData, 10))
@@ -31,7 +26,6 @@
 
 void Initialize(void);
 int getSerialAddress();
-uint16_t ReadCAN(CANPacket *receivedPacket);
 void DebugPrint(char input);
 void DisplayErrorCode(uint8_t code);
 

@@ -18,6 +18,7 @@ uint8_t currentMode   = 0xFF;
 
 void GotoUninitState() {
     currentState = UNINIT;
+    // reset any parameters
 }
 void SetStateTo(uint8_t state) {
     currentState = state;

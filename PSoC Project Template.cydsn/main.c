@@ -18,13 +18,18 @@
 #include "cyapicallbacks.h"
 #include "Temp_CAN.h"
 #include "Temp_FSM.h"
+#include "HindsightCAN/CANLibrary.h"
 
 // LED stuff
-uint8_t CAN_time_LED = 0;
-uint8_t ERROR_time_LED = 0;
+volatile uint8_t CAN_time_LED = 0;
+volatile uint8_t ERROR_time_LED = 0;
 
 // UART stuff
 char txData[TX_DATA_SIZE];
+
+// CAN stuff
+CANPacket can_recieve;
+CANPacket can_send;
 
 uint8 address = 0;
 
@@ -51,18 +56,33 @@ int main(void)
     
     for(;;)
     {
+        err = 0;
         switch(GetState()) {
             case(UNINIT):
                 SetStateTo(CHECK_CAN);
                 break;
             case(CHECK_CAN):
-                CheckCAN();
+                err = PollAndReceiveCANPacket(&can_recieve);
+                if (!err) {
+                    LED_CAN_Write(ON);
+                    CAN_time_LED = 0;
+                    err = ProcessCAN(&can_recieve, &can_send);
+                }
+                if (GetMode() == MODE1)
+                    SetStateTo(DO_MODE1);
+                else 
+                    SetStateTo(CHECK_CAN);
                 break;
+            case(DO_MODE1):
+                // mode 1 tasks
+                SetStateTo(CHECK_CAN);
             default:
-                DisplayErrorCode(ERROR_INVALID_STATE);
-                GotoUninitState();
+                err = ERROR_INVALID_STATE;
+                SetStateTo(UNINIT);
                 break;
         }
+        
+        if (err) DisplayErrorCode(err);
         
         if (DBG_UART_SpiUartGetRxBufferSize()) {
             DebugPrint(DBG_UART_UartGetByte());
@@ -79,7 +99,6 @@ void Initialize(void) {
     sprintf(txData, "Dip Addr: %x \r\n", address);
     Print(txData);
     
-
     LED_DBG_1_Write(0);
     
     InitCAN(0x4, (int)address);
@@ -118,40 +137,22 @@ int getSerialAddress() {
     return address;
 }
 
-/*
-Returns the Packet ID or 0xFF if there is no Packet
-This pulls from the CAN lib's FIFO
-Also Triggers LED
-*/
-uint16_t ReadCAN(CANPacket *receivedPacket){
-    volatile int error = PollAndReceiveCANPacket(receivedPacket);
-    if(!error){
-        LED_CAN_Write(ON);
-        CAN_time_LED = 0;
-        return receivedPacket->data[0];
-    }
-    return NO_NEW_CAN_PACKET; //Means no Packet
-}
-
 void DisplayErrorCode(uint8_t code) {    
     ERROR_time_LED = 0;
     LED_ERR_Write(ON);
     
-    Print("Error ");
-    PrintInt(code);
-    Print("\r\n");
+    sprintf(txData, "Error %X\r\n", code);
+    Print(txData);
 
     switch(code)
-    {   
-        //case0: CAN Packet ERROR
-        case 1://Mode Error
+    {
+        case ERROR_WRONG_MODE:
             LED_DBG_1_Write(ON);
             break;
         default:
             //some error
             break;
     }
-
 }
 
 /* [] END OF FILE */

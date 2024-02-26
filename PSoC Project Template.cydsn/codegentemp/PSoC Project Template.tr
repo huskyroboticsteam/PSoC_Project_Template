@@ -533,7 +533,7 @@ Net_308/clock_0                                       macrocell2              0 
 Path Begin     : ClockBlock_LFClk__SYNC/out
 Path End       : \Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en
 Capture Clock  : \Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clock
-Path slack     : 18197p
+Path slack     : 18260p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -544,9 +544,9 @@ End-of-path required time (ps)                 22900
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4703
++ Data path delay                       4640
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4703
+End-of-path arrival time (ps)           4640
  
 Launch Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -557,8 +557,8 @@ ClockBlock_LFClk__SYNC/clock                          synccell                0 
 Data path
 pin name                                            model name    delay     AT  slack  edge  Fanout
 --------------------------------------------------  ------------  -----  -----  -----  ----  ------
-ClockBlock_LFClk__SYNC/out                          synccell       1480   1480  18197  RISE       1
-\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en  statusicell1   3223   4703  18197  RISE       1
+ClockBlock_LFClk__SYNC/out                          synccell       1480   1480  18260  RISE       1
+\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en  statusicell1   3160   4640  18260  RISE       1
 
 Capture Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -573,7 +573,7 @@ ClockBlock/hfclk                                      m0s8clockblockcell      0 
 Path Begin     : ClockBlock_LFClk__SYNC/out
 Path End       : \Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en
 Capture Clock  : \Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clock
-Path slack     : 18197p
+Path slack     : 18260p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -584,9 +584,9 @@ End-of-path required time (ps)                 22900
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4703
++ Data path delay                       4640
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4703
+End-of-path arrival time (ps)           4640
  
 Launch Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -597,8 +597,8 @@ ClockBlock_LFClk__SYNC/clock                          synccell                0 
 Data path
 pin name                                              model name     delay     AT  slack  edge  Fanout
 ----------------------------------------------------  -------------  -----  -----  -----  ----  ------
-ClockBlock_LFClk__SYNC/out                            synccell        1480   1480  18197  RISE       1
-\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en  datapathcell2   3223   4703  18197  RISE       1
+ClockBlock_LFClk__SYNC/out                            synccell        1480   1480  18260  RISE       1
+\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en  datapathcell2   3160   4640  18260  RISE       1
 
 Capture Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -613,7 +613,7 @@ ClockBlock/hfclk                                      m0s8clockblockcell      0 
 Path Begin     : ClockBlock_LFClk__SYNC/out
 Path End       : Net_308/clk_en
 Capture Clock  : Net_308/clock_0
-Path slack     : 18197p
+Path slack     : 18260p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -624,9 +624,9 @@ End-of-path required time (ps)                 22900
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4703
++ Data path delay                       4640
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4703
+End-of-path arrival time (ps)           4640
  
 Launch Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -637,8 +637,8 @@ ClockBlock_LFClk__SYNC/clock                          synccell                0 
 Data path
 pin name                    model name   delay     AT  slack  edge  Fanout
 --------------------------  -----------  -----  -----  -----  ----  ------
-ClockBlock_LFClk__SYNC/out  synccell      1480   1480  18197  RISE       1
-Net_308/clk_en              macrocell2    3223   4703  18197  RISE       1
+ClockBlock_LFClk__SYNC/out  synccell      1480   1480  18260  RISE       1
+Net_308/clk_en              macrocell2    3160   4640  18260  RISE       1
 
 Capture Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -653,7 +653,7 @@ Net_308/clock_0                                       macrocell2              0 
 Path Begin     : ClockBlock_LFClk__SYNC/out
 Path End       : \Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clk_en
 Capture Clock  : \Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clock
-Path slack     : 18210p
+Path slack     : 18273p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -664,9 +664,9 @@ End-of-path required time (ps)                 22900
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4690
++ Data path delay                       4627
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4690
+End-of-path arrival time (ps)           4627
  
 Launch Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -677,8 +677,8 @@ ClockBlock_LFClk__SYNC/clock                          synccell                0 
 Data path
 pin name                                              model name     delay     AT  slack  edge  Fanout
 ----------------------------------------------------  -------------  -----  -----  -----  ----  ------
-ClockBlock_LFClk__SYNC/out                            synccell        1480   1480  18197  RISE       1
-\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clk_en  datapathcell1   3210   4690  18210  RISE       1
+ClockBlock_LFClk__SYNC/out                            synccell        1480   1480  18260  RISE       1
+\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clk_en  datapathcell1   3147   4627  18273  RISE       1
 
 Capture Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -693,7 +693,7 @@ ClockBlock/hfclk                                      m0s8clockblockcell      0 
 Path Begin     : ClockBlock_LFClk__SYNC_1/out
 Path End       : \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clk_en
 Capture Clock  : \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock
-Path slack     : 18535p
+Path slack     : 18563p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -704,9 +704,9 @@ End-of-path required time (ps)                 22900
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4365
++ Data path delay                       4337
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4365
+End-of-path arrival time (ps)           4337
  
 Launch Clock Path
 pin name                                              model name          delay     AT  edge  Fanout
@@ -717,8 +717,8 @@ ClockBlock_LFClk__SYNC_1/clock                        synccell                0 
 Data path
 pin name                                                       model name    delay     AT  slack  edge  Fanout
 -------------------------------------------------------------  ------------  -----  -----  -----  ----  ------
-ClockBlock_LFClk__SYNC_1/out                                   synccell       1480   1480  18535  RISE       1
-\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clk_en  controlcell1   2885   4365  18535  RISE       1
+ClockBlock_LFClk__SYNC_1/out                                   synccell       1480   1480  18563  RISE       1
+\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clk_en  controlcell1   2857   4337  18563  RISE       1
 
 Capture Clock Path
 pin name                                                      model name          delay     AT  edge  Fanout

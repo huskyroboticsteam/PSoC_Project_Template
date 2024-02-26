@@ -1,6 +1,6 @@
 // ======================================================================
 // PSoC Project Template.v generated from TopDesign.cysch
-// 02/24/2024 at 11:44
+// 02/25/2024 at 17:25
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -607,7 +607,6 @@ module top ;
           wire  Net_321;
           wire  Net_309;
           wire  Net_308;
-          wire  Net_307;
           wire  Net_306;
           wire  Net_305;
           wire  Net_320;
@@ -619,6 +618,7 @@ module top ;
     electrical  Net_208;
           wire  Net_82;
           wire  Net_81;
+          wire  Net_325;
           wire  Net_78;
           wire  Net_77;
           wire  Net_76;
@@ -641,8 +641,8 @@ module top ;
           wire  Net_59;
           wire  Net_58;
           wire  Net_57;
+          wire  Net_307;
           wire  Net_12;
-          wire  Net_11;
 
     SCB_P4_v4_0_0 DBG_UART (
         .clock(1'b0),
@@ -729,7 +729,7 @@ module top ;
 		CAN_RX
 		 (.oe(tmpOE__CAN_RX_net),
 		  .y({1'b0}),
-		  .fb({Net_11}),
+		  .fb({Net_325}),
 		  .io({tmpIO_0__CAN_RX_net[0:0]}),
 		  .siovref(tmpSIOVREF__CAN_RX_net),
 		  .interrupt({tmpINTERRUPT_0__CAN_RX_net[0:0]}),
@@ -819,7 +819,7 @@ module top ;
 
     CAN_v3_0_1 CAN (
         .interrupt(Net_81),
-        .rx(Net_11),
+        .rx(Net_325),
         .tx(Net_12),
         .tx_en(Net_82));
 
