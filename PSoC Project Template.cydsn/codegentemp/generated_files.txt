@@ -59,10 +59,10 @@
   <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_ERR.h" value="HEADER;;;;;LED_ERR" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_ERR_aliases.h" value="HEADER;;;;;LED_ERR" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_ERR_PM.c" value="SOURCE_C;CortexM0;;;;LED_ERR" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG_1.c" value="SOURCE_C;CortexM0;;;;LED_DBG_1" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG_1.h" value="HEADER;;;;;LED_DBG_1" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG_1_aliases.h" value="HEADER;;;;;LED_DBG_1" />
-  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG_1_PM.c" value="SOURCE_C;CortexM0;;;;LED_DBG_1" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG.c" value="SOURCE_C;CortexM0;;;;LED_DBG" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG.h" value="HEADER;;;;;LED_DBG" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG_aliases.h" value="HEADER;;;;;LED_DBG" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_DBG_PM.c" value="SOURCE_C;CortexM0;;;;LED_DBG" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_CAN.c" value="SOURCE_C;CortexM0;;;;LED_CAN" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_CAN.h" value="HEADER;;;;;LED_CAN" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\codegentemp\LED_CAN_aliases.h" value="HEADER;;;;;LED_CAN" />

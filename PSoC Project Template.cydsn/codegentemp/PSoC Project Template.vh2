@@ -2,7 +2,7 @@
 --	Conversion of PSoC Project Template.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Feb 25 17:25:24 2024
+--	Wed Feb 28 20:15:02 2024
 --
 
 USE cypress.cypress.all;
@@ -106,11 +106,11 @@ SIGNAL tmpFB_0__LED_ERR_net_0 : bit;
 SIGNAL tmpIO_0__LED_ERR_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_ERR_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__LED_ERR_net_0 : bit;
-SIGNAL tmpOE__LED_DBG_1_net_0 : bit;
-SIGNAL tmpFB_0__LED_DBG_1_net_0 : bit;
-SIGNAL tmpIO_0__LED_DBG_1_net_0 : bit;
-TERMINAL tmpSIOVREF__LED_DBG_1_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__LED_DBG_1_net_0 : bit;
+SIGNAL tmpOE__LED_DBG_net_0 : bit;
+SIGNAL tmpFB_0__LED_DBG_net_0 : bit;
+SIGNAL tmpIO_0__LED_DBG_net_0 : bit;
+TERMINAL tmpSIOVREF__LED_DBG_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__LED_DBG_net_0 : bit;
 SIGNAL tmpOE__LED_CAN_net_0 : bit;
 SIGNAL tmpFB_0__LED_CAN_net_0 : bit;
 SIGNAL tmpIO_0__LED_CAN_net_0 : bit;
@@ -303,7 +303,6 @@ SIGNAL \Timer_Period_Reset:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\ : bit;
 ATTRIBUTE port_state_att of \Timer_Period_Reset:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\:SIGNAL IS 2;
 SIGNAL \Timer_Period_Reset:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
 ATTRIBUTE port_state_att of \Timer_Period_Reset:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
-SIGNAL Net_316 : bit;
 SIGNAL tmpOE__Button_1_net_0 : bit;
 SIGNAL Net_324 : bit;
 SIGNAL tmpIO_0__Button_1_net_0 : bit;
@@ -934,9 +933,9 @@ DIP4:cy_psoc3_pins_v1_10
 		interrupt=>tmpINTERRUPT_0__DIP4_net_0);
 LED_ERR:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
-		drive_mode=>"011",
+		drive_mode=>"110",
 		ibuf_enabled=>"1",
-		init_dr_st=>"1",
+		init_dr_st=>"0",
 		input_sync=>"1",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
@@ -1002,11 +1001,11 @@ LED_ERR:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__LED_ERR_net_0);
-LED_DBG_1:cy_psoc3_pins_v1_10
+LED_DBG:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"cda343a7-a70d-4278-90ef-7776c8b47560",
 		drive_mode=>"110",
 		ibuf_enabled=>"1",
-		init_dr_st=>"1",
+		init_dr_st=>"0",
 		input_sync=>"1",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
@@ -1060,10 +1059,10 @@ LED_DBG_1:cy_psoc3_pins_v1_10
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(one),
 		y=>(zero),
-		fb=>(tmpFB_0__LED_DBG_1_net_0),
+		fb=>(tmpFB_0__LED_DBG_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__LED_DBG_1_net_0),
-		siovref=>(tmpSIOVREF__LED_DBG_1_net_0),
+		io=>(tmpIO_0__LED_DBG_net_0),
+		siovref=>(tmpSIOVREF__LED_DBG_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>one,
@@ -1071,12 +1070,12 @@ LED_DBG_1:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>one,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__LED_DBG_1_net_0);
+		interrupt=>tmpINTERRUPT_0__LED_DBG_net_0);
 LED_CAN:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"55e4ee15-7eea-46a5-90dd-1e5fd00ff7de",
-		drive_mode=>"011",
+		drive_mode=>"110",
 		ibuf_enabled=>"1",
-		init_dr_st=>"1",
+		init_dr_st=>"0",
 		input_sync=>"1",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",
@@ -1344,10 +1343,10 @@ LED_CAN:cy_psoc3_pins_v1_10
 			zero, zero, zero, zero),
 		po=>open);
 isr_Period_Reset:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
+	GENERIC MAP(int_type=>"00",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_308);
-Clock_100:cy_clock_v1_0
+LFClk:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"2f726f74-6174-4c41-b263-e3315f1677a0",
 		source_clock_id=>"9A908CA6-5BB3-4db0-B098-959E5D90882B",
@@ -1357,21 +1356,11 @@ Clock_100:cy_clock_v1_0
 		is_digital=>'0')
 	PORT MAP(clock_out=>Net_320,
 		dig_domain_out=>open);
-Clock_1:cy_clock_v1_0
-	GENERIC MAP(cy_registers=>"",
-		id=>"a75f9d05-828b-49f5-b615-b0e6c48bb53a",
-		source_clock_id=>"413DE2EF-D9F2-4233-A808-DFAF137FD877",
-		divisor=>0,
-		period=>"0",
-		is_direct=>'1',
-		is_digital=>'0')
-	PORT MAP(clock_out=>Net_316,
-		dig_domain_out=>open);
 Button_1:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"aa58a004-c402-40e0-9ff5-87b032aba07d",
-		drive_mode=>"001",
+		drive_mode=>"010",
 		ibuf_enabled=>"1",
-		init_dr_st=>"0",
+		init_dr_st=>"1",
 		input_sync=>"0",
 		input_clk_en=>'0',
 		input_sync_mode=>"0",

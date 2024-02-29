@@ -34,7 +34,7 @@ MEMORY
 
 
 CY_APPL_ORIGIN                  = 0;
-CY_FLASH_ROW_SIZE               = 256;
+CY_FLASH_ROW_SIZE               = 128;
 CY_APPL_NUM                     = 1;
 CY_APPL_MAX                     = 1;
 CY_METADATA_SIZE                = 64;

@@ -17,7 +17,7 @@ define symbol __ICFEDIT_size_heap__   = 0x80;
 /******** Definitions ********/
 define symbol CY_FLASH_SIZE     = 131072;
 define symbol CY_APPL_ORIGIN    = 0;
-define symbol CY_FLASH_ROW_SIZE = 256;
+define symbol CY_FLASH_ROW_SIZE = 128;
 define symbol CY_APPL_LOADABLE  = 0;
 define symbol CY_APPL_LOADER    = 0;
 define symbol CY_APPL_NUM       = 1;

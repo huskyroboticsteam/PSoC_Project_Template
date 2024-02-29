@@ -45,7 +45,7 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
             Print("\r\n\r\nSTOP\r\n\r\n");
             // stop all movement
             GotoUninitState();
-            err = ERROR_ESTOP;
+            err = ESTOP_ERR_GENERAL;
             break;
         
         case(ID_TELEMETRY_PULL):            
@@ -53,16 +53,19 @@ int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend) {
             {
                 // USE CONSTANTS FOR CASES
                 case(0):
-                    data = 1;
+                    data = 105;
+                    break;
                 default:
-                    Print("Cannot Send That Data Type!\n\r");
-            }   
+                    err = ERROR_INVALID_TTC;
+                    break;
+            }
             
             // Assemble and send packet
             AssembleTelemetryReportPacket(packetToSend, sender_DG, sender_SN, receivedPacket->data[3], data);
-            if (SendCANPacket(packetToSend)) {
-                err = ERROR_GENERIC_ERROR;
-            }
+            
+            if (err == 0)
+                SendCANPacket(packetToSend);
+            
             break;
             
         default: //recieved Packet with non-valid ID

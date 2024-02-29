@@ -1,5 +1,5 @@
 -- Project:   C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cyprj
--- Generated: 02/25/2024 17:25:27
+-- Generated: 02/28/2024 20:15:05
 -- PSoC Creator  4.4
 
 ENTITY \PSoC Project Template\ IS
@@ -13,28 +13,25 @@ ENTITY \PSoC Project Template\ IS
         DIP3(0)_PAD : IN std_ulogic;
         DIP4(0)_PAD : IN std_ulogic;
         LED_ERR(0)_PAD : OUT std_ulogic;
-        LED_DBG_1(0)_PAD : OUT std_ulogic;
+        LED_DBG(0)_PAD : OUT std_ulogic;
         LED_CAN(0)_PAD : OUT std_ulogic;
         Button_1(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDIO_A_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA_CTB OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDIO_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
+    ATTRIBUTE voltage_VDDD_0 OF __DEFAULT__ : ENTITY IS 3.3e0;
+    ATTRIBUTE voltage_VDDD_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_1 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_2 OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDIO_3 OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VDDIO_4 OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO_A OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDIO OF __DEFAULT__ : ENTITY IS 3.3e0;
-    ATTRIBUTE voltage_VBUS OF __DEFAULT__ : ENTITY IS 5e0;
+    ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 3.3e0;
 END \PSoC Project Template\;
 
 ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     SIGNAL Button_1(0)__PA : bit;
     SIGNAL CAN_RX(0)__PA : bit;
     SIGNAL CAN_TX(0)__PA : bit;
-    SIGNAL ClockBlock_ECO : bit;
     SIGNAL ClockBlock_ExtClk : bit;
     SIGNAL ClockBlock_HFClk : bit;
     ATTRIBUTE udbclken_assigned OF ClockBlock_HFClk : SIGNAL IS "True";
@@ -44,8 +41,6 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     SIGNAL ClockBlock_LFClk : bit;
     SIGNAL ClockBlock_LFClk__SYNC_OUT : bit;
     SIGNAL ClockBlock_LFClk__SYNC_OUT_1 : bit;
-    SIGNAL ClockBlock_PLL0 : bit;
-    SIGNAL ClockBlock_PLL1 : bit;
     SIGNAL ClockBlock_Routed1 : bit;
     SIGNAL ClockBlock_SysClk : bit;
     SIGNAL ClockBlock_WCO : bit;
@@ -54,11 +49,11 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     SIGNAL DIP3(0)__PA : bit;
     SIGNAL DIP4(0)__PA : bit;
     SIGNAL LED_CAN(0)__PA : bit;
-    SIGNAL LED_DBG_1(0)__PA : bit;
+    SIGNAL LED_DBG(0)__PA : bit;
     SIGNAL LED_ERR(0)__PA : bit;
     SIGNAL Net_12 : bit;
     SIGNAL Net_308 : bit;
-    ATTRIBUTE placement_force OF Net_308 : SIGNAL IS "U(1,1,A)1";
+    ATTRIBUTE placement_force OF Net_308 : SIGNAL IS "U(0,0,B)1";
     SIGNAL Net_324 : bit;
     SIGNAL Net_325 : bit;
     SIGNAL Net_59 : bit;
@@ -92,7 +87,7 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     SIGNAL \Timer_Period_Reset:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_Period_Reset:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_Period_Reset:TimerUDB:status_tc\ : bit;
-    ATTRIBUTE placement_force OF \Timer_Period_Reset:TimerUDB:status_tc\ : SIGNAL IS "U(1,1,A)0";
+    ATTRIBUTE placement_force OF \Timer_Period_Reset:TimerUDB:status_tc\ : SIGNAL IS "U(0,0,B)0";
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -134,31 +129,31 @@ ARCHITECTURE __DEFAULT__ OF \PSoC Project Template\ IS
     ATTRIBUTE Location OF DIP4(0) : LABEL IS "P4[0]";
     ATTRIBUTE lib_model OF LED_ERR(0) : LABEL IS "iocell9";
     ATTRIBUTE Location OF LED_ERR(0) : LABEL IS "P1[1]";
-    ATTRIBUTE lib_model OF LED_DBG_1(0) : LABEL IS "iocell10";
-    ATTRIBUTE Location OF LED_DBG_1(0) : LABEL IS "P1[6]";
+    ATTRIBUTE lib_model OF LED_DBG(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF LED_DBG(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF LED_CAN(0) : LABEL IS "iocell11";
     ATTRIBUTE Location OF LED_CAN(0) : LABEL IS "P1[3]";
     ATTRIBUTE lib_model OF Button_1(0) : LABEL IS "iocell12";
     ATTRIBUTE Location OF Button_1(0) : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "U(1,1)";
-    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:status_tc\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC : LABEL IS "U(1,1)";
     ATTRIBUTE Location OF \DBG_UART:SCB\ : LABEL IS "F(SCB,3)";
-    ATTRIBUTE Location OF \CAN:isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(29)]";
-    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC_1 : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \CAN:isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(28)]";
+    ATTRIBUTE Location OF ClockBlock_LFClk__SYNC_1 : LABEL IS "U(1,1)";
     ATTRIBUTE Location OF \CAN:CanIP\ : LABEL IS "F(CAN,1)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell1";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:rstSts:stsreg\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:rstSts:stsreg\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\ : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF \Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\ : LABEL IS "U(0,0)";
     ATTRIBUTE Location OF isr_Period_Reset : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
     ATTRIBUTE Location OF isr_Button_1 : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
     ATTRIBUTE lib_model OF Net_308 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_308 : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF Net_308 : LABEL IS "U(0,0)";
     COMPONENT cancell
         PORT (
             clock : IN std_ulogic;
@@ -540,9 +535,6 @@ BEGIN
             imo => ClockBlock_IMO,
             ext => ClockBlock_ExtClk,
             sysclk => ClockBlock_SysClk,
-            eco => ClockBlock_ECO,
-            pll => ClockBlock_PLL0,
-            dbl => ClockBlock_PLL1,
             ilo => ClockBlock_ILO,
             lfclk => ClockBlock_LFClk,
             wco => ClockBlock_WCO,
@@ -1278,10 +1270,10 @@ BEGIN
 
     LED_ERR:logicalport
         GENERIC MAP(
-            drive_mode => "011",
+            drive_mode => "110",
             ibuf_enabled => "1",
             id => "e851a3b9-efb8-48be-bbb8-b303b216c393",
-            init_dr_st => "1",
+            init_dr_st => "0",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",
@@ -1366,12 +1358,12 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    LED_DBG_1:logicalport
+    LED_DBG:logicalport
         GENERIC MAP(
             drive_mode => "110",
             ibuf_enabled => "1",
             id => "cda343a7-a70d-4278-90ef-7776c8b47560",
-            init_dr_st => "1",
+            init_dr_st => "0",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",
@@ -1437,18 +1429,18 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    LED_DBG_1(0):iocell
+    LED_DBG(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "LED_DBG_1",
+            logicalport => "LED_DBG",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
         PORT MAP(
-            pa_out => LED_DBG_1(0)__PA,
+            pa_out => LED_DBG(0)__PA,
             oe => open,
-            pad_in => LED_DBG_1(0)_PAD,
+            pad_in => LED_DBG(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -1458,10 +1450,10 @@ BEGIN
 
     LED_CAN:logicalport
         GENERIC MAP(
-            drive_mode => "011",
+            drive_mode => "110",
             ibuf_enabled => "1",
             id => "55e4ee15-7eea-46a5-90dd-1e5fd00ff7de",
-            init_dr_st => "1",
+            init_dr_st => "0",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",
@@ -1548,10 +1540,10 @@ BEGIN
 
     Button_1:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "aa58a004-c402-40e0-9ff5-87b032aba07d",
-            init_dr_st => "0",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "0",
@@ -1852,7 +1844,7 @@ BEGIN
 
     isr_Period_Reset:interrupt
         GENERIC MAP(
-            int_type => "10",
+            int_type => "00",
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_308,

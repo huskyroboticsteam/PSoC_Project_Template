@@ -30,7 +30,7 @@
 
 #define CY_FLASH_SIZE                   131072
 #define CY_APPL_ORIGIN                  0
-#define CY_FLASH_ROW_SIZE               256
+#define CY_FLASH_ROW_SIZE               128
 #define CY_METADATA_SIZE                64
 
 #define CY_APPL_FOR_STACK_AND_COPIER    0

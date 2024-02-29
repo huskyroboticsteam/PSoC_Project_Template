@@ -19,6 +19,7 @@
 #define ERROR_NO_NEW_PACKET 0xFFFF
 #define ERROR_WRONG_MODE      0x10
 #define ERROR_INVALID_MODE    0x11
+#define ERROR_INVALID_TTC     0x12
 
 int ReadCAN(CANPacket *receivedPacket);
 int ProcessCAN(CANPacket* receivedPacket, CANPacket* packetToSend);

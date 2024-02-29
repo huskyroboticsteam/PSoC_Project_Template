@@ -1,5 +1,5 @@
 # PSoC Project Template
-# 2024-02-26 01:25:25Z
+# 2024-02-29 04:15:03Z
 
 # IO_4@[IOP=(0)][IoId=(4)] is reserved: KhzXtalEnabled
 dont_use_io iocell 0 4
@@ -21,6 +21,6 @@ set_io "DIP2(0)" iocell 4 2
 set_io "DIP3(0)" iocell 4 1
 set_io "DIP4(0)" iocell 4 0
 set_io "LED_ERR(0)" iocell 1 1
-set_io "LED_DBG_1(0)" iocell 1 6
+set_io "LED_DBG(0)" iocell 1 6
 set_io "LED_CAN(0)" iocell 1 3
 set_io "Button_1(0)" iocell 0 7

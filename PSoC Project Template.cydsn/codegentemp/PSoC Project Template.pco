@@ -1,5 +1,5 @@
 # PSoC Project Template
-# 2024-02-26 01:25:26Z
+# 2024-02-29 04:15:04Z
 
 # IO_4@[IOP=(0)][IoId=(4)] is reserved: KhzXtalEnabled
 dont_use_io iocell 0 4
@@ -22,19 +22,19 @@ set_io "DIP2(0)" iocell 4 2
 set_io "DIP3(0)" iocell 4 1
 set_io "DIP4(0)" iocell 4 0
 set_io "LED_ERR(0)" iocell 1 1
-set_io "LED_DBG_1(0)" iocell 1 6
+set_io "LED_DBG(0)" iocell 1 6
 set_io "LED_CAN(0)" iocell 1 3
 set_io "Button_1(0)" iocell 0 7
-set_location "\Timer_Period_Reset:TimerUDB:status_tc\" 1 1 0 0
-set_location "ClockBlock_LFClk__SYNC" 0 0 5 1
+set_location "\Timer_Period_Reset:TimerUDB:status_tc\" 0 0 1 0
+set_location "ClockBlock_LFClk__SYNC" 1 1 5 1
 set_location "\DBG_UART:SCB\" m0s8scbcell -1 -1 3
-set_location "\CAN:isr\" interrupt -1 -1 29
-set_location "ClockBlock_LFClk__SYNC_1" 0 0 5 0
+set_location "\CAN:isr\" interrupt -1 -1 28
+set_location "ClockBlock_LFClk__SYNC_1" 1 1 5 0
 set_location "\CAN:CanIP\" cancell -1 -1 1
-set_location "\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 0 1 6
-set_location "\Timer_Period_Reset:TimerUDB:rstSts:stsreg\" 1 1 4
-set_location "\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\" 0 1 2
-set_location "\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\" 1 1 2
+set_location "\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" 1 0 6
+set_location "\Timer_Period_Reset:TimerUDB:rstSts:stsreg\" 0 0 4
+set_location "\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\" 1 0 2
+set_location "\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\" 0 0 2
 set_location "isr_Period_Reset" interrupt -1 -1 1
 set_location "isr_Button_1" interrupt -1 -1 0
-set_location "Net_308" 1 1 0 1
+set_location "Net_308" 0 0 1 1

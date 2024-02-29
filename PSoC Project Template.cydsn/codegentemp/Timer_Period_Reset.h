@@ -168,14 +168,14 @@ void Timer_Period_Reset_Wakeup(void)        ;
 *    Initialial Parameter Constants
 ***************************************/
 
-#define Timer_Period_Reset_INIT_PERIOD             1637u
+#define Timer_Period_Reset_INIT_PERIOD             1599u
 #define Timer_Period_Reset_INIT_CAPTURE_MODE       ((uint8)((uint8)0u << Timer_Period_Reset_CTRL_CAP_MODE_SHIFT))
 #define Timer_Period_Reset_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << Timer_Period_Reset_CTRL_TRIG_MODE_SHIFT))
 #if (Timer_Period_Reset_UsingFixedFunction)
-    #define Timer_Period_Reset_INIT_INTERRUPT_MODE (((uint8)((uint8)1u << Timer_Period_Reset_STATUS_TC_INT_MASK_SHIFT)) | \
+    #define Timer_Period_Reset_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Timer_Period_Reset_STATUS_TC_INT_MASK_SHIFT)) | \
                                                   ((uint8)((uint8)0 << Timer_Period_Reset_STATUS_CAPTURE_INT_MASK_SHIFT)))
 #else
-    #define Timer_Period_Reset_INIT_INTERRUPT_MODE (((uint8)((uint8)1u << Timer_Period_Reset_STATUS_TC_INT_MASK_SHIFT)) | \
+    #define Timer_Period_Reset_INIT_INTERRUPT_MODE (((uint8)((uint8)0u << Timer_Period_Reset_STATUS_TC_INT_MASK_SHIFT)) | \
                                                  ((uint8)((uint8)0 << Timer_Period_Reset_STATUS_CAPTURE_INT_MASK_SHIFT)) | \
                                                  ((uint8)((uint8)0 << Timer_Period_Reset_STATUS_FIFOFULL_INT_MASK_SHIFT)))
 #endif /* (Timer_Period_Reset_UsingFixedFunction) */

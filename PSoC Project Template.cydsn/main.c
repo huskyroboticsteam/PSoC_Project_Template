@@ -30,23 +30,22 @@ char txData[TX_DATA_SIZE];
 // CAN stuff
 CANPacket can_recieve;
 CANPacket can_send;
-
 uint8 address = 0;
 
 CY_ISR(Period_Reset_Handler) {
     CAN_time_LED++;
     ERROR_time_LED++;
 
-    if(ERROR_time_LED >= 3) {
+    if (ERROR_time_LED >= 3) {
         LED_ERR_Write(OFF);
     }
-    if(CAN_time_LED >= 3){
+    if (CAN_time_LED >= 3) {
         LED_CAN_Write(OFF);
     }
 }
 
 CY_ISR(Button_1_Handler) {
-    LED_DBG_1_Write(!LED_DBG_1_Read());
+    LED_DBG_Write(!LED_DBG_Read());
 }
 
 int main(void)
@@ -62,8 +61,7 @@ int main(void)
                 SetStateTo(CHECK_CAN);
                 break;
             case(CHECK_CAN):
-                err = PollAndReceiveCANPacket(&can_recieve);
-                if (!err) {
+                if (!PollAndReceiveCANPacket(&can_recieve)) {
                     LED_CAN_Write(ON);
                     CAN_time_LED = 0;
                     err = ProcessCAN(&can_recieve, &can_send);
@@ -76,6 +74,7 @@ int main(void)
             case(DO_MODE1):
                 // mode 1 tasks
                 SetStateTo(CHECK_CAN);
+                break;
             default:
                 err = ERROR_INVALID_STATE;
                 SetStateTo(UNINIT);
@@ -87,6 +86,8 @@ int main(void)
         if (DBG_UART_SpiUartGetRxBufferSize()) {
             DebugPrint(DBG_UART_UartGetByte());
         }
+        
+        CyDelay(100);
     }
 }
 
@@ -99,10 +100,11 @@ void Initialize(void) {
     sprintf(txData, "Dip Addr: %x \r\n", address);
     Print(txData);
     
-    LED_DBG_1_Write(0);
+    LED_DBG_Write(0);
     
     InitCAN(0x4, (int)address);
     Timer_Period_Reset_Start();
+    // Timer_Period_Reset_Enable();
 
     isr_Button_1_StartEx(Button_1_Handler);
     isr_Period_Reset_StartEx(Period_Reset_Handler);
@@ -130,7 +132,7 @@ int getSerialAddress() {
     if (DIP2_Read()==0) address += 2;
     if (DIP3_Read()==0) address += 4;
     if (DIP4_Read()==0) address += 8;
-
+    
     if (address == 0)
         address = DEVICE_SERIAL_TELEM_LOCALIZATION;
 
@@ -146,8 +148,8 @@ void DisplayErrorCode(uint8_t code) {
 
     switch(code)
     {
-        case ERROR_WRONG_MODE:
-            LED_DBG_1_Write(ON);
+        case ERROR_INVALID_TTC:
+            Print("Cannot Send That Data Type!\n\r");
             break;
         default:
             //some error

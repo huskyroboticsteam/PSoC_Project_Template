@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Project Template\PSoC Project Template\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSoC Project Template\PSoC Project Template\TopDesign">
 <ExpandedNodeIds>
 <v>PSoC Project Template</v>
 <v>PSoC Project Template\PSoC Project Template</v>
@@ -32,6 +32,7 @@
 <v>PSoC Project Template\PSoC Project Template\Header Files\main.h</v>
 <v>PSoC Project Template\PSoC Project Template\Header Files\Temp_CAN.h</v>
 <v>PSoC Project Template\PSoC Project Template\Header Files\Temp_FSM.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN</v>
 <v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANCommon.c</v>
 <v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANCommon.h</v>
 <v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANGPIO.c</v>
@@ -70,6 +71,20 @@
 <v>PSoC Project Template\PSoC Project Template\Header Files\Temp_CAN.h</v>
 <v>PSoC Project Template\PSoC Project Template\Header Files\Temp_FSM.h</v>
 <v>PSoC Project Template\PSoC Project Template\HindSightCAN</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANCommon.c</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANCommon.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANGPIO.c</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANGPIO.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANLibrary.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANLocalization.c</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANLocalization.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANMotorUnit.c</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANMotorUnit.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANPacket.c</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANPacket.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\CANSerialNumbers.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\Port.h</v>
+<v>PSoC Project Template\PSoC Project Template\HindSightCAN\PortPSOC_CY8C4248AZI_L485.c</v>
 <v>PSoC Project Template\PSoC Project Template\Source Files</v>
 <v>PSoC Project Template\PSoC Project Template\Source Files\main.c</v>
 <v>PSoC Project Template\PSoC Project Template\Source Files\Temp_CAN.c</v>
@@ -151,8 +166,8 @@
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\isr_Period_Reset.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_CAN.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_CAN_PM.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_DBG_1.lst</v>
-<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_DBG_1_PM.lst</v>
+<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_DBG.lst</v>
+<v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_DBG_PM.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_ERR.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\LED_ERR_PM.lst</v>
 <v>PSoC Project Template\PSoC Project Template\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
@@ -183,14 +198,13 @@
 <v>PSoC Project Template</v>
 <v>PSoC Project Template\PSoC Project Template</v>
 <v>PSoC Project Template\PSoC Project Template\PSoC 4 Architecture TRM</v>
-<v>PSoC Project Template\PSoC Project Template\PSoC 4200L Family Datasheet</v>
+<v>PSoC Project Template\PSoC Project Template\PSoC 4200M Family Datasheet</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_boot_v6_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_dmac_v1_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_lfclk_v1_20</v>
 <v>PSoC Project Template\PSoC Project Template\CAN_v3_0.pdf</v>
-<v>PSoC Project Template\PSoC Project Template\cy_clock_v2_20</v>
-<v>PSoC Project Template\PSoC Project Template\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>PSoC Project Template\PSoC Project Template\cy_clock_v2_20.pdf</v>
 <v>PSoC Project Template\PSoC Project Template\cy_constant_v1_0.pdf</v>
 <v>PSoC Project Template\PSoC Project Template\cy_isr_v1_71</v>
 <v>PSoC Project Template\PSoC Project Template\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
@@ -203,14 +217,13 @@
 <v>PSoC Project Template</v>
 <v>PSoC Project Template\PSoC Project Template</v>
 <v>PSoC Project Template\PSoC Project Template\PSoC 4 Architecture TRM</v>
-<v>PSoC Project Template\PSoC Project Template\PSoC 4200L Family Datasheet</v>
+<v>PSoC Project Template\PSoC Project Template\PSoC 4200M Family Datasheet</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_boot_v6_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_dmac_v1_10</v>
 <v>PSoC Project Template\PSoC Project Template\System Reference Guides\cy_lfclk_v1_20</v>
 <v>PSoC Project Template\PSoC Project Template\CAN_v3_0.pdf</v>
-<v>PSoC Project Template\PSoC Project Template\cy_clock_v2_20</v>
-<v>PSoC Project Template\PSoC Project Template\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>PSoC Project Template\PSoC Project Template\cy_clock_v2_20.pdf</v>
 <v>PSoC Project Template\PSoC Project Template\cy_constant_v1_0.pdf</v>
 <v>PSoC Project Template\PSoC Project Template\cy_isr_v1_71</v>
 <v>PSoC Project Template\PSoC Project Template\cy_isr_v1_71\cy_isr_v1_71.pdf</v>
@@ -226,7 +239,27 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\PSoC Project Template.cydsn\PSoC Project Template.cydwr" />
+<name v=".\PSoC Project Template.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PSoC Project Template.cydsn\Temp_CAN.c" />
+<name v=".\PSoC Project Template.cydsn\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" />
+<name v=".\PSoC Project Template.cydsn\HindsightCAN\CANLibrary.h" />
+<name v=".\PSoC Project Template.cydsn\HindsightCAN\CANCommon.h" />
+<name v=".\PSoC Project Template.cydsn\HindsightCAN\Port.h" />
+<name v=".\PSoC Project Template.cydsn\HindsightCAN\CANMotorUnit.h" />
+<name v=".\PSoC Project Template.cydsn\HindsightCAN\CANPacket.h" />
+<name v=".\PSoC Project Template.cydsn\main.h" />
+<name v=".\PSoC Project Template.cydsn\Generated_Source\PSoC4\CyBootAsmGnu.s" />
+<name v=".\PSoC Project Template.cydsn\Generated_Source\PSoC4\CyLib.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="521, 661" SelectedTabbedMdiWindow="88fbd740-a9ed-4b36-b48f-f2fa94d36d72"><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\PSoC Project Template.cydwr" Guid="08232d74-1b2f-4146-869a-e4a4dfc6edb3" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\TopDesign\TopDesign.cysch" Guid="88fbd740-a9ed-4b36-b48f-f2fa94d36d72" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\Temp_CAN.c" Guid="8f575af5-379b-40b6-88e2-2ef557934953" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\HindsightCAN\PortFiles\PortPSOC_CY8C4248AZI_L485.c" Guid="5248ffe6-51fa-490a-92d9-91d6fbb0f8dd" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\HindsightCAN\CANLibrary.h" Guid="62366246-758b-4e58-a4d7-856d82575071" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\HindsightCAN\CANCommon.h" Guid="de8b5a8c-45f1-4142-ab75-70005b80054e" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\HindsightCAN\Port.h" Guid="b4704972-51a9-4b6a-b548-4a04f1df4bf8" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\HindsightCAN\CANMotorUnit.h" Guid="5d1c5b2f-7bf2-46fb-9429-d19b39d523e0" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\HindsightCAN\CANPacket.h" Guid="b43d2971-4611-435e-9070-d28741d8fd79" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\main.h" Guid="808cee25-4a5d-428e-8dba-48988761f069" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\Generated_Source\PSoC4\CyBootAsmGnu.s" Guid="c45c28e4-f4b6-4e2c-ab7b-16c27ddf1443" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\PSoC_Project_Template\PSoC Project Template.cydsn\Generated_Source\PSoC4\CyLib.c" Guid="1cb472aa-f1ba-47d9-ae72-27b820ee1192" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f9102868-88ca-4853-ab28-0a28d99070b3" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

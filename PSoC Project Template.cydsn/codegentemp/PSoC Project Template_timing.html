@@ -539,30 +539,26 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> PSoC Project Template</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 02/25/24 17:25:27</td></tr>
+<td class="proptext"> 02/28/24 20:15:05</td></tr>
 <tr> <td class="prop"> Device :</td>
-<td class="proptext"> CY8C4247LTI-L485</td></tr>
+<td class="proptext"> CY8C4247AZI-M485</td></tr>
 <tr> <td class="prop"> Temperature :</td>
 <td class="proptext"> -40C - 85C</td></tr>
-<tr> <td class="prop"> VBUS :</td>
-<td class="proptext"> 5.00</td></tr>
 <tr> <td class="prop"> VDDA_0 :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDA_CTB :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDD :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDIO :</td>
+<tr> <td class="prop"> VDDD_0 :</td>
 <td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDIO_0 :</td>
+<tr> <td class="prop"> VDDD_1 :</td>
+<td class="proptext"> 3.30</td></tr>
+<tr> <td class="prop"> VDDIO :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO_1 :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO_2 :</td>
-<td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDIO_3 :</td>
-<td class="proptext"> 3.30</td></tr>
-<tr> <td class="prop"> VDDIO_4 :</td>
 <td class="proptext"> 3.30</td></tr>
 <tr> <td class="prop"> VDDIO_A :</td>
 <td class="proptext"> 3.30</td></tr>
@@ -583,7 +579,28 @@ function getElementsByClass(rootNode, elemName, className)
 <span class="sec_head"><span style="font-family: monospace;">+</span>
 Timing Violation Section</span>
 </a>
-</div><div class="vio_sta_secbody"><div class="sta_sec_desc">No Timing Violations</div>
+</div><div class="vio_sta_secbody"><div class="sta_sec_desc"></div>
+<table class="sta_tpd">
+ <thead> 
+<tr> 
+<th>Violation</th>
+<th>Source Clock</th>
+<th>Destination Clock</th>
+<th>Slack(ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td colspan="4" class = "text_info">Setup</td>
+</tr>
+<tr class="sta_tv tv1">
+ <td class = "text_info"> </td>
+ <td class = "text_info">CyHFClk</td>
+ <td class = "text_info">CyHFClk</td>
+ <td class = "number">-2.096</td>
+</tr>
+</tbody>
+ </table> 
 </div>
 </div>
 <div class="sta_sec" id="clock_summary">
@@ -615,16 +632,16 @@ Clock Summary Section</span>
 <tr> 
  <td class = "text_info">CyHFClk</td>
  <td class = "text_info">CyHFClk</td>
- <td class = "number">40.000&nbsp;MHz</td>
- <td class = "number">40.000&nbsp;MHz</td>
- <td class = "number">43.541&nbsp;MHz</td>
- <td class = "text_info"></td>
+ <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">43.613&nbsp;MHz</td>
+ <td class = "text_info violation_color">Frequency</td>
 </tr>
 <tr> 
  <td class = "text_info">DBG_UART_SCBCLK</td>
  <td class = "text_info">CyHFClk</td>
- <td class = "number">1.379&nbsp;MHz</td>
- <td class = "number">1.379&nbsp;MHz</td>
+ <td class = "number">1.371&nbsp;MHz</td>
+ <td class = "number">1.371&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -647,24 +664,24 @@ Clock Summary Section</span>
 <tr> 
  <td class = "text_info">CyLFClk</td>
  <td class = "text_info">CyLFClk</td>
- <td class = "number">32.768&nbsp;kHz</td>
- <td class = "number">32.768&nbsp;kHz</td>
+ <td class = "number">32.000&nbsp;kHz</td>
+ <td class = "number">32.000&nbsp;kHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
 <tr> 
  <td class = "text_info">CyRouted1</td>
  <td class = "text_info">CyRouted1</td>
- <td class = "number">40.000&nbsp;MHz</td>
- <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">48.000&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
 <tr> 
  <td class = "text_info">CySysClk</td>
  <td class = "text_info">CySysClk</td>
- <td class = "number">40.000&nbsp;MHz</td>
- <td class = "number">40.000&nbsp;MHz</td>
+ <td class = "number">48.000&nbsp;MHz</td>
+ <td class = "number">48.000&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -679,8 +696,8 @@ Clock Summary Section</span>
 <tr> 
  <td class = "text_info">DBG_UART_SCBCLK(FFB)</td>
  <td class = "text_info">DBG_UART_SCBCLK(FFB)</td>
- <td class = "number">1.379&nbsp;MHz</td>
- <td class = "number">1.379&nbsp;MHz</td>
+ <td class = "number">1.371&nbsp;MHz</td>
+ <td class = "number">1.371&nbsp;MHz</td>
  <td class = "number"> N/A </td>
  <td class = "text_info"> </td>
 </tr>
@@ -704,15 +721,15 @@ Setup Subsection</span>
 <div>
 <a href="#" style="text-decoration: none; color: inherit;">
 <span class="sec_head"><span style="font-family: monospace;">+</span>
-Source Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</span>
+Source Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</span>
 </a>
 </div><div class="sta_secbody"><div class="sta_sec" >
 <div>
 <a href="#" style="text-decoration: none; color: inherit;">
 <span class="sec_head"><span style="font-family: monospace;">+</span>
-Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</span>
+Destination Clock : CyHFClk : Positive edge(Required Frequency 48&nbsp;MHz)</span>
 </a>
-</div><div class="sta_secbody"><div class="sta_sec_desc">Path Delay Requirement : 25ns(40&nbsp;MHz)</div>
+</div><div class="sta_secbody"><div class="sta_sec_desc">Path Delay Requirement : 20.8333ns(48&nbsp;MHz)</div>
 <table class="sta_tscs">
  <thead> 
 <tr> 
@@ -728,12 +745,12 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/z0</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/ci</td>
- <td class = "number">43.541&nbsp;MHz</td>
- <td class = "number">22.967</td>
- <td class = "number">2.033</td>
- <td class = "text_info"></td>
+ <td class = "number">43.613&nbsp;MHz</td>
+ <td class = "number">22.929</td>
+ <td class = "number violation_color">-2.096</td>
+ <td class = "text_info violation_color">SETUP</td>
 </tr>
-<tr class="sta_path">
+<tr class="sta_path tv1">
 <td class="sta_path"  colspan="6">
 <table class="sta_path">
  <thead> 
@@ -750,7 +767,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clock</td>
@@ -768,7 +785,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0i</td>
@@ -782,11 +799,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:per_zero\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
- <td class = "number">2.887</td>
+ <td class = "number">2.849</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
@@ -804,7 +821,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"></td>
@@ -827,10 +844,10 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/ci</td>
- <td class = "number">46.432&nbsp;MHz</td>
- <td class = "number">21.537</td>
- <td class = "number">3.463</td>
- <td class = "text_info"></td>
+ <td class = "number">46.514&nbsp;MHz</td>
+ <td class = "number">21.499</td>
+ <td class = "number violation_color">-0.666</td>
+ <td class = "text_info violation_color">SETUP</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="6">
@@ -849,7 +866,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clock</td>
@@ -863,11 +880,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:per_zero\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
- <td class = "number">2.887</td>
+ <td class = "number">2.849</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
@@ -885,7 +902,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"></td>
@@ -908,9 +925,9 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/ci</td>
- <td class = "number">49.310&nbsp;MHz</td>
- <td class = "number">20.280</td>
- <td class = "number">4.720</td>
+ <td class = "number">49.446&nbsp;MHz</td>
+ <td class = "number">20.224</td>
+ <td class = "number">0.609</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -930,7 +947,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
@@ -944,11 +961,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:control_7\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
- <td class = "number">2.900</td>
+ <td class = "number">2.844</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
@@ -966,7 +983,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"></td>
@@ -988,10 +1005,10 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/z0</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
- <td class = "number">50.795&nbsp;MHz</td>
- <td class = "number">19.687</td>
- <td class = "number">5.313</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">50.559&nbsp;MHz</td>
+ <td class = "number">19.779</td>
+ <td class = "number">1.054</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1011,7 +1028,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clock</td>
@@ -1029,7 +1046,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0i</td>
@@ -1037,19 +1054,19 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "number">2.960</td>
 </tr>
 <tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
- <td class = "number">2.887</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
+ <td class = "number">2.979</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">11.520</td>
@@ -1069,10 +1086,10 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/z0</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
- <td class = "number">50.803&nbsp;MHz</td>
- <td class = "number">19.684</td>
- <td class = "number">5.316</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">50.893&nbsp;MHz</td>
+ <td class = "number">19.649</td>
+ <td class = "number">1.184</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1092,7 +1109,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clock</td>
@@ -1110,75 +1127,12 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0i</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "number">2.960</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
- <td class = "number">2.884</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">11.520</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
- <td class = "number">54.774&nbsp;MHz</td>
- <td class = "number">18.257</td>
- <td class = "number">6.743</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clock</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
- <td class = "number">3.850</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
@@ -1187,11 +1141,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:per_zero\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
- <td class = "number">2.887</td>
+ <td class = "number">2.849</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info"></td>
@@ -1214,9 +1168,9 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
- <td class = "number">54.783&nbsp;MHz</td>
- <td class = "number">18.254</td>
- <td class = "number">6.746</td>
+ <td class = "number">54.499&nbsp;MHz</td>
+ <td class = "number">18.349</td>
+ <td class = "number">2.484</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1236,7 +1190,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clock</td>
@@ -1245,18 +1199,81 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
- <td class = "number">2.884</td>
+ <td class = "number">2.979</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">11.520</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">54.888&nbsp;MHz</td>
+ <td class = "number">18.219</td>
+ <td class = "number">2.614</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clock</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "number">3.850</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:per_zero\</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.849</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info"></td>
  <td class = "text_info">SETUP</td>
  <td class = "number">11.520</td>
@@ -1277,9 +1294,9 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
- <td class = "number">58.813&nbsp;MHz</td>
- <td class = "number">17.003</td>
- <td class = "number">7.997</td>
+ <td class = "number">58.524&nbsp;MHz</td>
+ <td class = "number">17.087</td>
+ <td class = "number">3.746</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1299,7 +1316,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
@@ -1313,11 +1330,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:control_7\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
- <td class = "number">2.903</td>
+ <td class = "number">2.987</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"></td>
@@ -1340,9 +1357,9 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
- <td class = "number">58.824&nbsp;MHz</td>
- <td class = "number">17.000</td>
- <td class = "number">8.000</td>
+ <td class = "number">59.018&nbsp;MHz</td>
+ <td class = "number">16.944</td>
+ <td class = "number">3.889</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1362,7 +1379,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
@@ -1376,11 +1393,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:control_7\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
- <td class = "number">2.900</td>
+ <td class = "number">2.844</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info"></td>
@@ -1403,9 +1420,9 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/z0</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/status_0</td>
- <td class = "number">64.872&nbsp;MHz</td>
- <td class = "number">15.415</td>
- <td class = "number">9.585</td>
+ <td class = "number">64.767&nbsp;MHz</td>
+ <td class = "number">15.440</td>
+ <td class = "number">5.393</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1425,7 +1442,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clock</td>
@@ -1443,7 +1460,7 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0i</td>
@@ -1457,11 +1474,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:per_zero\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:status_tc\/main_1</td>
- <td class = "number">2.904</td>
+ <td class = "number">2.981</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:status_tc\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:status_tc\/main_1</td>
@@ -1475,11 +1492,11 @@ Destination Clock : CyHFClk : Positive edge(Required Frequency 40&nbsp;MHz)</spa
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:status_tc\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:status_tc\/q</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/status_0</td>
- <td class = "number">2.311</td>
+ <td class = "number">2.259</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\</td>
  <td class = "text_info"></td>
@@ -1538,7 +1555,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">ClockBlock_LFClk__SYNC_1/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clk_en</td>
- <td class = "number">2.854</td>
+ <td class = "number">2.858</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1558,7 +1575,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC_1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC_1/clock</td>
@@ -1572,11 +1589,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">ClockBlock_LFClk__SYNC_OUT_1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC_1/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clk_en</td>
- <td class = "number">2.854</td>
+ <td class = "number">2.858</td>
 </tr>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
  <td class = "text_info"> </td>
@@ -1599,7 +1616,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clk_en</td>
- <td class = "number">3.142</td>
+ <td class = "number">3.178</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1619,7 +1636,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
@@ -1633,11 +1650,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clk_en</td>
- <td class = "number">3.142</td>
+ <td class = "number">3.178</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info"> </td>
@@ -1660,7 +1677,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en</td>
- <td class = "number">3.155</td>
+ <td class = "number">3.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1680,7 +1697,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
@@ -1694,11 +1711,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\/clk_en</td>
- <td class = "number">3.155</td>
+ <td class = "number">3.195</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:rstSts:stsreg\</td>
  <td class = "text_info"> </td>
@@ -1721,7 +1738,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en</td>
- <td class = "number">3.155</td>
+ <td class = "number">3.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1741,7 +1758,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
@@ -1755,11 +1772,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clk_en</td>
- <td class = "number">3.155</td>
+ <td class = "number">3.195</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"> </td>
@@ -1782,7 +1799,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">Net_308/clk_en</td>
- <td class = "number">3.155</td>
+ <td class = "number">3.195</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1802,7 +1819,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">synccell</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/clock</td>
@@ -1816,11 +1833,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">ClockBlock_LFClk__SYNC_OUT</td>
  <td class = "text_info">ClockBlock_LFClk__SYNC/out</td>
  <td class = "text_info">Net_308/clk_en</td>
- <td class = "number">3.155</td>
+ <td class = "number">3.195</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_308</td>
  <td class = "text_info"> </td>
@@ -1863,7 +1880,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/clock</td>
@@ -1881,7 +1898,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"> </td>
@@ -1904,7 +1921,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
- <td class = "number">4.940</td>
+ <td class = "number">4.884</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1924,7 +1941,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
@@ -1938,11 +1955,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:control_7\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
- <td class = "number">2.900</td>
+ <td class = "number">2.844</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info"> </td>
@@ -1965,7 +1982,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
- <td class = "number">4.943</td>
+ <td class = "number">5.027</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1985,7 +2002,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
@@ -1999,11 +2016,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:control_7\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
- <td class = "number">2.903</td>
+ <td class = "number">2.987</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"> </td>
@@ -2026,7 +2043,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">Net_308/main_0</td>
- <td class = "number">4.962</td>
+ <td class = "number">5.032</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2046,7 +2063,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(0,1)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
@@ -2060,11 +2077,11 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:control_7\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
  <td class = "text_info">Net_308/main_0</td>
- <td class = "number">2.922</td>
+ <td class = "number">2.992</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_308</td>
  <td class = "text_info"> </td>
@@ -2086,8 +2103,8 @@ Destination Clock : CyHFClk : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
- <td class = "number">6.154</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">6.119</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2107,7 +2124,7 @@ Destination Clock : CyHFClk : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/clock</td>
@@ -2115,19 +2132,19 @@ Destination Clock : CyHFClk : Positive edge</span>
  <td class = "number">3.270</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:per_zero\</td>
  <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\/cs_addr_0</td>
- <td class = "number">2.884</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "number">2.849</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(1,1)</td>
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info">\Timer_Period_Reset:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
