@@ -104,7 +104,6 @@ void Initialize(void) {
     
     InitCAN(0x4, (int)address);
     Timer_Period_Reset_Start();
-    // Timer_Period_Reset_Enable();
 
     isr_Button_1_StartEx(Button_1_Handler);
     isr_Period_Reset_StartEx(Period_Reset_Handler);
